@@ -1,22 +1,22 @@
-let slides = document.getElementsByClassName("slide");
-let index = 0;
-slideW = parseFloat(window.getComputedStyle(document.getElementById("slider")).getPropertyValue("width"));
-leftPos = slideW;
+(function () {
+    "use strict"
 
-for (let i=0; i<slides.length; i++) {
-    if (i !== 0) {
-        slides[i].style.display = "none";
-        slides[i].style.position = "absolute";
-        slides[i].style.left = leftPos + "px";
-        slides[i].style.top = 0 + "px";
-        leftPos += slideW;
+    let index = 1;
+
+    let Slider = function () {
+        this.box = document.querySelector(".slider_wrapper");
+        this.slidesBox = document.getElementById("slider");
+        this.slides = document.querySelectorAll(".slide");
+        this.buttons = document.querySelectorAll(".slider_button");
+        this.boxSize = this.box.clientWidth;
+    };
+
+    Slider.prototype.carousel = function () {
+        let that = this;
+        let max = slid
     }
-}
 
-function next() {
-   slides[index].style.display = "none";
-   slides[index].style.position = "absolute";
-   slides[++index].style.left = 0 + "px";
-   slides[index].style.display = "block";
 
-}
+    new Slider();
+})();
+
