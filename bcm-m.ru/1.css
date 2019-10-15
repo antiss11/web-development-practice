@@ -386,7 +386,6 @@ body {
 
     .slide:nth-child(1) {
         left: 0;
-        /*transform: translateX(-100%);*/
     }
 
     .slide:nth-child(2) {
@@ -395,4 +394,16 @@ body {
 
     .slide:nth-child(3) {
         left: 200%;
+    }
+
+    .slide:nth-child(4) {
+        left: 300%;
+    }
+
+    .slide:nth-child(5) {
+        left: 400%;
+    }
+
+    .slide:nth-child(6) {
+        left: 500%;
     }
