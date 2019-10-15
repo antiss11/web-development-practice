@@ -42,13 +42,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.main.html">
     <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/bcm-m.ru/main.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="slider.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="slider.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.main.html" />
+        <item itemvalue="Node.js.slider.js" />
       </list>
     </recent_temporary>
   </component>
@@ -63,7 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1570604753054</updated>
       <workItem from="1570604754267" duration="6312000" />
-      <workItem from="1570713253728" duration="54189000" />
+      <workItem from="1570713253728" duration="55462000" />
+      <workItem from="1571117777405" duration="5216000" />
     </task>
     <servers />
   </component>
@@ -75,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
