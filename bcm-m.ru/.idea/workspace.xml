@@ -28,7 +28,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/slider.css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -69,7 +69,7 @@
       <workItem from="1570604754267" duration="6312000" />
       <workItem from="1570713253728" duration="55462000" />
       <workItem from="1571117777405" duration="5644000" />
-      <workItem from="1571155440221" duration="8089000" />
+      <workItem from="1571155440221" duration="20294000" />
     </task>
     <servers />
   </component>

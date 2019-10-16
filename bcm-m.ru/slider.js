@@ -1,10 +1,13 @@
 (function () {
 
-    let Slider = function () {
-        this.box = document.querySelector(".slider_wrapper");
-        this.slidesBox = document.getElementById("slider");
-        this.slides = document.querySelectorAll(".slide");
-        this.buttons = document.querySelectorAll(".slider_button");
+    let Slider = function (
+        box, slidesBox, slides, buttonNext, buttonPrev
+    ) {
+        this.box = box;
+        this.slidesBox = slidesBox;
+        this.slides = slides;
+        this.buttonNext = buttonNext;
+        this.buttonPrev = buttonPrev;
         this.boxSize = this.box.clientWidth;
         this.index = 1;
         this.initial();
@@ -18,9 +21,8 @@
 
 
     Slider.prototype.carousel = function () {
-        for (let button of this.buttons) {
-            button.addEventListener("click", Slider[button.id].bind(this))
-        }
+        this.buttonNext.addEventListener("click", Slider.next.bind(this));
+        this.buttonPrev.addEventListener("click", Slider.prev.bind(this))
     };
 
     Slider.prototype.indexListener = function() {
@@ -32,7 +34,6 @@
         else if (this.slides[this.index].id === "lastClone") {
             this.index = this.slides.length-2;
             this.slidesBox.style.transition = "none";
-            this.slidesBox.style.transform = "translateX(-300%)";
             this.slidesBox.style.transform = "translateX(" + (-this.index * 100) + "%)";
         }
 
@@ -50,6 +51,25 @@
         this.slidesBox.style.transform = "translateX(" + (-this.index*this.boxSize) + "px";
     };
 
-    new Slider();
+    function initialSliders() {
+
+        let sliderWrappers = document.querySelectorAll(".slider_wrapper");
+        for (let sliderWrapper of sliderWrappers) {
+            let slidesBox = sliderWrapper.querySelector(".we_slider");
+            let slides = sliderWrapper.querySelectorAll(".slide");
+            let buttonNext = sliderWrapper.querySelector(".slider_button.next");
+            let buttonPrev = sliderWrapper.querySelector(".slider_button.prev");
+            new Slider(sliderWrapper, slidesBox, slides, buttonNext, buttonPrev)
+        }
+    }
+
+
+    function bindSliderTabs() {
+        let tabs = document.querySelectorAll(".we_tab");
+        tabs[0].addEventListener("click", )
+    }
+
+    bindSliderTabs()
+
 })();
 

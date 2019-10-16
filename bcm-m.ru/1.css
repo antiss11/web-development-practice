@@ -50,6 +50,7 @@ table {
 
 :root {
     --mobile-default-padding: 20px;
+    --brand-color: #0069A6;
 }
 
 body {
@@ -68,6 +69,7 @@ body {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 100;
 }
 
 
@@ -84,9 +86,6 @@ body {
     border-radius: 5px;
     background-color: #222;
     border: none;
-    /*position: absolute;*/
-    /*top: 8px;*/
-    /*right: 30px;*/
 }
 
 .menu-container {
@@ -101,8 +100,6 @@ body {
     right: 45px;
 }
 
-
-
 .menu-dropdown {
     display: none;
 }
@@ -113,14 +110,10 @@ body {
 
 
 .nav {
-    /*margin-top: 100px;*/
 }
 
 
 .main_contact {
-    /*position: relative;*/
-    /*left: 40px;*/
-    /*top: 7px;*/
     margin: 0 20px;
 }
 
@@ -221,7 +214,7 @@ body {
 }
 
 .query {
-    border: 2px solid blue;
+    border: 2px solid var(--brand-color);
     margin: 15px 0;
     padding: 15px;
 }
@@ -237,7 +230,7 @@ body {
 }
 
 .query_button {
-    background: #0069A6;
+    background: var(--brand-color);
     padding: 10px 20px;
     width: 70%;
     color: #fff;
@@ -328,6 +321,7 @@ body {
 
 .we {
     padding: var(--mobile-default-padding);
+    position: relative;
 }
 
     .we_tabs {
@@ -338,50 +332,75 @@ body {
         width: 100%;
     }
 
+
     .we_tab {
         display: table-cell;
         font-size: 28px;
         text-align: center;
         text-decoration: none;
-        color: #0069A6;
+        color: var(--brand-color);
         border: 1px solid #E8E8E8;
     }
 
     .we_tab.active {
-        border-bottom: 4px solid #0069A6;
+        border-bottom: 4px solid var(--brand-color);
     }
 
     .slider_wrapper {
+        margin-top: 10px;
         position: relative;
-        top: 10px;
+        height: 30vh;
+        overflow: hidden;
     }
 
+    .slider_wrapper.office {
+        display: none;
+    }
+
+
     .slider_buttons {
-        display: flex;
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 50%;
-        justify-content: space-between;
+        /*position: absolute;*/
+        /*top: 40%;*/
+    }
+
+    .we_slider {
+        /*position: absolute;*/
+        /*top: 0;*/
     }
 
     .slider_button {
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: 0 0;
-        width: 100px;
-        height: 100px;
+        position: absolute;
+        top: 30%;
         background-image: url("images/arrow.png");
+        width: 30px;
+        height: 30px;
     }
 
-
-    .slider_button:nth-child(2) {
-        transform: rotate(180deg) ;
+    .slider_button:hover {
+        background-image: url("images/arrow_hover.png");
     }
+
+    .slider_button.next {
+        /*transform: rotate(180deg);*/
+        margin-left: auto;
+        right: 40px;
+    }
+
+    .slider_button.prev {
+        transform: rotate(180deg);
+        left: 40px;
+    }
+
 
     .slide {
         width: 100%;
         position: absolute;
+        height: 40vh;
+        object-fit: cover;
+        top: 0;
     }
 
     .slide:nth-child(1) {
@@ -407,3 +426,22 @@ body {
     .slide:nth-child(6) {
         left: 500%;
     }
+
+
+.slide_text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+}
+
+/*.out_projects {*/
+/*    padding: var(--mobile-default-padding);*/
+/*    margin-top: 100px;*/
+/*}*/
+
+/*    .out_projects h2 {*/
+/*        font-size: 28px;*/
+/*    }*/
+
+/**/
