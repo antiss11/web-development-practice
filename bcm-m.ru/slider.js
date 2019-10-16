@@ -6,10 +6,11 @@
         this.box = box;
         this.slidesBox = slidesBox;
         this.slides = slides;
-        this.buttonNext = buttonNext;
-        this.buttonPrev = buttonPrev;
+        this.buttonNext = buttonNext || null;
+        this.buttonPrev = buttonPrev || null;
         this.boxSize = this.box.clientWidth;
         this.index = 1;
+        // console.log(this.buttonNext)
         this.initial();
         this.carousel();
     };
@@ -51,25 +52,36 @@
         this.slidesBox.style.transform = "translateX(" + (-this.index*this.boxSize) + "px";
     };
 
-    function initialSliders() {
+    function sliderSwitcher(container) {
+        let disabledSlider = container.querySelector(".slider_wrapper:not(.active)");
+        let activeSlider = container.querySelector(".slider_wrapper.active");
+        disabledSlider.classList.toggle("active");
+        activeSlider.classList.toggle("active")
+    }
 
-        let sliderWrappers = document.querySelectorAll(".slider_wrapper");
-        for (let sliderWrapper of sliderWrappers) {
-            let slidesBox = sliderWrapper.querySelector(".we_slider");
-            let slides = sliderWrapper.querySelectorAll(".slide");
-            let buttonNext = sliderWrapper.querySelector(".slider_button.next");
-            let buttonPrev = sliderWrapper.querySelector(".slider_button.prev");
-            new Slider(sliderWrapper, slidesBox, slides, buttonNext, buttonPrev)
+    function tabsSwitcher(event) {
+        let activeTab = document.querySelector(".we_tab.active")
+        if ( !event.target.classList.contains("active") ) {
+            event.target.classList.toggle("active");
+            activeTab.classList.toggle("active");
+            sliderSwitcher(event.target.parentNode.parentElement)
         }
     }
 
+    function initialSliders() {
+        function initialFirstSlider() {
+            let sliderContainer = document.querySelector(".we");
+            let sliderTabs = sliderContainer.querySelectorAll(".we_tab");
+            let sliders = sliderContainer.querySelectorAll(".we_slider");
+            for (let tab of sliderTabs) {
+                tab.addEventListener("click", tabsSwitcher )
+            }
+        }
+        initialFirstSlider()
 
-    function bindSliderTabs() {
-        let tabs = document.querySelectorAll(".we_tab");
-        tabs[0].addEventListener("click", )
     }
+    //
 
-    bindSliderTabs()
-
+    initialSliders()
 })();
 

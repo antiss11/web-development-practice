@@ -351,11 +351,21 @@ body {
         position: relative;
         height: 30vh;
         overflow: hidden;
-    }
-
-    .slider_wrapper.office {
         display: none;
     }
+
+    /*.slider_wrapper.storage {*/
+    /*    display: none;*/
+    /*}*/
+
+    .slider_wrapper.active {
+        display: block;
+    }
+
+    /*.slider_wrapper.office {*/
+    /*    display: block;*/
+    /*}*/
+
 
 
     .slider_buttons {
@@ -429,10 +439,7 @@ body {
 
 
 .slide_text {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
+
 }
 
 /*.out_projects {*/
