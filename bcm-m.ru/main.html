@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<!--<div class="container">-->
+
   <header class="header">
     <img src="images/logo.mobile.png" alt="БСМ-МЕТАЛЛ" class="logo">
     <div class="main_contact">
@@ -19,16 +19,15 @@
       <button class="menu-toggle">свернуть меню</button>
       <div class="menu-dropdown">
         <ul class="menu">
-          <li><a href="#" class="menu_item">Каталог</a></li>
-          <li><a href="#" class="menu_item">Выбрать город</a></li>
-          <li><a href="#" class="menu_item">О компании</a></li>
-          <li><a href="#" class="menu_item">Отзывы</a></li>
-          <li><a href="#" class="menu_item">Оплата и доставка</a></li>
-          <li><a href="#" class="menu_item">Партнерам</a></li>
-          <li><a href="#" class="menu_item">Вакансии</a></li>
-          <li><a href="#" class="menu_item">ГОСТы и ТУ</a></li>
-          <li><a href="#" class="menu_item">Контакты</a></li>
-          <li><a href="#" class="menu_item">Калькулятор</a></li>
+          <li><a href="">О компании</a></li>
+          <li><a href="">Отзывы</a></li>
+          <li><a href="">Оплата и доставка</a></li>
+          <li><a href="">Партнерам</a></li>
+          <li><a href="">Вакансии</a></li>
+          <li><a href="">ГОСТы и ТУ</a></li>
+          <li><a href="">Контакты</a></li>
+          <li><a href="">Калькулятор</a></li>
+          <li><a href="">Карта сайта</a></li>
         </ul>
       </div>
     </div>
@@ -38,227 +37,292 @@
     </form>
   </header>
 
-  <main class="main">
-    <div class="contacts">
-      <div class="contact">
-        <div class="contact__description">Новосибирск</div>
-        <a href="#" class="number">8 (383) 235-91-09</a>
+  <div class="container">
+    <main class="main">
+      <div class="contacts">
+        <div class="contact">
+          <div class="contact__description">Новосибирск</div>
+          <a href="#" class="number">8 (383) 235-91-09</a>
+        </div>
+        <div class="contact">
+          <div class="contact__description">Москва</div>
+          <a href="#" class="number">8 (499) 348-92-77</a>
+        </div>
+        <div class="contact">
+          <div class="contact__description">Екатеринбург</div>
+          <a href="#" class="number">8 (343) 300-96-49</a>
+        </div>
       </div>
-      <div class="contact">
-        <div class="contact__description">Москва</div>
-        <a href="#" class="number">8 (499) 348-92-77</a>
+      <div class="advantages_wrapper">
+        <div class="advantages_caption">
+          <h2 class="advantages_title">Производство металлопродукции с доставкой по России и СНГ</h2>
+          <ul class="advantages_list">
+            <li class="advantage">Отгрузка в день оплаты заказа</li>
+            <li class="advantage">Услуги резки, гибки и обработки металла</li>
+            <li class="advantage">Производим изделия из металла под заказ по чертежам</li>
+          </ul>
+        </div>
       </div>
-      <div class="contact">
-        <div class="contact__description">Екатеринбург</div>
-        <a href="#" class="number">8 (343) 300-96-49</a>
+      <div class="query">
+        <p class="query-description">Отправьте заявку на расчет и получите
+        счет на оплату
+        </p>
+        <form action="#" class="query_form">
+          <input type="text" name="phone" class="query_phone" placeholder="Телефон">
+          <input type="text" name="email" class="query-email" placeholder="Ваш e-mail">
+          <textarea rows="1" name="comment" class="query-comment" placeholder="Ваш комментарий"></textarea>
+          <input type="submit" value="Отправить запрос" class="query_button">
+        </form>
+        <p class="terms_of_use">
+          Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
+          <a href="#" class="terms_of_use_link">политики конфиденциальности</a>
+        </p>
       </div>
-    </div>
-    <div class="advantages_wrapper">
-      <div class="advantages_caption">
-        <h2 class="advantages_title">Производство металлопродукции с доставкой по России и СНГ</h2>
-        <ul class="advantages_list">
-          <li class="advantage">Отгрузка в день оплаты заказа</li>
-          <li class="advantage">Услуги резки, гибки и обработки металла</li>
-          <li class="advantage">Производим изделия из металла под заказ по чертежам</li>
-        </ul>
+      <div class="categories">
+        <h2 class="categories_title">Категории</h2>
+        <div class="category">
+          <img src="images/black_steel.jpg" alt="Черный прокат" class="category_logo">
+          <p class="category_description">Черный <br> металлопрокат</p>
+        </div>
+        <div class="category">
+          <img src="images/color_steel.jpg" alt="Цветной прокат" class="category_logo">
+          <p class="category_description">Цветной <br> металлопрокат</p>
+        </div>
+        <div class="category">
+          <img src="images/stainless-steel.jpg" alt="Нержавейка" class="category_logo">
+          <p class="category_description">Нержавеющая <br> сталь</p>
+        </div>
+        <div class="category">
+          <img src="images/special-steel.jpg" alt=Спецсталь"" class="category_logo">
+          <p class="category_description">Спецсталь</p>
+        </div>
+        <div class="category">
+          <img src="images/zinked-steel.jpg" alt=Оцинковка"" class="category_logo">
+          <p class="category_description">Оцинкованный <br> металлопрокат</p>
+        </div>
+        <div class="category">
+          <img src="images/pipelines.jpg" alt="Арматура" class="category_logo">
+          <p class="category_description">Трубопровдная <br> арматура</p>
+        </div>
+        <div class="category">
+          <img src="images/alloys.jpg" alt="Сплавы и сырье" class="category_logo">
+          <p class="category_description">Металлургическое <br> сырье и сплавы</p>
+        </div>
+        <div class="category">
+          <img src="images/powders.jpg" alt=Порошки"" class="category_logo">
+          <p class="category_description">Порошки металлов</p>
+        </div>
+        <div class="category">
+          <img src="images/any-things.jpg" alt="Оборудование" class="category_logo">
+          <p class="category_description">Оборудование <br> полимеры кабель метизы</p>
+        </div>
+        <div class="category">
+          <img src="images/services.jpg" alt="Услуги" class="category_logo">
+          <p class="category_description">Услуги</p>
+        </div>
+        <div class="category">
+          <img src="images/production.jpg" alt="Производство" class="category_logo">
+          <p class="category_description">Производство</p>
+        </div>
       </div>
-    </div>
-    <div class="query">
-      <p class="query-description">Отправьте заявку на расчет и получите
-      счет на оплату
-      </p>
-      <form action="#" class="query_form">
-        <input type="text" name="phone" class="query_phone" placeholder="Телефон">
-        <input type="text" name="email" class="query-email" placeholder="Ваш e-mail">
-        <textarea rows="1" name="comment" class="query-comment" placeholder="Ваш комментарий"></textarea>
-        <input type="submit" value="Отправить запрос" class="query_button">
-      </form>
-      <p class="terms_of_use">
-        Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
-        <a href="#" class="terms_of_use_link">политики конфиденциальности</a>
-      </p>
-    </div>
-    <div class="categories">
-      <h2 class="categories_title">Категории</h2>
-      <div class="category">
-        <img src="images/black_steel.jpg" alt="Черный прокат" class="category_logo">
-        <p class="category_description">Черный <br> металлопрокат</p>
-      </div>
-      <div class="category">
-        <img src="images/color_steel.jpg" alt="Цветной прокат" class="category_logo">
-        <p class="category_description">Цветной <br> металлопрокат</p>
-      </div>
-      <div class="category">
-        <img src="images/stainless-steel.jpg" alt="Нержавейка" class="category_logo">
-        <p class="category_description">Нержавеющая <br> сталь</p>
-      </div>
-      <div class="category">
-        <img src="images/special-steel.jpg" alt=Спецсталь"" class="category_logo">
-        <p class="category_description">Спецсталь</p>
-      </div>
-      <div class="category">
-        <img src="images/zinked-steel.jpg" alt=Оцинковка"" class="category_logo">
-        <p class="category_description">Оцинкованный <br> металлопрокат</p>
-      </div>
-      <div class="category">
-        <img src="images/pipelines.jpg" alt="Арматура" class="category_logo">
-        <p class="category_description">Трубопровдная <br> арматура</p>
-      </div>
-      <div class="category">
-        <img src="images/alloys.jpg" alt="Сплавы и сырье" class="category_logo">
-        <p class="category_description">Металлургическое <br> сырье и сплавы</p>
-      </div>
-      <div class="category">
-        <img src="images/powders.jpg" alt=Порошки"" class="category_logo">
-        <p class="category_description">Порошки металлов</p>
-      </div>
-      <div class="category">
-        <img src="images/any-things.jpg" alt="Оборудование" class="category_logo">
-        <p class="category_description">Оборудование <br> полимеры кабель метизы</p>
-      </div>
-      <div class="category">
-        <img src="images/services.jpg" alt="Услуги" class="category_logo">
-        <p class="category_description">Услуги</p>
-      </div>
-      <div class="category">
-        <img src="images/production.jpg" alt="Производство" class="category_logo">
-        <p class="category_description">Производство</p>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <article class="article">
-    <div class="about_us">
-      <h3 class="about_us__title">
-        О компании БСМ-МЕТАЛЛ
-      </h3>
-      <p class="about_us__description">
-        Компания БСМ-МЕТАЛЛ была основана в 2011 году. Основным видом деятельности на момент создания компании была продажа цветного металла. Со временем компания росла и открывались новые направления:  производство, переработка и продажа металлопродукции на территории России, Казахстана и Белоруссии. На сегодняшний день мы поставляем цветной металл, спецсталь редких марок, нержавейку, сплавы, черный прокат и многое другое, производим металлоконструкции, прессформы. Отдельное подразделение БСМ-МЕТАЛЛ занимается поставкой трубопроводной арматуры. Оптимизация складского-логистического комплекса позволяет нашим клиентам купить запорную арматуру по цене ниже рыночной. Собственная транспортная компания и оптимальные логистические схемы существенно снижают себестоимость продукции для конечного потребителя.
+    <article class="article">
+      <div class="about_us">
+        <h3 class="about_us__title">
+          О компании БСМ-МЕТАЛЛ
+        </h3>
+        <p class="about_us__description">
+          Компания БСМ-МЕТАЛЛ была основана в 2011 году. Основным видом деятельности на момент создания компании была продажа цветного металла. Со временем компания росла и открывались новые направления:  производство, переработка и продажа металлопродукции на территории России, Казахстана и Белоруссии. На сегодняшний день мы поставляем цветной металл, спецсталь редких марок, нержавейку, сплавы, черный прокат и многое другое, производим металлоконструкции, прессформы. Отдельное подразделение БСМ-МЕТАЛЛ занимается поставкой трубопроводной арматуры. Оптимизация складского-логистического комплекса позволяет нашим клиентам купить запорную арматуру по цене ниже рыночной. Собственная транспортная компания и оптимальные логистические схемы существенно снижают себестоимость продукции для конечного потребителя.
 
-        Сейчас компания БСМ-МЕТАЛЛ представляет сеть представительств, складских комплексов, производственных площадей и перевалочных центров по всей России и СНГ.
-      </p>
-      <h4>Головной офис и представительства</h4>
-      <p class="about_us__description">
-        Центральный офис компании находится в Новосибирске. В нем, как и любом другом представительстве компании можно осуществить заказ на поставку и изготовление металлоконструкций, обработку металла. Так же на складе в Новосибирске, Екатеринбурге, Москве можно купить медь, алюминий, никель, нержавеющий прокат, сплавы металлов, спецсталь, порошки металлов. БСМ-МЕТАЛЛ всегда содержит в наличии широкий ассортимент продукции для оперативной поставки нашим клиентам.
-      </p>
+          Сейчас компания БСМ-МЕТАЛЛ представляет сеть представительств, складских комплексов, производственных площадей и перевалочных центров по всей России и СНГ.
+        </p>
+        <h4>Головной офис и представительства</h4>
+        <p class="about_us__description">
+          Центральный офис компании находится в Новосибирске. В нем, как и любом другом представительстве компании можно осуществить заказ на поставку и изготовление металлоконструкций, обработку металла. Так же на складе в Новосибирске, Екатеринбурге, Москве можно купить медь, алюминий, никель, нержавеющий прокат, сплавы металлов, спецсталь, порошки металлов. БСМ-МЕТАЛЛ всегда содержит в наличии широкий ассортимент продукции для оперативной поставки нашим клиентам.
+        </p>
+      </div>
+    </article>
+
+    <div class="features">
+      <h2 class="features__title">Преимущества</h2>
+      <figure class="feature">
+        <img src="images/feature1.png" alt="Ящики" class="feature_label">
+        <figcaption class="feature_caption">
+          Всегда на складах в наличии 15 000 типоразмеров металлопродукции
+        </figcaption>
+      </figure>
+      <figure class="feature">
+        <img src="images/feature2.png" alt="Время" class="feature_label">
+        <figcaption class="feature_caption">
+          Отсрочка платежа постоянным клиентам
+        </figcaption>
+      </figure>
+      <figure class="feature">
+        <img src="images/feature3.png" alt="Календарь" class="feature_label">
+        <figcaption class="feature_caption">
+          Отгрузка в день оплаты
+        </figcaption>
+      </figure>
+      <figure class="feature">
+        <img src="images/feature4.png" alt="Карта" class="feature_label">
+        <figcaption class="feature_caption">
+          Склады: Новосибирск, Екатеринбург, Москва
+        </figcaption>
+      </figure>
     </div>
-  </article>
 
-  <div class="features">
-    <h2 class="features__title">Преимущества</h2>
-    <figure class="feature">
-      <img src="images/feature1.png" alt="Ящики" class="feature_label">
-      <figcaption class="feature_caption">
-        Всегда на складах в наличии 15 000 типоразмеров металлопродукции
-      </figcaption>
-    </figure>
-    <figure class="feature">
-      <img src="images/feature2.png" alt="Время" class="feature_label">
-      <figcaption class="feature_caption">
-        Отсрочка платежа постоянным клиентам
-      </figcaption>
-    </figure>
-    <figure class="feature">
-      <img src="images/feature3.png" alt="Календарь" class="feature_label">
-      <figcaption class="feature_caption">
-        Отгрузка в день оплаты
-      </figcaption>
-    </figure>
-    <figure class="feature">
-      <img src="images/feature4.png" alt="Карта" class="feature_label">
-      <figcaption class="feature_caption">
-        Склады: Новосибирск, Екатеринбург, Москва
-      </figcaption>
-    </figure>
-  </div>
-
-  <div class="we">
-    <div class="we_tabs">
-      <a class="we_tab active" onclick="return false;">Офис</a>
-      <a class="we_tab" onclick="return false;">Склады</a>
+    <div class="we">
+      <div class="we_tabs">
+        <a class="we_tab active" onclick="return false;">Офис</a>
+        <a class="we_tab" onclick="return false;">Склады</a>
+      </div>
+      <div class="slider_wrapper active">
+        <div class="we_slider">
+          <img src="images/slider_images/office/img3.jpg" alt="" class="slide lastClone">
+          <img src="images/slider_images/office/img1.jpg" alt="" class="slide">
+          <img src="images/slider_images/office/img2.jpg" alt="" class="slide">
+          <img src="images/slider_images/office/img3.jpg" alt="" class="slide">
+          <img src="images/slider_images/office/img1.jpg" alt="" class="slide firstClone">
+        </div>
+        <div class="slider_background"></div>
+        <div class="slider_buttons">
+          <div class="slider_button prev"></div>
+          <div class="slider_button next"></div>
+        </div>
+      </div>
+      <div class="slider_wrapper">
+        <div class="we_slider">
+          <img src="images/slider_images/storage/4.jpg" alt="" class="slide lastClone">
+          <img src="images/slider_images/storage/1.jpg" alt="" class="slide">
+          <img src="images/slider_images/storage/2.jpg" alt="" class="slide">
+          <img src="images/slider_images/storage/3.jpg" alt="" class="slide">
+          <img src="images/slider_images/storage/4.jpg" alt="" class="slide">
+          <img src="images/slider_images/storage/1.jpg" alt="" class="slide firstClone">
+        </div>
+        <div class="slider_text">
+          <h2 class="slider_text_header">Склады</h2>
+          <ul>
+            <li>Более 20 производителей</li>
+            <li>Более 10 000 наименований металлопродукции</li>
+            <li>Услуги резки, гибки и обработки металла</li>
+          </ul>
+        </div>
+        <div class="slider_background"></div>
+        <div class="slider_buttons">
+          <div class="slider_button prev"></div>
+          <div class="slider_button next"></div>
+        </div>
+      </div>
     </div>
+
+  <div class="our_projects">
+    <h2>Выполненные проекты</h2>
     <div class="slider_wrapper active">
       <div class="we_slider">
-        <img src="images/slider_images/office/img3.jpg" alt="" class="slide lastClone">
-        <img src="images/slider_images/office/img1.jpg" alt="" class="slide">
-        <img src="images/slider_images/office/img2.jpg" alt="" class="slide">
-        <img src="images/slider_images/office/img3.jpg" alt="" class="slide">
-        <img src="images/slider_images/office/img1.jpg" alt="" class="slide firstClone">
+        <div class="slide lastClone">
+          <div class="slide_text">Стадион Спартак</div>
+          <div class="slider_background"></div>
+          <img src="images/slider_images/2/5.jpg" alt=""></div>
+        <div class="slide">
+          <div class="slide_text">Череповецкая ГРЭС</div>
+          <div class="slider_background"></div>
+          <img src="images/slider_images/2/1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <div class="slide_text">Гипермаркет &laquo;Мега&raquo;</div>
+          <div class="slider_background"></div>
+          <img src="images/slider_images/2/2.jpg" alt=""></div>
+        <div class="slide">
+          <div class="slide_text">Вышки МТС и Билайн</div>
+          <div class="slider_background"></div>
+          <img src="images/slider_images/2/3.jpg" alt=""></div>
+        <div class="slide">
+          <div class="slide_text">Южная ТЭЦ</div>
+          <div class="slider_background"></div>
+          <img src="images/slider_images/2/4.jpg" alt=""></div>
+        <div class="slide">
+          <div class="slide_text">Стадион Спартак</div>
+          <div class="slider_background"></div>
+          <img src="images/slider_images/2/5.jpg" alt=""></div>
+        <div class="slide firstClone">
+          <div class="slide_text">Череповецкая ГРЭС</div>
+          <div class="slider_background"></div>
+          <img src="images/slider_images/2/1.jpg" alt="">
+        </div>
       </div>
-      <div class="slider_background"></div>
-      <div class="slider_buttons">
-        <div class="slider_button prev"></div>
-        <div class="slider_button next"></div>
-      </div>
+
     </div>
-    <div class="slider_wrapper">
-      <div class="we_slider">
-        <img src="images/slider_images/storage/4.jpg" alt="" class="slide lastClone">
-        <img src="images/slider_images/storage/1.jpg" alt="" class="slide">
-        <img src="images/slider_images/storage/2.jpg" alt="" class="slide">
-        <img src="images/slider_images/storage/3.jpg" alt="" class="slide">
-        <img src="images/slider_images/storage/4.jpg" alt="" class="slide">
-        <img src="images/slider_images/storage/1.jpg" alt="" class="slide firstClone">
-      </div>
-      <div class="slider_text">
-        <h2 class="slider_text_header">Склады</h2>
-        <ul>
-          <li>Более 20 производителей</li>
-          <li>Более 10 000 наименований металлопродукции</li>
-          <li>Услуги резки, гибки и обработки металла</li>
-        </ul>
-      </div>
-      <div class="slider_background"></div>
-      <div class="slider_buttons">
-        <div class="slider_button prev"></div>
-        <div class="slider_button next"></div>
-      </div>
+
+    <div class="slider_buttons">
+      <div class="slider_button prev"></div>
+      <div class="slider_button next"></div>
     </div>
   </div>
 
-<div class="our_projects">
-  <h2>Выполненные проекты</h2>
-  <div class="slider_wrapper active">
-    <div class="we_slider">
-      <div class="slide lastClone">
-        <div class="slide_text">Стадион Спартак</div>
-        <div class="slider_background"></div>
-        <img src="images/slider_images/2/5.jpg" alt=""></div>
-      <div class="slide">
-        <div class="slide_text">Череповецкая ГРЭС</div>
-        <div class="slider_background"></div>
-        <img src="images/slider_images/2/1.jpg" alt="">
-      </div>
-      <div class="slide">
-        <div class="slide_text">Гипермаркет &laquo;Мега&raquo;</div>
-        <div class="slider_background"></div>
-        <img src="images/slider_images/2/2.jpg" alt=""></div>
-      <div class="slide">
-        <div class="slide_text">Вышки МТС и Билайн</div>
-        <div class="slider_background"></div>
-        <img src="images/slider_images/2/3.jpg" alt=""></div>
-      <div class="slide">
-        <div class="slide_text">Южная ТЭЦ</div>
-        <div class="slider_background"></div>
-        <img src="images/slider_images/2/4.jpg" alt=""></div>
-      <div class="slide">
-        <div class="slide_text">Стадион Спартак</div>
-        <div class="slider_background"></div>
-        <img src="images/slider_images/2/5.jpg" alt=""></div>
-      <div class="slide firstClone">
-        <div class="slide_text">Череповецкая ГРЭС</div>
-        <div class="slider_background"></div>
-        <img src="images/slider_images/2/1.jpg" alt="">
-      </div>
+  <div class="producers">
+    <h2 class="producers__title">Металлоконструкция напрямую от производителя</h2>
+    <div class="producers__logos">
+      <img src="images/producers/1.jpg" alt="" class="producer_logo">
+      <img src="images/producers/2.jpg" alt="" class="producer_logo">
+      <img src="images/producers/3.jpg" alt="" class="producer_logo">
+      <img src="images/producers/4.jpg" alt="" class="producer_logo">
     </div>
-
   </div>
 
-  <div class="slider_buttons">
-    <div class="slider_button prev"></div>
-    <div class="slider_button next"></div>
+  <div class="query pricelist">
+    <p class="query_description">
+      Узнайте стоимость и размер скидки!
+    </p>
+    <form action="#" class="query_form">
+      <input type="text" name="phone" class="query_input" placeholder="Телефон">
+      <input type="text" name="email" class="query_input" placeholder="Ваш e-mail">
+      <textarea rows="1" name="comment" class="query-comment" placeholder="Ваш комментарий"></textarea>
+      <input type="submit" value="Отправить заявку" class="query_button">
+      <input type="submit" value="Получить прайс-лист" class="query_button second">
+    </form>
+    <p class="terms_of_use">
+      Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
+      <a href="#" class="terms_of_use_link">политики конфиденциальности</a>
+    </p>
+  </div>
+
+  <div class="geography">
+    <h2 class="geography__title">География наших клиентов</h2>
+    <h3 class="geography__description">Работаем на всей территории РФ</h3>
+    <img src="images/map-bcm.png" alt="Карта России" class="geography_img">
+    <input type="submit" class="query_button" value="Рассчитать стоимость заказа">
+    <input type="submit" class="query_button second" value="Получить прайс-лист">
   </div>
 </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_menu">
+        <ul class="menu">
+          <li><a href="" class="menu_item">О компании</a></li>
+          <li><a href="" class="menu_item">Отзывы</a></li>
+          <li><a href="" class="menu_item">Оплата и доставка</a></li>
+          <li><a href="" class="menu_item">Партнерам</a></li>
+          <li><a href="" class="menu_item">Вакансии</a></li>
+          <li><a href="" class="menu_item">ГОСТы и ТУ</a></li>
+          <li><a href="" class="menu_item">Контакты</a></li>
+          <li><a href="" class="menu_item">Калькулятор</a></li>
+          <li><a href="" class="menu_item">Карта сайта</a></li>
+          <li><a href="" class="menu_item">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div class="footer__mailing">
+        <h2 class="mailing__title">Подпишитесь на обновления прайс-листа и новостей</h2>
+        <input type="text" placeholder="Ваш e-mail" class="query_input">
+        <input type="submit" value="Подписаться" class="query_button">
+        <input type="checkbox" checked id="email_agree">
+        <label for="email_agree">Я согласен получать рассылку прайс-листа и новостей</label>
+      </div>
+    </div>
+  </footer>
+
+
+
 
 <script src="slider.js"></script>
 </body>

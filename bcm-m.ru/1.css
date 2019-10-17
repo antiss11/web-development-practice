@@ -59,8 +59,12 @@ body {
 }
 
 
+.container {
+    padding: var(--mobile-default-padding);
+}
+
 .header {
-    background-color: #4C4C4C;
+    background-color: #333;
     position: fixed;
     padding: 10px;
     width: 100%;
@@ -100,6 +104,12 @@ body {
     right: 45px;
 }
 
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 .menu-dropdown {
     display: none;
 }
@@ -108,15 +118,9 @@ body {
     display: none;
 }
 
-
-.nav {
-}
-
-
 .main_contact {
     margin: 0 20px;
 }
-
 
 .main_number {
     font-family: sans-serif;
@@ -141,7 +145,6 @@ body {
 .main {
     margin-top: 40px;
     margin-left: 0;
-    padding: 20px;
 }
 
 
@@ -224,20 +227,44 @@ body {
     flex-flow: column wrap;
 }
 
-.query_form * {
-    margin: 10px 0;
-    border: none;
-}
+    .query_form * {
+        margin: 10px 0;
+        outline: none;
+        padding: 10px;
+        border: 2px solid rgba(242,242,242,1);
+    }
 
-.query_button {
-    background: var(--brand-color);
-    padding: 10px 20px;
-    width: 70%;
-    color: #fff;
-}
+    .query_description {
+        font-size: 22px;
+    }
+
+    .query_form *:focus {
+        border-color: var(--brand-color);
+    }
+
+    .query_button {
+        background: var(--brand-color);
+        padding: 10px 20px;
+        width: 70%;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+    }
+
+    .query_button.second {
+        color: var(--brand-color);
+        background-color: #fff;
+        border: 2px solid var(--brand-color)
+    }
+
+    .query_input {
+        padding: 5px;
+        width: 100%;
+    }
+
 
 .terms_of_use {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .terms_of_use_link {
@@ -252,8 +279,6 @@ body {
 }
 
 .category {
-    /*margin: 10px auto;*/
-    padding: 20px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -270,11 +295,6 @@ body {
 .category_logo {
     border-radius: 100px;
     margin: 10px 0;
-}
-
-
-.about_us {
-    padding: var(--mobile-default-padding);
 }
 
 .about_us__title {
@@ -320,7 +340,6 @@ body {
     }
 
 .we {
-    padding: var(--mobile-default-padding);
     position: relative;
 }
 
@@ -470,12 +489,11 @@ body {
 .our_projects {
     position: relative;
     margin: 30px 0;
-    padding: var(--mobile-default-padding)
 }
-
     .our_projects h2 {
         font-size: 28px;
     }
+
 
     .slide_text {
         position: absolute;
@@ -485,6 +503,117 @@ body {
         z-index: 100;
     }
 
-    .slide > img {
-        /*object-fit: cover;*/
+.producers {
+    background-color: #F5F5F5;
+    padding: 15px 0;
+}
+
+    .producers__title {
+        font-size: 32px;
+        margin:0 30px;
     }
+
+    .producers__logos {
+        background-color: #fff;
+        /*background-color: #000;*/
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 30px 0;
+        padding: 15px 0;
+    }
+
+.query.pricelist form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+    .query.pricelist * {
+        width: 100%;
+    }
+
+    .query.pricelist input:nth-child(1),
+    .query.pricelist input:nth-child(2) {
+        width: 45%;
+    }
+
+.geography {
+    margin: 50px 0;
+}
+
+.geography__title {
+    font-size: 36px;
+}
+
+.geography__description {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.geography_img {
+    width: 100%;
+}
+
+.geography input {
+    width: 100%;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.menu li{
+    width: 45%;
+}
+
+.menu_item {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.footer__mailing {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px 0;
+}
+
+.footer__mailing .query_input {
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.footer__mailing input {
+    margin: 15px 0;
+    position: relative;
+}
+
+.footer__mailing .query_button {
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.mailing__title {
+    font-size: 20px;
+}
+
+#email_agree {
+    /*position:absolute;*/
+    /*opacity: 0;*/
+    top: 0;
+}
+
+.footer__mailing label:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+}
