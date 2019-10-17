@@ -42,7 +42,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.main.html">
+  <component name="RunManager" selected="Node.js.slider.js">
     <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/bcm-m.ru/main.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -69,7 +69,8 @@
       <workItem from="1570604754267" duration="6312000" />
       <workItem from="1570713253728" duration="55462000" />
       <workItem from="1571117777405" duration="5644000" />
-      <workItem from="1571155440221" duration="26543000" />
+      <workItem from="1571155440221" duration="30086000" />
+      <workItem from="1571292084225" duration="2273000" />
     </task>
     <servers />
   </component>

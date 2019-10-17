@@ -350,7 +350,7 @@ body {
         margin-top: 10px;
         position: relative;
         height: 30vh;
-        overflow: hidden;
+        /*overflow: hidden;*/
         display: none;
     }
 
