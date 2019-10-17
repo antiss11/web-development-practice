@@ -3,7 +3,6 @@
     let Slider = function (
          slidesBox, slides, buttonNext, buttonPrev, size
     ) {
-
         this.slidesBox = slidesBox;
         this.slides = slides;
         this.buttonNext = buttonNext;
@@ -106,7 +105,18 @@
                     slider.querySelector(".slider_button.prev"), size)
             }
         }
-        initialFirstSlider()
+        function initialSecondSlider() {
+            let sliderContainer = document.querySelector(".our_projects");
+            let sliderWrapper = sliderContainer.querySelector(".slider_wrapper");
+            let size = sliderWrapper.clientWidth;
+            let slides = sliderContainer.querySelectorAll(".slide");
+            let slidesBox = sliderContainer.querySelector(".we_slider");
+            let buttonNext = sliderContainer.querySelector(".slider_button.next");
+            let buttonPrev = sliderContainer.querySelector(".slider_button.prev");
+            new Slider(slidesBox, slides, buttonNext, buttonPrev, size)
+        }
+        initialFirstSlider();
+        initialSecondSlider()
     }
 
 
