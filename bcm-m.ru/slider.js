@@ -8,11 +8,11 @@
         this.slides = slides;
         this.buttonNext = buttonNext;
         this.buttonPrev = buttonPrev;
-        // this.boxSize = this.slidesBox.clientWidth;
         this.boxSize = size;
         this.index = 1;
         this.initial();
         this.carousel();
+        this.animationInProgress = false;
     };
 
     Slider.prototype.initial = function() {
@@ -42,15 +42,31 @@
     };
 
     Slider.next = function() {
-        this.slidesBox.style.transition = "transform 0.2s ease-in-out";
-        this.index++;
-        this.slidesBox.style.transform = "translateX(" + (-this.index*this.boxSize) + "px";
+        if (!this.animationInProgress) {
+            this.animationInProgress = true;
+            this.slidesBox.style.transition = "transform 0.2s ease-in-out";
+            this.index++;
+            this.slidesBox.style.transform = "translateX(" + (-this.index*this.boxSize) + "px";
+            setTimeout( () => this.animationInProgress=false, 200)
+        }
+        else {
+            return false;
+        }
+
     };
 
     Slider.prev = function () {
-        this.slidesBox.style.transition = "transform 0.2s ease-in-out";
-        this.index--;
-        this.slidesBox.style.transform = "translateX(" + (-this.index*this.boxSize) + "px";
+        if (!this.animationInProgress) {
+            this.animationInProgress = true;
+            this.slidesBox.style.transition = "transform 0.2s ease-in-out";
+            this.index--;
+            this.slidesBox.style.transform = "translateX(" + (-this.index*this.boxSize) + "px";
+            setTimeout( () => this.animationInProgress=false, 200)
+        }
+        else {
+            return false;
+        }
+
     };
 
     function sliderSwitcher(container) {
@@ -91,9 +107,8 @@
             }
         }
         initialFirstSlider()
-
     }
-    //
+
 
     initialSliders()
 })();
