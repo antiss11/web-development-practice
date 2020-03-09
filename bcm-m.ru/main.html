@@ -5,16 +5,29 @@
   <title>БСМ-МЕТАЛЛ — Производство и поставка металлопродукции с доставкой до объекта по </title>
   <link rel="stylesheet" href="1.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="Inputmask/dist/jquery.inputmask.js"></script>
+
+
 </head>
 <body>
 
   <header class="header">
-    <img src="images/logo.mobile.png" alt="БСМ-МЕТАЛЛ" class="logo">
+    <img src="images/logo.mobile.png" alt="БСМ-МЕТАЛЛ" class="logo">    
+    <form action="#" class="search">
+      <input type="text" placeholder="Поиск" name="search" class="search_field">
+      <input type="submit" value="Найти" class="submit_search">
+    </form>
+    <div class="header__query">
+      Отправьте нам заявку
+    </div>
     <div class="main_contact">
       <div class="contact__description"></div>
       <a href="tel:11111" class="main_number">8 (800) 350-88-36</a>
     </div>
-
     <div class="menu-container">
       <div class="menu_toggle">
         свернуть меню
@@ -34,15 +47,17 @@
         </ul>
       </div>
     </div>
-    <form action="#" class="search">
-      <input type="text" placeholder="Поиск" name="search" class="search_field">
-      <input type="submit" value="Найти" class="submit_search">
-    </form>
   </header>
-
-  <div class="container">
+  
+  <div class="main_container">
     <main class="main">
       <div class="contacts">
+        <div class="email contact">
+          <p class="email_description">Почта для заявок:</p>          
+          <a href="mailto:info@bcm-m.ru" class="email_link">
+            info@bcm-m.ru
+          </a>
+        </div>
         <div class="contact">
           <div class="contact__description">Новосибирск</div>
           <a href="#" class="number">8 (383) 235-91-09</a>
@@ -56,34 +71,36 @@
           <a href="#" class="number">8 (343) 300-96-49</a>
         </div>
       </div>
-      <div class="advantages_wrapper">
-        <div class="advantages_caption">
-          <h2 class="advantages_title">Производство металлопродукции с доставкой по России и СНГ</h2>
-          <ul class="advantages_list">
-            <li class="advantage">Отгрузка в день оплаты заказа</li>
-            <li class="advantage">Услуги резки, гибки и обработки металла</li>
-            <li class="advantage">Производим изделия из металла под заказ по чертежам</li>
-          </ul>
+      <div class="advantages_categories_wrapper">        
+        <div class="advantages_wrapper">
+          <div class="advantages_caption">
+            <h2 class="advantages_title">Производство металлопродукции с доставкой по России и СНГ</h2>
+            <ul class="advantages_list">
+              <li class="advantage">Отгрузка в день оплаты заказа</li>
+              <li class="advantage">Услуги резки, гибки и обработки металла</li>
+              <li class="advantage">Производим изделия из металла под заказ по чертежам</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="query">
-        <p class="query-description">Отправьте заявку на расчет и получите
-        счет на оплату
-        </p>
-        <form action="#" class="query_form">
-          <input type="text" name="phone" class="query_phone" placeholder="Телефон">
-          <input type="text" name="email" class="query-email" placeholder="Ваш e-mail">
-          <textarea rows="1" name="comment" class="query-comment" placeholder="Ваш комментарий"></textarea>
-          <input type="submit" value="Отправить запрос" class="query_button">
-        </form>
-        <p class="terms_of_use">
-          Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
-          <a href="#" class="terms_of_use_link">политики конфиденциальности</a>
-        </p>
+        <div class="query">
+          <p class="query-description">Отправьте заявку на расчет и получите
+          счет на оплату
+          </p>
+          </p>
+          <form action="#" class="query_form">
+            <input type="text" name="phone" type="tel" class="query_input phone" placeholder="Телефон">
+            <input type="text" name="email" class="query_input" placeholder="Ваш e-mail">
+            <textarea rows="1" name="comment" class="query_input" placeholder="Ваш комментарий"></textarea>
+            <input type="submit" value="Отправить запрос" class="query_button">
+          </form>
+          <p class="terms_of_use">
+            Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
+            <a href="#" class="terms_of_use_link">политики конфиденциальности</a>
+          </p>
+        </div>
       </div>
       <h2 class="categories_title">Категории</h2>
       <div class="categories">
-
         <div class="category">
           <img src="images/black_steel.jpg" alt="Черный прокат" class="category_logo">
           <p class="category_description">Черный <br> металлопрокат</p>
@@ -151,30 +168,32 @@
     <div class="features">
 <!--      <div class="features_wrapper">-->
       <h2 class="features__title">Преимущества</h2>
-      <figure class="feature">
-        <img src="images/feature1.png" alt="Ящики" class="feature_label">
-        <figcaption class="feature_caption">
-          Всегда на складах в наличии 15 000 типоразмеров металлопродукции
-        </figcaption>
-      </figure>
-      <figure class="feature">
-        <img src="images/feature2.png" alt="Время" class="feature_label">
-        <figcaption class="feature_caption">
-          Отсрочка платежа постоянным клиентам
-        </figcaption>
-      </figure>
-      <figure class="feature">
-        <img src="images/feature3.png" alt="Календарь" class="feature_label">
-        <figcaption class="feature_caption">
-          Отгрузка в день оплаты
-        </figcaption>
-      </figure>
-      <figure class="feature">
+      <div class="features_list">
+        <figure class="feature">
+          <img src="images/feature1.png" alt="Ящики" class="feature_label">
+          <figcaption class="feature_caption">
+            Всегда на складах в наличии 15 000 типоразмеров металлопродукции
+          </figcaption>
+        </figure>
+        <figure class="feature">
+          <img src="images/feature2.png" alt="Время" class="feature_label">
+          <figcaption class="feature_caption">
+            Отсрочка платежа постоянным клиентам
+          </figcaption>
+        </figure>
+        <figure class="feature">
+          <img src="images/feature3.png" alt="Календарь" class="feature_label">
+          <figcaption class="feature_caption">
+            Отгрузка в день оплаты
+          </figcaption>
+        </figure>
+        <figure class="feature">
         <img src="images/feature4.png" alt="Карта" class="feature_label">
         <figcaption class="feature_caption">
           Склады: Новосибирск, Екатеринбург, Москва
         </figcaption>
       </figure>
+      </div>
     </div>
 
     <div class="we">
@@ -264,32 +283,33 @@
       <div class="slider_button next"></div>
     </div>
   </div>
-
-  <div class="producers">
-    <h2 class="producers__title">Металлоконструкция напрямую от производителя</h2>
-    <div class="producers__logos">
-      <img src="images/producers/1.jpg" alt="" class="producer_logo">
-      <img src="images/producers/2.jpg" alt="" class="producer_logo">
-      <img src="images/producers/3.jpg" alt="" class="producer_logo">
-      <img src="images/producers/4.jpg" alt="" class="producer_logo">
+  <div class="producers_query_container">
+    <div class="producers">
+      <h2 class="producers__title">Металлопродукция напрямую от производителя</h2>
+      <div class="producers__logos">
+        <img src="images/producers/1.jpg" alt="" class="producer_logo">
+        <img src="images/producers/2.jpg" alt="" class="producer_logo">
+        <img src="images/producers/3.jpg" alt="" class="producer_logo">
+        <img src="images/producers/4.jpg" alt="" class="producer_logo">
+      </div>
     </div>
-  </div>
 
-  <div class="query pricelist">
-    <p class="query_description">
-      Узнайте стоимость и размер скидки!
-    </p>
-    <form action="#" class="query_form">
-      <input type="text" name="phone" class="query_input" placeholder="Телефон">
-      <input type="text" name="email" class="query_input" placeholder="Ваш e-mail">
-      <textarea rows="1" name="comment" class="query-comment" placeholder="Ваш комментарий"></textarea>
-      <input type="submit" value="Отправить заявку" class="query_button">
-      <input type="submit" value="Получить прайс-лист" class="query_button second">
-    </form>
-    <p class="terms_of_use">
-      Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
-      <a href="#" class="terms_of_use_link">политики конфиденциальности</a>
-    </p>
+    <div class="query pricelist">
+      <p class="query_description">
+        Узнайте стоимость и размер скидки!
+      </p>
+      <form action="#" class="query_form">
+        <input type="text" name="phone" class="query_input phone" type="tel" placeholder="Телефон">
+        <input type="text" name="email" class="query_input" placeholder="Ваш e-mail">
+        <textarea rows="1" name="comment" class="query-comment" placeholder="Ваш комментарий"></textarea>
+        <input type="submit" value="Отправить заявку" class="query_button">
+        <input type="submit" value="Получить прайс-лист" class="query_button second">
+      </form>
+      <p class="terms_of_use">
+        Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
+        <a href="#" class="terms_of_use_link">политики конфиденциальности</a>
+      </p>
+    </div>
   </div>
 
   <div class="geography">
@@ -355,15 +375,18 @@
         &copy; БСМ-МЕТАЛЛ 2011-2019
       </div>
 
-      <a id="to_top"></a>
+<!--      <a id="to_top"></a>-->
     </div>
   </footer>
 
-
-
-
+<script>  
+ $("input[name='phone']").inputmask("+7 (999) 999 99 99", {"placeholder": "*", "showMaskOnHover": false});
+</script>
+<!-- <script src="initialPhoneMasks.js"></script> -->
+<!-- <script>  -->
+<!-- </script> -->
 <script src="slider.js"></script>
 <script src="toTopAnchor.js"></script>
-<script src="headerMenu.js"></script>
+<!--<script src="headerMenu.js"></script>-->
 </body>
 </html>

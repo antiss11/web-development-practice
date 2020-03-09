@@ -26,9 +26,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/slider.css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,7 +71,15 @@
       <workItem from="1571117777405" duration="5644000" />
       <workItem from="1571155440221" duration="30086000" />
       <workItem from="1571292084225" duration="21118000" />
-      <workItem from="1571373531339" duration="16929000" />
+      <workItem from="1571373531339" duration="18340000" />
+      <workItem from="1573759394692" duration="1000" />
+      <workItem from="1575695958940" duration="3008000" />
+      <workItem from="1576092763668" duration="24000" />
+      <workItem from="1576250177931" duration="7905000" />
+      <workItem from="1576520761958" duration="8344000" />
+      <workItem from="1578775429281" duration="860000" />
+      <workItem from="1583419721486" duration="513000" />
+      <workItem from="1583420303541" duration="834000" />
     </task>
     <servers />
   </component>
