@@ -10,6 +10,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="Inputmask/dist/jquery.inputmask.js"></script>
+  <script src="headerMenu.js"></script>
 
 
 </head>
@@ -29,11 +30,11 @@
       <a href="tel:11111" class="main_number">8 (800) 350-88-36</a>
     </div>
     <div class="menu-container">
-      <div class="menu_toggle">
+      <div class="menu_toggle" onclick="toggleMenu()">
         свернуть меню
       </div>
       <div class="menu-dropdown">
-        <ul class="menu">
+        <ul class="menu" id="menu">
           <li><a href="" class="menu_item extend">Каталог</a></li>
           <li><a href="" class="menu_item extend">Выбрать город</a></li>
           <li><a href="" class="menu_item">О компании</a></li>
@@ -301,9 +302,9 @@
       <form action="#" class="query_form">
         <input type="text" name="phone" class="query_input phone" type="tel" placeholder="Телефон">
         <input type="text" name="email" class="query_input" placeholder="Ваш e-mail">
-        <textarea rows="1" name="comment" class="query-comment" placeholder="Ваш комментарий"></textarea>
+        <textarea rows="1" name="comment" class="query_comment" placeholder="Ваш комментарий"></textarea>
         <input type="submit" value="Отправить заявку" class="query_button">
-        <input type="submit" value="Получить прайс-лист" class="query_button second">
+        <input type="submit" value="Получить прайс-лист" class="query_button get_price">
       </form>
       <p class="terms_of_use">
         Нажимая кнопку &laquo;Отправить&raquo; я подтверждаю, что принимаю условия
@@ -316,8 +317,10 @@
     <h2 class="geography__title">География наших клиентов</h2>
     <h3 class="geography__description">Работаем на всей территории РФ</h3>
     <img src="images/map-bcm.png" alt="Карта России" class="geography_img">
-    <input type="submit" class="query_button" value="Рассчитать стоимость заказа">
-    <input type="submit" class="query_button second" value="Получить прайс-лист">
+    <div class="geography__actions">
+      <input type="submit" class="query_button calculate_order" value="Рассчитать стоимость заказа">
+      <input type="submit" class="query_button get_price" value="Получить прайс-лист">
+    </div>    
   </div>
 </div>
   <footer class="footer">
@@ -380,10 +383,24 @@
   </footer>
 
 <script>  
- $("input[name='phone']").inputmask("+7 (999) 999 99 99", {"placeholder": "*", "showMaskOnHover": false});
+  $("input[name='phone']").inputmask("+7 (999) 999 99 99", {"placeholder": "*", "showMaskOnHover": false});
+  $("textarea").each(function() {
+      $(this).data("holder", $(this).attr("placeholder"));
+      $(this).focusin(function() {
+      $(this).attr("placeholder", "");
+    });
+    $(this).focusout(function() {
+      $(this).attr("placeholder", $(this).data("holder"));
+    });    
+  });
 </script>
-<!-- <script src="initialPhoneMasks.js"></script> -->
-<!-- <script>  -->
+
+
+<script>
+  let screenWidth = window.innerWidth;
+    let menu = document.getElementById("menu");
+    menu.style.width = screenWidth + "px"
+</script>
 <!-- </script> -->
 <script src="slider.js"></script>
 <script src="toTopAnchor.js"></script>
