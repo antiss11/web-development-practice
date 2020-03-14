@@ -148,3 +148,22 @@ function task9() {
         document.write("Треугольник не существует")
     }
 }
+
+function task10() {
+    // Даны числа h и m, где h - количество часов, m - количество минут некоторого момента времени. Найдите угол между часовой и минутными стрелками в этот момент времени.
+    let h = 1;
+    let m = 0;
+    while (h >= 12) {
+        h -= 12;
+    }
+    while (m >= 60) {
+        m -= 60;
+    }
+    let hDegree = h * 180 / 12;
+    let mDegree = m * 180 / 60;
+    let diff = Math.abs(hDegree - mDegree);
+    document.write(diff);
+}
+
+
+
