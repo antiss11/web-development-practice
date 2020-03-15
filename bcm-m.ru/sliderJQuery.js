@@ -1,8 +1,8 @@
-(function() {
+$(function() {
     let sliderWidth = $(".we").width();       
     const $sliderBody = $(".we_slider");
     const len = $("slide").length;
-    const animTime = 1000;
+    const animTime = 200;
 
     initialSlider();   
     initialButtons(); 
@@ -23,7 +23,7 @@
         sliderWidth = $(".we").width();
     }
 
-    function next() {      
+    function prev() {      
         let $slides = $(".slide");
         let offset = sliderWidth;
         $slides.each(function() {  
@@ -35,7 +35,7 @@
         prependLastSlide()      
     }
 
-    function prev() {      
+    function next() {      
         let $slides = $(".slide");
         let offset = -sliderWidth;
         $slides.each(function() {  
@@ -64,5 +64,5 @@
         $firstSlide.finish();
         $firstSlide.offset(lastSlideOffset);
         $firstSlide.appendTo(".we_slider");
-    }
-})();
+    }  
+});
