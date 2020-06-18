@@ -43,21 +43,28 @@ table {
 }
 
 
+:root {
+    --brand-color: #767676;
+    --max-width: 980px;
+}
+
 
 header {
-    display: flex;
+    padding: 65px;
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 980px;
+    display: flex;
     margin: 0 auto;
+    justify-content: space-between;
 }
 
+
 .header {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 65px;
-    color: #767676;
+    margin: 0 auto;
+    color: var(--brand-color);
+    background-color: #DCDCDC;
 }
 
 .company_label {
@@ -112,10 +119,52 @@ header {
         margin-top: 10px;
         display: inline-block;
         margin-right: 0;
+        text-decoration: none;
+        color: var(--brand-color);
     }
 
     .feedback__underline {
         border-top: 2px dashed;
     }
 
+.menu {
+    background: var(--brand-color);
+    width: auto;
+    margin: 0 auto;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 30px;
+}
 
+    .menu__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: var(--max-width);
+        margin: 0 auto;
+    }
+
+    .menu__item {
+        color: #ffffff;
+        display: block;
+        margin: 25px 25px;
+        box-sizing: border-box;
+        text-decoration: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0);
+        transition: border-bottom .2s ease-in;
+    }
+
+    .menu__item:hover {
+        border-color: rgba(255, 255, 255, 1);
+    }
+
+    .menu li {
+        position: relative;
+
+    }
+
+    .menu li:not(:first-child):after {
+        content: "|";
+        position: absolute;
+        top: 30%;
+        color: #fff;
+    }
