@@ -31,7 +31,31 @@
 
 (function() {
     // Код подменю
-    let isOpen = false;
+    let submenus = document.querySelectorAll(".categories__second-level-list");
+    submenus.forEach(function(submenu) {
+        let menuItems = submenu.querySelectorAll("li");
+        let menuHeight = 0;
+        menuItems.forEach(function(item) {
+            menuHeight += item.clientHeight;
+        });
+        // console.log(menuHeight)
+        submenu.parentElement.addEventListener("click", function(e) {
+            if (submenu.clientHeight === 0) {
+                submenu.style.height = menuHeight + "px";
+            }
+            else {
+                submenu.style.height = 0;
+            }
+        })
+    });
 
+    // function toggle()
+
+    // let submenuItems = submenu.querySelectorAll("li");
+    // let submenuHeight = 0;
+    // submenuItems.forEach(function(el) {
+    //     submenuHeight += el.clientHeight;
+    // });
+    // console.log(submenuHeight)
 })();
 

@@ -275,7 +275,6 @@ header {
     padding-left: 10px;
     height: 0;
     transition: height .5s ease-out;
-    /*position: absolute;*/
     overflow: hidden;
 }
 
@@ -296,12 +295,10 @@ header {
     float: right;
     margin-top: 20px;
     width: 80%;
-    /*padding: 20px;*/
 }
 
 .product {
     padding: 20px;
-    /*border:1px solid red;*/
     width: calc(30% - 20px - 15px);
     float: left;
     background-color: #DCDCDC;
@@ -336,7 +333,3 @@ header {
     display: block;
 }
 
-@keyframes submenu {
-    0% {height: 0}
-    100% {height: auto}
-}
