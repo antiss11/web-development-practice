@@ -168,3 +168,61 @@ header {
         top: 30%;
         color: #fff;
     }
+
+.slider {
+    /*max-width: 980px;*/
+    background: no-repeat url("images/1.png");
+    background-size: 80%;
+    background-position: 0 -20px;
+    margin: 0 auto;
+    height: 400px;
+}
+
+/*.slider:after {*/
+    /*content: " ";*/
+    /*clear: both;*/
+    /*display: block;*/
+/*}*/
+
+.slide {
+    margin: 0 auto;
+    display: block;
+    transition: opacity 1s ease-in;
+    /*position: absolute;*/
+    /*width: 130%;*/
+}
+
+.slide:not(.active) {
+    opacity: 0;
+    position: absolute;
+}
+
+.slider__container {
+    max-width: 980px;
+}
+
+
+.slider__buttons {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.slider__button {
+    background-image: url(images/arrow.png);
+    width: 34px;
+    height: 61px;
+    /*display: block;*/
+    position: relative;
+    top: 50%;
+}
+
+.slider__button.next {
+    /*float: right;*/
+    transform: rotate(180deg);
+}
