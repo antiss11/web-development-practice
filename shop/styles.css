@@ -58,6 +58,7 @@ header {
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    position: relative;
 }
 
 
@@ -127,7 +128,7 @@ header {
         border-top: 2px dashed;
     }
 
-.menu {
+.main-menu {
     background: var(--brand-color);
     width: auto;
     margin: 0 auto;
@@ -135,7 +136,7 @@ header {
     font-size: 30px;
 }
 
-    .menu__list {
+    .main-menu__list {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -143,7 +144,7 @@ header {
         margin: 0 auto;
     }
 
-    .menu__item {
+    .list__item {
         color: #ffffff;
         display: block;
         margin: 25px 25px;
@@ -153,16 +154,15 @@ header {
         transition: border-bottom .2s ease-in;
     }
 
-    .menu__item:hover {
+    .list__item:hover {
         border-color: rgba(255, 255, 255, 1);
     }
 
-    .menu li {
+    .main-menu__list li {
         position: relative;
-
     }
 
-    .menu li:not(:first-child):after {
+    .main-menu__list li:not(:first-child):after {
         content: "|";
         position: absolute;
         top: 30%;
@@ -172,17 +172,12 @@ header {
 .slider {
     /*max-width: 980px;*/
     background: no-repeat url("images/1.png");
-    background-size: 80%;
-    background-position: 0 -20px;
+    /*background-size: 80%;*/
+    background-position: 50% -20px;
     margin: 0 auto;
     height: 400px;
 }
 
-/*.slider:after {*/
-    /*content: " ";*/
-    /*clear: both;*/
-    /*display: block;*/
-/*}*/
 
 .slide {
     margin: 0 auto;
@@ -204,10 +199,9 @@ header {
 
 .slider__buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: absolute;
     top: 50%;
-    width: 100%;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -220,9 +214,129 @@ header {
     /*display: block;*/
     position: relative;
     top: 50%;
+    cursor: pointer;
 }
 
 .slider__button.next {
     /*float: right;*/
     transform: rotate(180deg);
+}
+
+.submenu__path-list {
+    display: flex;
+    padding: 5px 0;
+}
+
+.path-list__item {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    color: #767676;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.path-list__item:hover {
+    text-decoration: underline;
+}
+
+.categories-list__first-level-item {
+    font-size: 18px;
+    color: #767676;
+    text-decoration: none;
+    display: block;
+}
+
+.item_container:not(:first-child) {
+    padding-top: 10px;
+}
+
+.categories-list__second-level-item {
+    font-size: 14px;
+    color: #767676;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    position: relative;
+}
+
+.categories-list__first-level-item:hover,
+.categories-list__second-level-item:hover {
+    color: #767676;
+    text-decoration: underline;
+}
+
+.aside {
+    margin-top: 20px;
+    float: left;
+    width: 20%;
+}
+
+.categories__second-level-list {
+    padding-left: 10px;
+    height: 0;
+    transition: height .5s ease-out;
+    /*position: absolute;*/
+    overflow: hidden;
+}
+
+.categories-list__second-level-item:before {
+    content: "\2022";
+    color: #767676;
+    display: inline-block;
+    position: absolute;
+    left: -5px;
+}
+
+.categories-list__second-level-item:hover {
+    color: #000;
+}
+
+
+.main {
+    float: right;
+    margin-top: 20px;
+    width: 80%;
+    /*padding: 20px;*/
+}
+
+.product {
+    padding: 20px;
+    /*border:1px solid red;*/
+    width: calc(30% - 20px - 15px);
+    float: left;
+    background-color: #DCDCDC;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.product__info {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    color: #8E8E8E;
+    margin: 20px 0 55px;
+}
+
+.product__price {
+    font-family: "PT Sans", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.product__basket {
+    display: inline-block;
+}
+
+.basket__link:before {
+    content: url("images/basket.png");
+    margin-left: 60px;
+}
+
+.visible {
+    display: block;
+}
+
+@keyframes submenu {
+    0% {height: 0}
+    100% {height: auto}
 }
