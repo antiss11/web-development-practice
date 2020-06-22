@@ -11,11 +11,11 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="company_label">
-          <div class="company_label__logo"></div>
-          <div class="company_label__description">
-              <p class="company_label__title">Название компании</p>
-              <p class="company_label__slogan">самая клевая компания</p>
+      <div class="company-label">
+          <div class="company-label__logo"></div>
+          <div class="company-label__description">
+              <p class="company-label__title">Название компании</p>
+              <p class="company-label__slogan">самая клевая компания</p>
           </div>
       </div>
       <div class="feedback">
@@ -91,6 +91,12 @@
           <li class="item_container"><a href="javascript:void(0)" class="categories-list__first-level-item">Недвижимость</a></li>
         </ul>
       </nav>
+      <div class="pricelist__container">
+        <a href="javascript:void(0)" class="pricelist__url">
+          <img class="pricelist__image" src="images/ms-excel.png" alt="Прайс-лист">
+        </a>
+        <p class="pricelist__decription">Прайс-лист</p>
+      </div>
     </aside>
 
     <main class="main">
@@ -144,10 +150,69 @@
         <p class="product__price">1 900 р.</p>
         <div class="product__basket"><a href="javascript:void(0)" class="basket__link"></a></div>
       </div>
-    </main>
 
+      <nav class="main__nav">
+        <ul class="nav__list">
+          <li><a href="javascript:void(0)" class="page__num">1</a></li>
+          <li><a href="javascript:void(0)" class="page__num">2</a></li>
+          <li><a href="javascript:void(0)" class="page__num">3</a></li>
+          <li><a href="javascript:void(0)" class="page__num">4</a></li>
+          <li><a href="javascript:void(0)" class="page__num">5</a></li>
+          <li><a href="javascript:void(0)" class="page__num">6</a></li>
+          <li><a href="javascript:void(0)" class="page__num">7</a></li>
+        </ul>
+      </nav>
+    </main>
   </div>
 
-  <script src="sliderCode.js"></script>
+  <div class="container-about-us">
+    <article class="about-us">
+      <section class="about-us__company">
+        Компания &laquo;Пиксель Плюс&raquo; существует более 6 лет, за это время мы принимали участие в разработке
+        более чем 700 сайтов, поэтому можем уверенно называть себя профессионалами. На данный момент наш коллектив
+        состоит из более чем 30 сотрудников работающих в двух офисах в Москве и Зеленограде. Характерные для этого
+        жанра мотивы: неразделенной любви, ухода молодости, угосания души.
+      </section>
+      <section class="about-us__company">
+        Одним из основных направлений работ нашей компании является поисковое продвижения сайтов, на данный момент мы
+        работает с более чем 150 постоянными клиентами по более чем 11 000 поисковым запросам. При этом в работе основной
+        акцент мы делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO продвижения.
+        На данный момент отдел SEO состоит из 9 человек под руководством ведущего специалиста, преимущественно работающих в
+        нашем московском офисе.
+      </section>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <section class="years-email">
+        <p>&copy; 2012-2013 ЗАО &laquo;Компания&raquo;</p>
+        <p>info&commat;name.ru</p>
+      </section>
+      <nav class="footer__nav">
+        <ul>
+          <li><a class="footer__nav-item" href="javascript:void(0)">Главная</a></li>
+          <li><a class="footer__nav-item" href="javascript:void(0)">Каталог</a></li>
+          <li><a class="footer__nav-item" href="javascript:void(0)">Доставка и оплата</a></li>
+          <li><a class="footer__nav-item" href="javascript:void(0)">Прайс-лист</a></li>
+          <li><a class="footer__nav-item" href="javascript:void(0)">Контакты</a></li>
+        </ul>
+      </nav>
+      <section class="site-development">
+        <figure class="site-development__fig">
+          <img src="images/company.png" alt="Компания">
+          <figcaption class="site-development__description">
+            <span class="underline">Разработка сайта</span> &mdash; <br> компания &laquo;Пиксель Плюс&raquo;
+          </figcaption>
+        </figure>
+      </section>
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="jsCode.js"></script>
 </body>
 </html>

@@ -57,8 +57,8 @@ header {
     max-width: 980px;
     display: flex;
     margin: 0 auto;
-    justify-content: space-between;
     position: relative;
+    justify-content: space-between;
 }
 
 
@@ -68,12 +68,12 @@ header {
     background-color: #DCDCDC;
 }
 
-.company_label {
+.company-label {
     display: flex;
     font-family: 'PT Sans', sans-serif;
 }
 
-    .company_label__description {
+    .company-label__description {
         display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
@@ -81,23 +81,23 @@ header {
     }
 
 
-    .company_label__logo {
+    .company-label__logo {
         width: 100px;
         height: 100px;
         background: #767676;
     }
 
-    .company_label__title {
+    .company-label__title {
         font-size: 24px;
         font-weight: bold;
     }
 
-    .company_label__description {
+    .company-label__description {
         margin: 5px 15px 15px;
         width: 150px;
     }
 
-    .company_label__slogan {
+    .company-label__slogan {
         font-size: 14px;
     }
 
@@ -109,24 +109,24 @@ header {
     align-items: flex-end;
 }
 
-    .feedback__phone {
-        font-size: 40px;
-        font-weight: 300;
-    }
+.feedback__phone {
+    font-size: 40px;
+    font-weight: 300;
+}
 
-    .feedback__url {
-        font-size: 24px;
-        font-weight: 700;
-        margin-top: 10px;
-        display: inline-block;
-        margin-right: 0;
-        text-decoration: none;
-        color: var(--brand-color);
-    }
+.feedback__url {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    display: inline-block;
+    margin-right: 0;
+    text-decoration: none;
+    color: var(--brand-color);
+}
 
-    .feedback__underline {
-        border-top: 2px dashed;
-    }
+.feedback__underline {
+    border-top: 2px dashed;
+}
 
 .main-menu {
     background: var(--brand-color);
@@ -136,44 +136,41 @@ header {
     font-size: 30px;
 }
 
-    .main-menu__list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: var(--max-width);
-        margin: 0 auto;
-    }
+.main-menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
 
-    .list__item {
-        color: #ffffff;
-        display: block;
-        margin: 25px 25px;
-        box-sizing: border-box;
-        text-decoration: none;
-        border-bottom: 2px solid rgba(255, 255, 255, 0);
-        transition: border-bottom .2s ease-in;
-    }
+.list__item {
+    color: #ffffff;
+    display: block;
+    margin: 25px 25px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: border-bottom .2s ease-in;
+}
 
-    .list__item:hover {
-        border-color: rgba(255, 255, 255, 1);
-    }
+.list__item:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
 
-    .main-menu__list li {
-        position: relative;
-    }
+.main-menu__list li {
+    position: relative;
+}
 
-    .main-menu__list li:not(:first-child):after {
-        content: "|";
-        position: absolute;
-        top: 30%;
-        color: #fff;
-    }
+.main-menu__list li:not(:first-child):after {
+    content: "|";
+    position: absolute;
+    top: 30%;
+    color: #fff;
+}
 
 .slider {
-    /*max-width: 980px;*/
-    background: no-repeat url("images/1.png");
-    /*background-size: 80%;*/
-    background-position: 50% -20px;
+    background: no-repeat url("images/1.png") 50% -20px;
     margin: 0 auto;
     height: 400px;
 }
@@ -183,8 +180,6 @@ header {
     margin: 0 auto;
     display: block;
     transition: opacity 1s ease-in;
-    /*position: absolute;*/
-    /*width: 130%;*/
 }
 
 .slide:not(.active) {
@@ -211,14 +206,12 @@ header {
     background-image: url(images/arrow.png);
     width: 34px;
     height: 61px;
-    /*display: block;*/
     position: relative;
     top: 50%;
     cursor: pointer;
 }
 
 .slider__button.next {
-    /*float: right;*/
     transform: rotate(180deg);
 }
 
@@ -266,9 +259,11 @@ header {
 }
 
 .aside {
+    font-family: "PT Sans", sans-serif;
     margin-top: 20px;
-    float: left;
     width: 20%;
+    display: flex;
+    flex-direction: column;
 }
 
 .categories__second-level-list {
@@ -292,22 +287,32 @@ header {
 
 
 .main {
-    float: right;
+    font-family: "PT Sans", sans-serif;
     margin-top: 20px;
     width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr) auto;
 }
+
+.main:after {
+    content: " ";
+    flex: auto;
+}
+
+
 
 .product {
     padding: 20px;
-    width: calc(30% - 20px - 15px);
     float: left;
     background-color: #DCDCDC;
     margin-bottom: 20px;
     margin-right: 15px;
 }
 
+
+
 .product__info {
-    font-family: "PT Sans", sans-serif;
     font-size: 18px;
     color: #8E8E8E;
     margin: 20px 0 55px;
@@ -333,3 +338,90 @@ header {
     display: block;
 }
 
+.pricelist__container {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    align-content: center;
+}
+
+.main__nav {
+    width: 100%;
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+}
+
+.page__num {
+    text-decoration: none;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    color: #767676;
+    margin-right: 20px;
+}
+
+.page__num:hover {
+    color: #000;
+    font-size: 16px;
+}
+
+.container-about-us {
+    max-width: 980px;
+    margin: 70px auto 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-us {
+    width: calc(80 * 980px / 100);
+    display: flex;
+    justify-content: space-between;
+    color: #767676;
+    font: 14px normal, "PT Sans", sans-serif;
+    border-top: 1px solid;
+    padding-top: 30px;
+}
+
+.about-us__company {
+    width: calc(50% - 15px);
+}
+
+.footer {
+    background: var(--brand-color);
+    color: #fff;
+    margin-top: 190px;
+    font: 14px normal, "PT Sans", sans-serif;
+    padding: 40px 0;
+}
+
+.footer__container {
+    max-width: 990px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+}
+
+.footer__nav-item {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.site-development__fig {
+    display: flex;
+    flex-direction: row;
+}
+
+.site-development__description {
+    margin-left: 8px;
+}
