@@ -35,47 +35,48 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  position: relative;
+  justify-content: space-between;
+  display: flex; }
+
 .header {
   margin: 0 auto;
   padding: 65px;
   color: #767676;
   background-color: #DCDCDC; }
-  .header .container {
-    margin: 0 auto;
-    max-width: 980px;
-    position: relative;
-    justify-content: space-between;
+  .header .company-label {
+    font-family: "PT Sans", sans-serif;
+    font-size: 24px;
     display: flex; }
-    .header .container .company-label {
-      font-family: "PT Sans", sans-serif;
-      font-size: 24px;
-      display: flex; }
-      .header .container .company-label .company-label__logo {
-        width: 100px;
-        height: 100px;
-        background: #767676; }
-      .header .container .company-label .company-label__description {
-        margin: 5px 15px 15px;
-        width: 150px;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-between;
-        line-height: .9; }
-        .header .container .company-label .company-label__description .company-label__title {
-          font-size: 24px;
-          font-weight: bold; }
-        .header .container .company-label .company-label__description .company-label__slogan {
-          font-size: 14px; }
-    .header .container .feedback {
+    .header .company-label .company-label__logo {
+      width: 100px;
+      height: 100px;
+      background: #767676; }
+    .header .company-label .company-label__description {
+      margin: 5px 15px 15px;
+      width: 150px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      line-height: .9; }
+      .header .company-label .company-label__description .company-label__title {
+        font-size: 24px;
+        font-weight: bold; }
+      .header .company-label .company-label__description .company-label__slogan {
+        font-size: 14px; }
+    .header .company-label .feedback {
       font-family: "Open Sans Condensed", sans-serif;
       margin-top: -20px;
       display: flex;
       flex-flow: column wrap;
       align-items: flex-end; }
-      .header .container .feedback .feedback__phone {
+      .header .company-label .feedback .feedback__phone {
         font-size: 40px;
         font-weight: 300; }
-      .header .container .feedback .feedback__url {
+      .header .company-label .feedback .feedback__url {
         font-size: 24px;
         font-weight: 700;
         margin-top: 10px;
@@ -83,7 +84,7 @@ table {
         margin-right: 0;
         text-decoration: none;
         color: #767676; }
-      .header .container .feedback .feedback__underline {
+      .header .company-label .feedback .feedback__underline {
         border-top: 2px dashed; }
 
 .main-menu {
@@ -117,5 +118,37 @@ table {
       border-bottom-color: rgba(255, 255, 255, 0); }
       .main-menu .main-menu__list .list__item:hover {
         border-color: white; }
+
+.slider {
+  margin: 0 auto;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-image: url("images/1.png");
+  background-position: calc(50% - 20px); }
+  .slider .slide {
+    margin: 0 auto;
+    display: block;
+    transition: opacity 1s ease-in; }
+    .slider .slide:not(.active) {
+      opacity: 0;
+      position: absolute; }
+  .slider .slider__buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0; }
+    .slider .slider__buttons .slider__button {
+      background-image: url("images/arrow.png");
+      background-repeat: no-repeat;
+      width: 64px;
+      height: 61px;
+      position: relative;
+      cursor: pointer;
+      top: 50%; }
+      .slider .slider__buttons .slider__button.next {
+        transform: rotate(180deg); }
 
 /*# sourceMappingURL=scssStyles.css.map */
