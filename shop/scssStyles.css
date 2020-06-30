@@ -1,0 +1,89 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  margin: 0 auto;
+  padding: 65px;
+  color: #767676;
+  background-color: #DCDCDC; }
+  .header .container {
+    margin: 0 auto;
+    max-width: 980px;
+    position: relative;
+    justify-content: space-between;
+    display: flex; }
+    .header .container .company-label {
+      font-family: "PT Sans", sans-serif;
+      font-size: 24px;
+      display: flex; }
+      .header .container .company-label .company-label__logo {
+        width: 100px;
+        height: 100px;
+        background: #767676; }
+      .header .container .company-label .company-label__description {
+        margin: 5px 15px 15px;
+        width: 150px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        line-height: .9; }
+        .header .container .company-label .company-label__description .company-label__title {
+          font-size: 24px;
+          font-weight: bold; }
+        .header .container .company-label .company-label__description .company-label__slogan {
+          font-size: 14px; }
+    .header .container .feedback {
+      font-family: "Open Sans Condensed", sans-serif;
+      margin-top: -20px;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-end; }
+      .header .container .feedback .feedback__phone {
+        font-size: 40px;
+        font-weight: 300; }
+      .header .container .feedback .feedback__url {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 10px;
+        display: inline-block;
+        margin-right: 0;
+        text-decoration: none;
+        color: #767676; }
+      .header .container .feedback .feedback__underline {
+        border-top: 2px dashed; }
+
+/*# sourceMappingURL=scssStyles.css.map */
