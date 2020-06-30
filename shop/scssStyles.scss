@@ -47,19 +47,20 @@ $font-family-stack: "PT Sans", sans-serif;
   margin: 0 auto;
 }
 
+.container {
+  @include horizCentered;
+  max-width: $max-width;
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+}
+
 
 .header {
   @include horizCentered;
   padding: 65px;
   color: #767676;
   background-color: #DCDCDC;
-
-  .container {
-    @include horizCentered;
-    max-width: $max-width;
-    position: relative;
-    justify-content: space-between;
-    display: flex;
 
     .company-label {
       font-family: $font-family-stack;
@@ -88,7 +89,6 @@ $font-family-stack: "PT Sans", sans-serif;
           .company-label__slogan {
             font-size: 14px;
           }
-        }
     }
 
     .feedback {
@@ -160,6 +160,52 @@ $font-family-stack: "PT Sans", sans-serif;
       };
       &:hover {
         border-color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+}
+
+.slider {
+  @include horizCentered;
+  height: 400px;
+  background: {
+    repeat: no-repeat;
+    image: url("images/1.png");
+    position: calc(#{50%} - #{20px});
+  };
+
+  .slide {
+    @include horizCentered;
+    display: block;
+    transition: opacity 1s ease-in;
+
+    &:not(.active) {
+      opacity: 0;
+      position: absolute;
+    }
+  }
+
+  .slider__buttons {
+    @include horizCentered;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    .slider__button {
+      background: {
+        image: url("images/arrow.png");
+        repeat: no-repeat;
+      }
+      width: 64px;
+      height: 61px;
+      position: relative;
+      cursor: pointer;
+      top: 50%;
+      &.next {
+        transform: rotate(180deg);
       }
     }
   }
