@@ -86,4 +86,36 @@ table {
       .header .container .feedback .feedback__underline {
         border-top: 2px dashed; }
 
+.main-menu {
+  margin: 0 auto;
+  background-color: #767676;
+  width: auto;
+  font-family: "PT Sans", sans-serif, sans-serif;
+  font-size: 30px; }
+  .main-menu .main-menu__list {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 980px; }
+    .main-menu .main-menu__list li {
+      position: relative; }
+      .main-menu .main-menu__list li:not(:first-child):after {
+        content: "|";
+        position: absolute;
+        top: 30%;
+        color: #fff; }
+    .main-menu .main-menu__list .list__item {
+      color: #fff;
+      display: block;
+      box-sizing: border-box;
+      text-decoration: none;
+      margin: 25px 25px;
+      transition: border-bottom .2s ease-in;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: rgba(255, 255, 255, 0); }
+      .main-menu .main-menu__list .list__item:hover {
+        border-color: white; }
+
 /*# sourceMappingURL=scssStyles.css.map */
