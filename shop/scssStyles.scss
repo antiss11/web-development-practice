@@ -404,3 +404,82 @@ $main-color: #767676;
     content: url("images/basket.png");
     margin-left: 60px;
   }
+
+.main__nav {
+  width: 100%;
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+  .nav__list {
+    @include flexbox;
+    @include justify-content(center);
+  }
+
+  .page__num {
+    font-family: $font-family-stack;
+    font-size: 14px;
+    color: $main-color;
+    margin-right: 20px;
+    text-decoration: none;
+    &:hover {
+      color: #000;
+      font-size: 16px;
+    }
+  }
+
+.container-about-us {
+  @include flexbox;
+  @include justify-content(flex-end);
+  max-width: 980px;
+  margin: 70px auto 0;
+}
+
+  .about-us {
+    @include flexbox;
+    @include justify-content(space-between);
+    font: {
+      size: 14px;
+      family: $font-family-stack;
+    }
+    color: $main-color;
+    width: 80 * 980px / 100;
+  }
+
+  .about-us__company {
+    width: calc(#{50%} - #{15px});
+  }
+
+.footer {
+  background: $main-color;
+  color: #fff;
+  margin-top: 15px;
+  font: {
+    size: 14px;
+    family: $font-family-stack;
+  }
+  padding: 40px 0;
+}
+
+  .footer__container {
+    @include horizCentered;
+    @include flexbox;
+    @include justify-content(space-between);
+    max-width: $max-width;
+  }
+
+  .footer__nav-item {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+
+  .site-development__fig {
+    @include flexbox;
+    @include flex-direction(row);
+  }
+
+  .site-development__description {
+    margin-left: 8px;
+  }

@@ -354,4 +354,106 @@ table {
   content: url("images/basket.png");
   margin-left: 60px; }
 
+.main__nav {
+  width: 100%;
+  grid-row: 3/4;
+  grid-column: 2/3; }
+
+.nav__list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+.page__num {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  color: #767676;
+  margin-right: 20px;
+  text-decoration: none; }
+  .page__num:hover {
+    color: #000;
+    font-size: 16px; }
+
+.container-about-us {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+  max-width: 980px;
+  margin: 70px auto 0; }
+
+.about-us {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+  color: #767676;
+  width: 784px; }
+
+.about-us__company {
+  width: calc(50% - 15px); }
+
+.footer {
+  background: #767676;
+  color: #fff;
+  margin-top: 15px;
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+  padding: 40px 0; }
+
+.footer__container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  max-width: 980px; }
+
+.footer__nav-item {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid; }
+
+.site-development__fig {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.site-development__description {
+  margin-left: 8px; }
+
 /*# sourceMappingURL=scssStyles.css.map */
