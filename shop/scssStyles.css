@@ -67,25 +67,25 @@ table {
         font-weight: bold; }
       .header .company-label .company-label__description .company-label__slogan {
         font-size: 14px; }
-    .header .company-label .feedback {
-      font-family: "Open Sans Condensed", sans-serif;
-      margin-top: -20px;
-      display: flex;
-      flex-flow: column wrap;
-      align-items: flex-end; }
-      .header .company-label .feedback .feedback__phone {
-        font-size: 40px;
-        font-weight: 300; }
-      .header .company-label .feedback .feedback__url {
-        font-size: 24px;
-        font-weight: 700;
-        margin-top: 10px;
-        display: inline-block;
-        margin-right: 0;
-        text-decoration: none;
-        color: #767676; }
-      .header .company-label .feedback .feedback__underline {
-        border-top: 2px dashed; }
+  .header .feedback {
+    font-family: "Open Sans Condensed", sans-serif;
+    margin-top: -20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end; }
+    .header .feedback .feedback__phone {
+      font-size: 40px;
+      font-weight: 300; }
+    .header .feedback .feedback__url {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 10px;
+      display: inline-block;
+      margin-right: 0;
+      text-decoration: none;
+      color: #767676; }
+    .header .feedback .feedback__underline {
+      border-top: 2px dashed; }
 
 .main-menu {
   margin: 0 auto;
@@ -150,5 +150,64 @@ table {
       top: 50%; }
       .slider .slider__buttons .slider__button.next {
         transform: rotate(180deg); }
+
+.submenu .submenu__path-list {
+  display: flex;
+  padding: 5px 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px; }
+  .submenu .submenu__path-list .path-list__item {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #767676; }
+    .submenu .submenu__path-list .path-list__item:hover {
+      text-decoration: underline; }
+
+.aside {
+  font-family: "PT Sans", sans-serif;
+  margin-top: 20px;
+  width: 20%;
+  display: flex;
+  flex-direction: column; }
+  .aside .aside__categories .categories__first-level-list .categories-list__first-level-item {
+    padding-top: 10px;
+    font-size: 18px;
+    color: #767676;
+    text-decoration: none;
+    display: block; }
+    .aside .aside__categories .categories__first-level-list .categories-list__first-level-item:hover {
+      text-decoration: underline; }
+    .aside .aside__categories .categories__first-level-list .categories-list__first-level-item:not(:first-child) {
+      padding-top: 10px; }
+  .aside .aside__categories .categories__first-level-list .categories__second-level-list {
+    height: 0;
+    padding-left: 10px;
+    transition: height .5s ease-out;
+    overflow: hidden; }
+    .aside .aside__categories .categories__first-level-list .categories__second-level-list .categories-list__second-level-item {
+      font-size: 14px;
+      color: #767676;
+      text-decoration: none;
+      display: block;
+      padding: 5px;
+      position: relative; }
+      .aside .aside__categories .categories__first-level-list .categories__second-level-list .categories-list__second-level-item:before {
+        content: "\2022";
+        color: #767676;
+        display: inline-block;
+        position: absolute;
+        left: -5px; }
+      .aside .aside__categories .categories__first-level-list .categories__second-level-list .categories-list__second-level-item:hover {
+        color: #000; }
+
+.pricelist__container {
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 30px; }
 
 /*# sourceMappingURL=scssStyles.css.map */

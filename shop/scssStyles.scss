@@ -67,28 +67,29 @@ $font-family-stack: "PT Sans", sans-serif;
       font-size: 24px;
       display: flex;
 
-        .company-label__logo {
-          width: 100px;
-          height: 100px;
-          background: #767676;
+      .company-label__logo {
+        width: 100px;
+        height: 100px;
+        background: #767676;
+      }
+
+      .company-label__description {
+        margin: 5px 15px 15px;
+        width: 150px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        line-height: .9;
+
+        .company-label__title {
+          font-size: 24px;
+          font-weight: bold;
         }
 
-        .company-label__description {
-          margin: 5px 15px 15px;
-          width: 150px;
-          display: flex;
-          flex-flow: column wrap;
-          justify-content: space-between;
-          line-height: .9;
-
-          .company-label__title {
-            font-size: 24px;
-            font-weight: bold;
-          }
-
-          .company-label__slogan {
-            font-size: 14px;
-          }
+        .company-label__slogan {
+          font-size: 14px;
+        }
+      }
     }
 
     .feedback {
@@ -118,7 +119,6 @@ $font-family-stack: "PT Sans", sans-serif;
       }
     }
   }
-}
 
 .main-menu {
   @include horizCentered;
@@ -210,3 +210,99 @@ $font-family-stack: "PT Sans", sans-serif;
     }
   }
 }
+
+.submenu {
+
+  .submenu__path-list {
+    display: flex;
+    padding: 5px 0;
+    font: {
+      family: $font-family-stack;
+      size: 14px;
+    };
+
+    .path-list__item {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #767676;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.aside {
+  font-family: $font-family-stack;
+  margin-top: 20px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+
+  .aside__categories {
+
+    .categories__first-level-list {
+
+      .categories-list__first-level-item {
+        padding-top: 10px;
+        font-size: 18px;
+        color: #767676;
+        text-decoration: none;
+        display: block;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:not(:first-child) {
+          padding-top: 10px;
+        }
+      }
+
+        .categories__second-level-list {
+          height: 0;
+          padding-left: 10px;
+          transition: height .5s ease-out;
+          overflow: hidden;
+
+          .categories-list__second-level-item {
+            font-size: 14px;
+            color: #767676;
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+            position: relative;
+            &:before {
+              content: "\2022";
+              color: #767676;
+              display: inline-block;
+              position: absolute;
+              left: -5px;
+            }
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pricelist__container {
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font: {
+      family: $font-family-stack;
+      weight: bold;
+      size: 30px;
+    }
+
+
+    .pricelist__url {
+
+    }
+    .pricelist__decription {
+
+    }
+  }
