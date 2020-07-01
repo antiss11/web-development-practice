@@ -42,6 +42,7 @@ table {
 
 $max-width: 980px;
 $font-family-stack: "PT Sans", sans-serif;
+$main-color: #767676;
 
 @mixin horizCentered {
   margin: 0 auto;
@@ -99,19 +100,26 @@ $font-family-stack: "PT Sans", sans-serif;
   align-content: $align;
 }
 
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+  -moz-align-self: $align;
+  -ms-align-self: $align;
+  align-self: $align;
+}
+
 .container {
   @include horizCentered;
   @include flexbox;
+  @include justify-content(space-between);
   max-width: $max-width;
   position: relative;
-  justify-content: space-between;
 }
 
 
 .header {
   @include horizCentered;
   padding: 65px;
-  color: #767676;
+  color: $main-color;
   background-color: #DCDCDC;
 }
 
@@ -124,15 +132,16 @@ $font-family-stack: "PT Sans", sans-serif;
       .company-label__logo {
         width: 100px;
         height: 100px;
-        background: #767676;
+        background: $main-color;
       }
 
       .company-label__description {
         @include flexbox;
+        @include flex-direction(column);
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
         margin: 5px 15px 15px;
         width: 150px;
-        flex-flow: column wrap;
-        justify-content: space-between;
         line-height: .9;
       }
 
@@ -147,10 +156,12 @@ $font-family-stack: "PT Sans", sans-serif;
 
     .feedback {
       @include flexbox;
+      @include align-items(flex-end);
+      @include flex-direction(column);
+      @include flex-wrap(wrap);
+      @include align-items(flex-end);
       font-family: "Open Sans Condensed", sans-serif;
       margin-top: -20px;
-      flex-flow: column wrap;
-      align-items: flex-end;
     }
 
       .feedback__phone {
@@ -165,7 +176,7 @@ $font-family-stack: "PT Sans", sans-serif;
         display: inline-block;
         margin-right: 0;
         text-decoration: none;
-        color: #767676;
+        color: $main-color;
       }
 
       .feedback__underline {
@@ -174,7 +185,7 @@ $font-family-stack: "PT Sans", sans-serif;
 
 .main-menu {
   @include horizCentered;
-  background-color: #767676;
+  background-color: $main-color;
   width: auto;
   font: {
     family: $font-family-stack, sans-serif;
@@ -185,8 +196,8 @@ $font-family-stack: "PT Sans", sans-serif;
   .main-menu__list {
     @include horizCentered;
     @include flexbox;
-    justify-content: center;
-    align-items: center;
+    @include justify-content(center);
+    @include align-items(center);
     max-width: $max-width
   }
 
@@ -242,7 +253,7 @@ $font-family-stack: "PT Sans", sans-serif;
   .slider__buttons {
     @include horizCentered;
     @include flexbox;
-    justify-content: space-between;
+    @include justify-content(space-between);
     position: absolute;
     top: 50%;
     left: 0;
@@ -278,7 +289,7 @@ $font-family-stack: "PT Sans", sans-serif;
   .path-list__item {
     margin-right: 10px;
     text-decoration: none;
-    color: #767676;
+    color: $main-color;
     &:hover {
       text-decoration: underline;
     }
@@ -286,16 +297,16 @@ $font-family-stack: "PT Sans", sans-serif;
 
 .aside {
   @include flexbox;
+  @include flex-direction(column);
   font-family: $font-family-stack;
   margin-top: 20px;
   width: 20%;
-  flex-direction: column;
 }
 
   .categories-list__first-level-item {
     padding-top: 10px;
     font-size: 18px;
-    color: #767676;
+    color: $main-color;
     text-decoration: none;
     display: block;
     &:hover {
@@ -315,14 +326,14 @@ $font-family-stack: "PT Sans", sans-serif;
 
   .categories-list__second-level-item {
     font-size: 14px;
-    color: #767676;
+    color: $main-color;
     text-decoration: none;
     display: block;
     padding: 5px;
     position: relative;
     &:before {
       content: "\2022";
-      color: #767676;
+      color: $main-color;
       display: inline-block;
       position: absolute;
       left: -5px;
@@ -334,16 +345,62 @@ $font-family-stack: "PT Sans", sans-serif;
 
   .pricelist__container {
     @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include align-content(flex-start);
     margin-top: 110px;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
     font: {
       family: $font-family-stack;
       weight: bold;
       size: 30px;
     }
+    align-self: flex-start;
   }
 
+.main {
+  font-family: $font-family-stack;
+  margin-top: 20px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr) auto;
+}
 
+  .product {
+    padding: 20px;
+    float: left;
+    background-color: #DCDCDC;
+    margin-bottom: 20px;
+    margin-right: 15px;
+  }
 
+  .product__fig {
+
+  }
+
+  .product_photo {
+
+  }
+
+  .product__info {
+    font-size: 18px;
+    color: #8E8E8E;
+    margin: 20px 0 55px;
+  }
+
+  .product__price {
+    display: inline-block;
+    font: {
+      size: 28px;
+      weight: bold;
+    }
+  }
+
+  .product__basket {
+    display: inline-block;
+  }
+
+  .basket__link:before {
+    content: url("images/basket.png");
+    margin-left: 60px;
+  }
