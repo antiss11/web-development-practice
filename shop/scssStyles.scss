@@ -47,12 +47,64 @@ $font-family-stack: "PT Sans", sans-serif;
   margin: 0 auto;
 }
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+  -moz-flex-flow: $flow;
+  -ms-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+}
+
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
 .container {
   @include horizCentered;
+  @include flexbox;
   max-width: $max-width;
   position: relative;
   justify-content: space-between;
-  display: flex;
 }
 
 
@@ -61,11 +113,13 @@ $font-family-stack: "PT Sans", sans-serif;
   padding: 65px;
   color: #767676;
   background-color: #DCDCDC;
+}
 
     .company-label {
+      @include flexbox;
       font-family: $font-family-stack;
       font-size: 24px;
-      display: flex;
+    }
 
       .company-label__logo {
         width: 100px;
@@ -74,12 +128,13 @@ $font-family-stack: "PT Sans", sans-serif;
       }
 
       .company-label__description {
+        @include flexbox;
         margin: 5px 15px 15px;
         width: 150px;
-        display: flex;
         flex-flow: column wrap;
         justify-content: space-between;
         line-height: .9;
+      }
 
         .company-label__title {
           font-size: 24px;
@@ -89,15 +144,14 @@ $font-family-stack: "PT Sans", sans-serif;
         .company-label__slogan {
           font-size: 14px;
         }
-      }
-    }
 
     .feedback {
+      @include flexbox;
       font-family: "Open Sans Condensed", sans-serif;
       margin-top: -20px;
-      display: flex;
       flex-flow: column wrap;
       align-items: flex-end;
+    }
 
       .feedback__phone {
         font-size: 40px;
@@ -117,8 +171,6 @@ $font-family-stack: "PT Sans", sans-serif;
       .feedback__underline {
         border-top: 2px dashed;
       }
-    }
-  }
 
 .main-menu {
   @include horizCentered;
@@ -128,15 +180,17 @@ $font-family-stack: "PT Sans", sans-serif;
     family: $font-family-stack, sans-serif;
     size: 30px;
   }
+}
 
   .main-menu__list {
     @include horizCentered;
-    display: flex;
+    @include flexbox;
     justify-content: center;
     align-items: center;
-    max-width: $max-width;
+    max-width: $max-width
+  }
 
-    li {
+  .main-menu li {
       position: relative;
       &:not(:first-child):after {
         content: "|";
@@ -162,8 +216,7 @@ $font-family-stack: "PT Sans", sans-serif;
         border-color: rgba(255, 255, 255, 1);
       }
     }
-  }
-}
+
 
 .slider {
   @include horizCentered;
@@ -172,13 +225,14 @@ $font-family-stack: "PT Sans", sans-serif;
     repeat: no-repeat;
     image: url("images/1.png");
     position: calc(#{50%} - #{20px});
-  };
+  }
+}
+
 
   .slide {
     @include horizCentered;
     display: block;
     transition: opacity 1s ease-in;
-
     &:not(.active) {
       opacity: 0;
       position: absolute;
@@ -187,12 +241,13 @@ $font-family-stack: "PT Sans", sans-serif;
 
   .slider__buttons {
     @include horizCentered;
-    display: flex;
+    @include flexbox;
     justify-content: space-between;
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
+  }
 
     .slider__button {
       background: {
@@ -208,87 +263,78 @@ $font-family-stack: "PT Sans", sans-serif;
         transform: rotate(180deg);
       }
     }
+
+
+
+.submenu__path-list {
+  @include flexbox;
+  padding: 5px 0;
+  font: {
+    family: $font-family-stack;
+    size: 14px;
   }
 }
 
-.submenu {
-
-  .submenu__path-list {
-    display: flex;
-    padding: 5px 0;
-    font: {
-      family: $font-family-stack;
-      size: 14px;
-    };
-
-    .path-list__item {
-      margin-right: 10px;
-      text-decoration: none;
-      color: #767676;
-      &:hover {
-        text-decoration: underline;
-      }
+  .path-list__item {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #767676;
+    &:hover {
+      text-decoration: underline;
     }
   }
-}
 
 .aside {
+  @include flexbox;
   font-family: $font-family-stack;
   margin-top: 20px;
   width: 20%;
-  display: flex;
   flex-direction: column;
+}
 
-  .aside__categories {
+  .categories-list__first-level-item {
+    padding-top: 10px;
+    font-size: 18px;
+    color: #767676;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:not(:first-child) {
+      padding-top: 10px;
+    }
+  }
 
-    .categories__first-level-list {
+  .categories__second-level-list {
+    height: 0;
+    padding-left: 10px;
+    transition: height .5s ease-out;
+    overflow: hidden;
+  }
 
-      .categories-list__first-level-item {
-        padding-top: 10px;
-        font-size: 18px;
-        color: #767676;
-        text-decoration: none;
-        display: block;
-        &:hover {
-          text-decoration: underline;
-        }
-        &:not(:first-child) {
-          padding-top: 10px;
-        }
-      }
-
-        .categories__second-level-list {
-          height: 0;
-          padding-left: 10px;
-          transition: height .5s ease-out;
-          overflow: hidden;
-
-          .categories-list__second-level-item {
-            font-size: 14px;
-            color: #767676;
-            text-decoration: none;
-            display: block;
-            padding: 5px;
-            position: relative;
-            &:before {
-              content: "\2022";
-              color: #767676;
-              display: inline-block;
-              position: absolute;
-              left: -5px;
-            }
-            &:hover {
-              color: #000;
-            }
-          }
-        }
-      }
+  .categories-list__second-level-item {
+    font-size: 14px;
+    color: #767676;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    position: relative;
+    &:before {
+      content: "\2022";
+      color: #767676;
+      display: inline-block;
+      position: absolute;
+      left: -5px;
+    }
+    &:hover {
+      color: #000;
     }
   }
 
   .pricelist__container {
+    @include flexbox;
     margin-top: 110px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -297,12 +343,7 @@ $font-family-stack: "PT Sans", sans-serif;
       weight: bold;
       size: 30px;
     }
-
-
-    .pricelist__url {
-
-    }
-    .pricelist__decription {
-
-    }
   }
+
+
+
