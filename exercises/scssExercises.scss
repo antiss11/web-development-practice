@@ -1,0 +1,192 @@
+/*
+  Write the following CSS using nested rules:
+*/
+a {
+  text-decoration: none;
+}
+
+a::hover {
+  text-decoration: underline;
+}
+
+/*
+  Solution:
+*/
+a {
+  text-decoration: none;
+  &::hover {
+    text-decoration: underline;
+  }
+}
+
+/*
+  Write the following CSS using an SCSS mixin:
+*/
+.box-square {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+      -ms-border-radius: 0;
+          border-radius: 0;
+}
+
+.box-rounded {
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+          border-radius: 10px;
+}
+
+/* Solution */
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  border-radius: $value;
+}
+
+.box-square {
+  @include border-radius(0);
+}
+
+.box-rounded {
+  @include border-radius(10px);
+}
+
+
+/*
+  Write the following rules using SCSS's nesting syntax:
+*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+/*
+  Solution
+*/
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+/*
+  Write the following CSS using the SCSS "extends" keyword:
+*/
+.success {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  border-color: green;
+}
+
+.error {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  border-color: red;
+}
+
+.warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  border-color: yellow;
+}
+
+/* Solution */
+
+.success {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  border-color: green;
+}
+
+.error {
+  @extend .success;
+  border-bolor: red;
+}
+
+.warning {
+  @extend .success;
+  border-color: yellow;
+}
+
+/*
+  Write the following CSS using an SCSS "each" directive and a "map" (similar to an object in JS)
+*/
+h1 {
+  color: darkorange;
+}
+
+h2 {
+  color: royalblue;
+}
+
+h3 {
+  color: springgreen;
+}
+
+/* Solution */
+$colors: (h1: darkorange, h2: royalblue, h3: springgreen);
+@each $h, $color in $colors {
+  #{$h} {color: $color;}
+}
+/*
+  Write the following CSS using the SCSS "extends" keyword and variables representing the color values:
+*/
+a.twitter {
+  min-width: 100px;
+  padding: 1em;
+  border-radius: 1em;
+  background: #55acee;
+  color: #fff;
+}
+
+span.facebook {
+  min-width: 100px;
+  padding: 1em;
+  border-radius: 1em;
+  background: #3b5998;
+  color: #fff;
+}
+
+/* Solution */
+
+$twitterBackgroundColor: #55acee;
+$facebookBackgroundColor: #3b5998;
+
+a.twitter {
+  min-width: 100px;
+  padding: 1em;
+  border-radius: 1em;
+  background: $twitterBackgroundColor;
+  color: #fff;
+}
+
+span.facebook {
+  @extend .twitter;
+  background: $facebookBackgroundColor;
+}
