@@ -107,6 +107,7 @@ $main-color: #767676;
   align-self: $align;
 }
 
+
 .container {
   @include horizCentered;
   @include flexbox;
@@ -165,16 +166,19 @@ $main-color: #767676;
     }
 
       .feedback__phone {
-        font-size: 40px;
-        font-weight: 300;
+        font: {
+          size: 40px;
+          weight: 300;
+        }
       }
 
       .feedback__url {
-        font-size: 24px;
-        font-weight: 700;
-        margin-top: 10px;
+        font: {
+          size: 24px;
+          weight: 700;
+        }
+        margin: 10px 0 0 0;
         display: inline-block;
-        margin-right: 0;
         text-decoration: none;
         color: $main-color;
       }
@@ -217,7 +221,11 @@ $main-color: #767676;
       box-sizing: border-box;
       text-decoration: none;
       margin: 25px 25px;
-      transition: border-bottom .2s ease-in;
+      transition: {
+        property: border-bottom;
+        delay: .2s;
+        timing-function: ease-in;
+      }
       border-bottom: {
         width: 2px;
         style: solid;
@@ -374,14 +382,6 @@ $main-color: #767676;
     margin-right: 15px;
   }
 
-  .product__fig {
-
-  }
-
-  .product_photo {
-
-  }
-
   .product__info {
     font-size: 18px;
     color: #8E8E8E;
@@ -417,8 +417,10 @@ $main-color: #767676;
   }
 
   .page__num {
-    font-family: $font-family-stack;
-    font-size: 14px;
+    font: {
+      family: $font-family-stack;
+      size: 14px;
+    }
     color: $main-color;
     margin-right: 20px;
     text-decoration: none;

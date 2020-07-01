@@ -134,9 +134,8 @@ table {
 .feedback__url {
   font-size: 24px;
   font-weight: 700;
-  margin-top: 10px;
+  margin: 10px 0 0 0;
   display: inline-block;
-  margin-right: 0;
   text-decoration: none;
   color: #767676; }
 
@@ -183,7 +182,9 @@ table {
   box-sizing: border-box;
   text-decoration: none;
   margin: 25px 25px;
-  transition: border-bottom .2s ease-in;
+  transition-property: border-bottom;
+  transition-delay: .2s;
+  transition-timing-function: ease-in;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: rgba(255, 255, 255, 0); }
