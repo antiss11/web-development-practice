@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+:root {
+  font-size: 14px;
+}
+
+$defaultFont: normal 1em/2 "Roboto", sans-serif;
+$darkFontColor: #1C2B2F;
+$headerFontSize: 2.5em;
+$pMargin: 45px 0;
+
+@mixin buttonInputStyle($borderColor, $fontColor) {
+  border-style: solid;
+  background-color: transparent;
+  border: {
+    color: $borderColor;
+    radius: 5px;
+    width: 1px;
+  }
+  color: $fontColor;
+  font: $defaultFont;
+  padding: 10px 25px;
+}
+
+
+
+.body {
+  font: $defaultFont;
+  display: grid;
+}
+
+.about {
+  //padding: 10px;
+}
+
+  .about__header {
+    font-size: $headerFontSize;
+    font-weight: 300;
+    color: $darkFontColor;
+    margin: 60px 0;
+  }
+
+  .about__text {
+    margin: $pMargin;
+  }
+
+.we-doing {
+  color: #fff;
+  background: {
+    image: url("images/Rectangle 1 copy 2.png");
+    repeat: no-repeat;
+    size: cover;
+  };
+}
+
+  .we-doing__header {
+    font-size: $headerFontSize;
+    margin-top: 90px;
+  }
+
+  .we-doing__text {
+    margin: $pMargin;
+  }
+
+.our-history {
+  color: $darkFontColor;
+  background: url("images/Rectangle 2.png");
+}
+
+  .our-history__header {
+    font-size: $headerFontSize;
+  }
+
+  .our-history__text {
+    margin: $pMargin;
+  }
+
+  .our-history__view {
+    @include buttonInputStyle($darkFontColor, $darkFontColor);
+  }
+
+.verified {
+  color: #fff;
+  background: {
+    image: url("images/Rectangle 1 copy.png");
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+
+  .verified__header {
+    font-size: $headerFontSize;
+    margin-top: 90px;
+  }
+
+  .verified__text {
+    margin: $pMargin;
+  }
+
+  .verified__button {
+    @include buttonInputStyle(#fff, #fff);
+  }
+
+.page-design {
+  background: url("images/Rectangle 2 copy.png");
+  color: #fff;
+}
+
+  .page-design__header {
+    font-size: $headerFontSize;
+    margin-bottom: 260px;
+  }
+
+  .page-design__name {
+    font-size: 2.5em;
+  }
+
+.contact {
+  background: url("images/Rectangle 3.png");
+  position: relative;
+  color: #fff;
+}
+
+  .contact__header {
+    font-size: $headerFontSize;
+  }
+
+  .contact__input {
+    @include buttonInputStyle(#fff, #fff);
+    background: transparent;
+    color: #fff;
+    margin: 10px 0;
+    &::placeholder {
+      color: #fff;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+
+.address_button {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: block;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.address_description {
+  margin-top: 45px;
+}
+
+.media-label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.social__container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.facebook_button {
+  background: #035BB8;
+}
+
+.dribbble_button {
+  background: #FF4699;
+}
+
+.twitter_button {
+  background: #00B5FF;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.nav {
+  position: sticky;
+  top: 15px;
+}
+
+.navigation__hamburger {
+  height: 3px;
+  width: 33px;
+  background: $darkFontColor;
+  position: absolute;
+  right: 13px;
+  top: 3px;
+  &:before, &:after {
+    content: " ";
+    display: block;
+    width: 33px;
+    height: 3px;
+    background: $darkFontColor;
+    position: absolute;
+  }
+  &:before {
+    top: 8px;
+  }
+  &:after {
+    top: 16px;
+  }
+}
+
+//.menu-toggle {
+//  //position: sticky;
+//}
+
+.menu-toggle__input {
+  right: 10px;
+  top: -1px;
+  position: absolute;
+  width: 35px;
+  height: 22px;
+  opacity: 0;
+  z-index: 1;
+}
+
+
+@media all and (max-width: 500px) {
+
+  $mobilePadding: 2em 2.5em;
+
+  @mixin mobilePadding {
+    padding: $mobilePadding;
+  }
+
+
+  .body {
+    grid-template-rows: 0 50vh;
+    grid-auto-rows: min-content;
+    grid-template-columns: 100vw;
+  }
+
+  .main-image {
+    overflow: hidden;
+  }
+
+  .main-image__image {
+    object-fit: cover;
+  }
+
+  .about {
+    @include mobilePadding;
+  }
+
+  .we-doing {
+    @include mobilePadding;
+  }
+
+  .our-history {
+    @include mobilePadding;
+  }
+
+  .verified {
+    @include mobilePadding;
+  }
+
+  .page-design {
+    @include mobilePadding;
+    padding-bottom: 70px;
+  }
+
+  .contact {
+    @include mobilePadding;
+  }
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
