@@ -43,9 +43,11 @@ table {
   font-size: 14px;
 }
 
-$defaultFont: normal 1em/2 "Roboto", sans-serif;
+$defaultFont: normal 18px/2 "Roboto", sans-serif;
 $darkFontColor: #1C2B2F;
-$headerFontSize: 2.5em;
+$mediumHeaderFontSize: 40px;
+$largeHeaderFontSize: 45px;
+$mediumFontSize: 42px;
 $pMargin: 45px 0;
 
 @mixin buttonInputStyle($borderColor, $fontColor) {
@@ -68,12 +70,8 @@ $pMargin: 45px 0;
   display: grid;
 }
 
-.about {
-  //padding: 10px;
-}
-
   .about__header {
-    font-size: $headerFontSize;
+    font-size: $largeHeaderFontSize;
     font-weight: 300;
     color: $darkFontColor;
     margin: 60px 0;
@@ -93,7 +91,7 @@ $pMargin: 45px 0;
 }
 
   .we-doing__header {
-    font-size: $headerFontSize;
+    font-size: $largeHeaderFontSize;
     margin-top: 90px;
   }
 
@@ -107,7 +105,7 @@ $pMargin: 45px 0;
 }
 
   .our-history__header {
-    font-size: $headerFontSize;
+    font-size: $largeHeaderFontSize;
   }
 
   .our-history__text {
@@ -119,6 +117,7 @@ $pMargin: 45px 0;
   }
 
 .verified {
+  font-size: .865em;
   color: #fff;
   background: {
     image: url("images/Rectangle 1 copy.png");
@@ -128,7 +127,7 @@ $pMargin: 45px 0;
 }
 
   .verified__header {
-    font-size: $headerFontSize;
+    font-size: $largeHeaderFontSize;
     margin-top: 90px;
   }
 
@@ -141,17 +140,22 @@ $pMargin: 45px 0;
   }
 
 .page-design {
-  background: url("images/Rectangle 2 copy.png");
+  background: url("images/Rectangle 2 copy.png") no-repeat;
+  background-size: cover;
   color: #fff;
 }
 
   .page-design__header {
-    font-size: $headerFontSize;
     margin-bottom: 260px;
+    font-size: $largeHeaderFontSize;
   }
 
   .page-design__name {
-    font-size: 2.5em;
+    font-size: $mediumFontSize;
+  }
+
+  .page-design__description {
+    font-size: .92em;
   }
 
 .contact {
@@ -161,7 +165,7 @@ $pMargin: 45px 0;
 }
 
   .contact__header {
-    font-size: $headerFontSize;
+    font-size: $largeHeaderFontSize;
   }
 
   .contact__input {
@@ -176,8 +180,6 @@ $pMargin: 45px 0;
       outline: none;
     }
   }
-
-
 
 .address_button {
   width: 45px;
@@ -250,10 +252,6 @@ $pMargin: 45px 0;
   }
 }
 
-//.menu-toggle {
-//  //position: sticky;
-//}
-
 .menu-toggle__input {
   right: 10px;
   top: -1px;
@@ -265,7 +263,7 @@ $pMargin: 45px 0;
 }
 
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
 
   $mobilePadding: 2em 2.5em;
 
