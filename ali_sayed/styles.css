@@ -1,0 +1,247 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+:root {
+  font-size: 14px; }
+
+.body {
+  font: normal 18px/2 "Roboto", sans-serif;
+  display: grid; }
+
+.about__header {
+  font-size: 45px;
+  font-weight: 300;
+  color: #1C2B2F;
+  margin: 60px 0; }
+
+.about__text {
+  margin: 45px 0; }
+
+.we-doing {
+  color: #fff;
+  background-image: url("images/Rectangle 1 copy 2.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.we-doing__header {
+  font-size: 45px;
+  margin-top: 90px; }
+
+.we-doing__text {
+  margin: 45px 0; }
+
+.our-history {
+  color: #1C2B2F;
+  background: url("images/Rectangle 2.png"); }
+
+.our-history__header {
+  font-size: 45px; }
+
+.our-history__text {
+  margin: 45px 0; }
+
+.our-history__view {
+  border-style: solid;
+  background-color: transparent;
+  border-color: #1C2B2F;
+  border-radius: 5px;
+  border-width: 1px;
+  color: #1C2B2F;
+  font: normal 18px/2 "Roboto", sans-serif;
+  padding: 10px 25px; }
+
+.verified {
+  font-size: .865em;
+  color: #fff;
+  background-image: url("images/Rectangle 1 copy.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.verified__header {
+  font-size: 45px;
+  margin-top: 90px; }
+
+.verified__text {
+  margin: 45px 0; }
+
+.verified__button {
+  border-style: solid;
+  background-color: transparent;
+  border-color: #fff;
+  border-radius: 5px;
+  border-width: 1px;
+  color: #fff;
+  font: normal 18px/2 "Roboto", sans-serif;
+  padding: 10px 25px; }
+
+.page-design {
+  background: url("images/Rectangle 2 copy.png") no-repeat;
+  background-size: cover;
+  color: #fff; }
+
+.page-design__header {
+  margin-bottom: 260px;
+  font-size: 45px; }
+
+.page-design__name {
+  font-size: 42px; }
+
+.page-design__description {
+  font-size: .92em; }
+
+.contact {
+  background: url("images/Rectangle 3.png");
+  position: relative;
+  color: #fff; }
+
+.contact__header {
+  font-size: 45px; }
+
+.contact__input {
+  border-style: solid;
+  background-color: transparent;
+  border-color: #fff;
+  border-radius: 5px;
+  border-width: 1px;
+  color: #fff;
+  font: normal 18px/2 "Roboto", sans-serif;
+  padding: 10px 25px;
+  background: transparent;
+  color: #fff;
+  margin: 10px 0; }
+  .contact__input::placeholder {
+    color: #fff; }
+  .contact__input:focus {
+    outline: none; }
+
+.address_button {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: block;
+  margin-right: 5px;
+  border-radius: 5px; }
+
+.address_description {
+  margin-top: 45px; }
+
+.media-label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.social__container {
+  display: flex;
+  margin: 20px 0; }
+
+.facebook_button {
+  background: #035BB8; }
+
+.dribbble_button {
+  background: #FF4699; }
+
+.twitter_button {
+  background: #00B5FF; }
+
+.strong {
+  font-weight: bold; }
+
+.nav {
+  position: sticky;
+  top: 15px; }
+
+.navigation__hamburger {
+  height: 3px;
+  width: 33px;
+  background: #1C2B2F;
+  position: absolute;
+  right: 13px;
+  top: 3px; }
+  .navigation__hamburger:before, .navigation__hamburger:after {
+    content: " ";
+    display: block;
+    width: 33px;
+    height: 3px;
+    background: #1C2B2F;
+    position: absolute; }
+  .navigation__hamburger:before {
+    top: 8px; }
+  .navigation__hamburger:after {
+    top: 16px; }
+
+@media all and (max-width: 768px) {
+  .body {
+    grid-template-rows: 0 50vh;
+    grid-auto-rows: min-content;
+    grid-template-columns: 100vw; }
+  .main-image {
+    overflow: hidden; }
+  .main-image__image {
+    object-fit: cover; }
+  .about {
+    padding: 2em 2.5em; }
+  .we-doing {
+    padding: 2em 2.5em; }
+  .our-history {
+    padding: 2em 2.5em; }
+  .verified {
+    padding: 2em 2.5em; }
+  .page-design {
+    padding: 2em 2.5em;
+    padding-bottom: 70px; }
+  .contact {
+    padding: 2em 2.5em; }
+  .contact__form {
+    display: flex;
+    flex-direction: column; }
+  .menu-toggle__input {
+    right: 10px;
+    top: -1px;
+    position: absolute;
+    width: 35px;
+    height: 22px;
+    opacity: 0;
+    z-index: 1; } }
+
+@media all and (min-width: 768px) {
+  .body {
+    grid-template-areas: "main-image about" "we-doing our-history" "we-doing verified" "page-design contact"; }
+  .main-image {
+    grid-area: main-image; } }
