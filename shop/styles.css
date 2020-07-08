@@ -49,10 +49,6 @@ table {
 }
 
 
-header {
-    padding: 65px;
-}
-
 .container {
     max-width: 980px;
     display: flex;
@@ -63,6 +59,7 @@ header {
 
 
 .header {
+    padding: 65px;
     margin: 0 auto;
     color: var(--brand-color);
     background-color: #DCDCDC;
@@ -78,6 +75,8 @@ header {
         flex-flow: column wrap;
         justify-content: space-between;
         line-height: .9;
+        margin: 5px 15px 15px;
+        width: 150px;
     }
 
 
@@ -93,8 +92,7 @@ header {
     }
 
     .company-label__description {
-        margin: 5px 15px 15px;
-        width: 150px;
+
     }
 
     .company-label__slogan {
@@ -187,11 +185,6 @@ header {
     position: absolute;
 }
 
-.slider__container {
-    max-width: 980px;
-}
-
-
 .slider__buttons {
     display: flex;
     justify-content: space-between;
@@ -252,8 +245,7 @@ header {
     position: relative;
 }
 
-.categories-list__first-level-item:hover,
-.categories-list__second-level-item:hover {
+.categories-list__first-level-item:hover {
     color: #767676;
     text-decoration: underline;
 }
@@ -408,7 +400,7 @@ header {
     display: flex;
     justify-content: space-between;
 }
-}
+
 
 .footer__nav-item {
     color: #fff;

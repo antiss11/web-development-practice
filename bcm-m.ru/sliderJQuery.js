@@ -1,55 +1,62 @@
 $(function() {
-    let sliderWidth = $(".we").width();       
+    let sliderWidth = $(".slider_main_container").width();       
     // const $sliderBody = $(".we_slider");
     // const len = $("slide").length;
     const animTime = 200;    
 
     initialSlider();   
-    initialButtons(); 
+    initialButtons();
     
     function initialSlider() {
         $(".slide").each(function() {
             $(this).css("transform", "translateX(-" + sliderWidth + "px)");            
         });
-        $(".we_tab:first").click(function() {
-            $(".slider_wrapper:last").removeClass("active");
-            $(".slider_wrapper:first").addClass("active"); 
-            $(".we_tab:last").removeClass("active");
-            $(".we_tab:first").addClass("active");           
+        $(".slider_tab:first").on("click", function() {
+            $(".slider_wrapper.we:last").removeClass("active");
+            $(".slider_wrapper.we:first").addClass("active");
+            $(".slider_tab:last").removeClass("active");
+            $(".slider_tab:first").addClass("active");           
         }); 
 
-        $(".we_tab:last").click(function() {
-            $(".slider_wrapper:first").removeClass("active");
-            $(".slider_wrapper:last").addClass("active");
-            $(".we_tab:first").removeClass("active");
-            $(".we_tab:last").addClass("active");
+        $(".slider_tab:last").on("click", function() {
+            $(".slider_wrapper.we:first").removeClass("active");
+            $(".slider_wrapper.we:last").addClass("active");
+            $(".slider_tab:first").removeClass("active");
+            $(".slider_tab:last").addClass("active");
         });
+        $(".slider_wrapper").height($(".slide").outerHeight());
     }
 
     function initialButtons() {
-        $(".slider_button.prev").click(prev);
-        $(".slider_button.next").click(next);
+        let $weSlidersContainer = $(".slider_main_container.we");
+        // let $projectsSlider = $
+        $(".slider_button.we.prev").on("click", prev.bind($weSlidersContainer));
+        $(".slider_button.we.next").on("click", next.bind($weSlidersContainer));
     }
 
     
     function resizeCallback(currentSlideN) {
-        sliderWidth = $(".we").width();
+        sliderWidth = $(".slider_main_container").width();
     }
 
-    function prev() {      
-        let $slides = $(".slider_wrapper.active .slide");
+    function prev() {
+        let $activeSliderWrapper = $(this).find(".slider_wrapper.active");
+        // let $slides = $(this).find(".slider_wrapper.active .slide");
+        let $slides = $activeSliderWrapper.find(".slide");
         let offset = sliderWidth;
-        $slides.each(function() {  
+        $slides.each(function() {
             $(this).animate({
                 "left": offset
             }, animTime)
             offset += sliderWidth;
         });
-        prependLastSlide()      
+        prependLastSlide($activeSliderWrapper);
     }
 
-    function next() {      
-        let $slides = $(".slider_wrapper.active .slide");
+    function next() {
+        let $activeSliderWrapper = $(this).find(".slider_wrapper.active");
+        // let $slides = $(this).find(".slider_wrapper.active .slide");
+        let $slides = $activeSliderWrapper.find(".slide");
         let offset = -sliderWidth;
         $slides.each(function() {  
             $(this).animate({
@@ -57,25 +64,29 @@ $(function() {
             }, animTime)
             offset += sliderWidth;
         });
-        appendFistSlide(); 
+        appendFistSlide($activeSliderWrapper);
     }
 
   
-    function prependLastSlide() {
-        let $lastSlide = $(".slider_wrapper.active .slide:last");      
-        let firstSlideOffset = $(".slider_wrapper.active .slide:first").offset();
-        firstSlideOffset.right -= sliderWidth; 
+    function prependLastSlide(sliderWrapper) {
+        let $lastSlide = $(sliderWrapper).find(".slide:last");
+        let firstSlideOffset = $(sliderWrapper).find(".slide:first").offset();
+        firstSlideOffset.right -= sliderWidth;
         $lastSlide.finish();
         $lastSlide.offset(firstSlideOffset);
-        $lastSlide.prependTo(".slider_wrapper.active .we_slider");
+        $lastSlide.prependTo(sliderWrapper);
     }
 
-    function appendFistSlide() {
-        let $firstSlide = $(".slider_wrapper.active .slide:first");      
-        let lastSlideOffset = $(".slider_wrapper.active .slide:last").offset();
-        lastSlideOffset.left += sliderWidth; 
+    function appendFistSlide(sliderWrapper) {
+        // let $firstSlide = $(".slider_wrapper.active .slide:first");
+        // let lastSlideOffset = $(".slider_wrapper.active .slide:last").offset();
+        let $firstSlide = $(sliderWrapper).find(".slide:first");
+        let lastSlideOffset = $(sliderWrapper).find(".slide:last").offset();
+        // console.log(lastSlideOffset)
+        lastSlideOffset.left += sliderWidth;
         $firstSlide.finish();
         $firstSlide.offset(lastSlideOffset);
-        $firstSlide.appendTo(".slider_wrapper.active .we_slider");
+        $firstSlide.appendTo(sliderWrapper);
+        // $firstSlide.appendTo(".slider_wrapper.active .slider_body");
     }  
 });

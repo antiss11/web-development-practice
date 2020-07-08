@@ -519,17 +519,15 @@ input:focus::placeholder, text:focus::placeholder {
         margin: 20px 0;
     }
 
-.we {
+/* .we {
     position: relative;
-    margin: 30px 0;
-    max-width: 860px;
-    border: 5px solid red;
+    margin: 30px 0;    
     width: 90vw;
-}
+} */
 
 
 
-    .we_tabs {
+    .slider_tabs {
         display: table;
         line-height: 2;
         border-collapse: collapse;
@@ -538,48 +536,76 @@ input:focus::placeholder, text:focus::placeholder {
     }
 
 
-    .we_tab {
+    .slider_tab {
         display: table-cell;
         font-size: 28px;
         text-align: center;
         text-decoration: none;
         color: var(--brand-color);
         border: 2px solid var(--border-color);
+        cursor: pointer; 
     }
 
-    .we_tab.active {
+    .slider_tab.active {
         border-bottom: 4px solid var(--brand-color);
+        cursor: default;
     }
+
+
+.slider_main_container {
+    max-width: 860px;
+    top: 50px;
+    position: relative;
+    /* overflow: auto; */
+    min-height: 100%;
+    margin: 50px 0;
+}
+
 
 .slider_wrapper {   
     margin-top: 10px;  
     position: relative;
-    height: 35vh;
-    /* overflow: hidden; */
+    min-height: 100%;
+    overflow: hidden;
     display: none;
 }
 
-.we_slider {
-    position: relative;
-    width: 90
-    /* transition: transform 2s; */    
+.slider_main_container.we .slider_wrapper:after {
+    content: "";
+    display: block;
+    background: linear-gradient(90deg, #fff 40%, rgba(0,0,0,0));
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /*clear: both;*/
+    /* left: 0; */
 }
+
 
     .slider_wrapper.active {
         display: block;
+    }
+
+    .slider_buttons {
+        position: absolute;
+        width: 100%;
+        top: 250px;
     }
 
 
     .slider_button {
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: 0 0;
+        /* background-position: 0 0; */
         position: absolute;
-        top: 30%;
+        /*top: 180px;*/
         background-image: url("images/arrow.png");
         width: 30px;
         height: 30px;
         z-index: 500;
+        cursor: pointer;
     }
 
     .slider_button:hover {
@@ -597,15 +623,20 @@ input:focus::placeholder, text:focus::placeholder {
     }
 
     .slide {
-        /* width: 90vw; */
+        /* width: 95%; */
         position: absolute;
         margin: 0 auto;
-        /* height: 60vh; */
+        /* background: rgba(255,0,0,0.5); */
+        object-fit: fill;
+        /* height: 100%; */
+        /* width: 100%; */
         top: 0;
+        /*z-index: 100;*/
     }
 
     .slide:nth-child(1) {
         left: 0;
+        /* background: rgba(255,0,0,0.5), url("images/slider_images/office/1.jpg"); */
     }
 
     .slide:nth-child(2) {
@@ -643,7 +674,7 @@ input:focus::placeholder, text:focus::placeholder {
         font-size: 16px;
         font-weight: lighter;
         top: 10%;
-        left: 10%;
+        left: 20%;
     }
 
     .slider_text ul {
@@ -661,11 +692,14 @@ input:focus::placeholder, text:focus::placeholder {
     .slider_background {
         /* background: linear-gradient(90deg, #fff 20%, rgba(0,0,0,0)); */
         /* background-size: contain; */
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: 1;
-        position: absolute;
+        /* width: 100%; */
+        /* height: 100%; */
+        /* height: 100%; */
+        /* height: auto; */
+        /* top: 0; */
+        /* z-index: 100; */
+        /* position: relative; */
+        /* top: 0; */
     }
 
     .slide_text {
@@ -673,7 +707,12 @@ input:focus::placeholder, text:focus::placeholder {
         top: 20px;
         left: 20px;
         font-size: 24px;
-        z-index: 100;
+        z-index: 500;
+    }
+
+    .slider_title {
+        font: bold 28px sans-serif;
+        margin: 35px 0;
     }
 
 
