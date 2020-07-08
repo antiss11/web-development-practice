@@ -1,0 +1,51 @@
+@media all and (min-width: 600px) {
+
+  $mobilePadding: 2em 2.5em;
+
+  @mixin mobilePadding {
+    padding: $mobilePadding;
+  }
+
+  .main-image {
+    height: 400px;
+    width: 100vw;
+  }
+
+  .about {
+    @include mobilePadding;
+  }
+
+  .we-doing {
+    @include mobilePadding;
+  }
+
+  .our-history {
+    @include mobilePadding;
+  }
+
+  .verified {
+    @include mobilePadding;
+  }
+
+  .page-design {
+    @include mobilePadding;
+  }
+
+  .contact {
+    @include mobilePadding;
+  }
+
+
+  .navigation__hamburger {
+    right: 25px;
+  }
+
+  .nav {
+    top: 15px;
+  }
+
+  .menu-toggle__input {
+    right: 25px;
+  }
+
+}
