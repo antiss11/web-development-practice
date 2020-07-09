@@ -9,13 +9,14 @@ $mediumHeaderFontSize: 40px;
 $largeHeaderFontSize: 45px;
 $mediumFontSize: 42px;
 $pMargin: 45px 0;
+$padding: 60px 50px;
 
 @mixin buttonInputStyle($borderColor, $fontColor) {
   border-style: solid;
   background-color: transparent;
   border: {
     color: $borderColor;
-    radius: 5px;
+    radius: 15px;
     width: 1px;
   }
   color: $fontColor;
@@ -35,6 +36,10 @@ $pMargin: 45px 0;
     }
   }
 
+  .about {
+    padding: $padding;
+  }
+
   .about__header {
     font-size: $largeHeaderFontSize;
     font-weight: 300;
@@ -47,6 +52,7 @@ $pMargin: 45px 0;
   }
 
 .we-doing {
+  padding: $padding;
   color: #fff;
   background: {
     image: url("images/Rectangle 1 copy 2.png");
@@ -57,7 +63,6 @@ $pMargin: 45px 0;
 
   .we-doing__header {
     font-size: $largeHeaderFontSize;
-    margin-top: 90px;
   }
 
   .we-doing__text {
@@ -65,6 +70,7 @@ $pMargin: 45px 0;
   }
 
 .our-history {
+  padding: $padding;
   color: $darkFontColor;
   background: url("images/Rectangle 2.png");
 }
@@ -82,6 +88,7 @@ $pMargin: 45px 0;
   }
 
 .verified {
+  padding: $padding;
   font-size: .865em;
   color: #fff;
   background: {
@@ -93,7 +100,6 @@ $pMargin: 45px 0;
 
   .verified__header {
     font-size: $largeHeaderFontSize;
-    margin-top: 90px;
   }
 
   .verified__text {
@@ -105,6 +111,7 @@ $pMargin: 45px 0;
   }
 
 .page-design {
+  padding: $padding;
   background: url("images/Rectangle 2 copy.png") no-repeat;
   background-size: cover;
   color: #fff;
@@ -124,7 +131,11 @@ $pMargin: 45px 0;
   }
 
 .contact {
-  background: url("images/Rectangle 3.png");
+  padding: $padding;
+  background: {
+    image: url("images/Rectangle 3.png");
+    size: cover;
+  }
   position: relative;
   color: #fff;
 }
@@ -189,10 +200,6 @@ $pMargin: 45px 0;
   font-weight: bold;
 }
 
-.nav {
-  position: sticky;
-}
-
 .navigation__hamburger {
   height: 3px;
   width: 33px;
@@ -214,6 +221,7 @@ $pMargin: 45px 0;
   }
 }
 
+
 .menu-toggle__input {
   position: absolute;
   width: 33px;
@@ -224,12 +232,6 @@ $pMargin: 45px 0;
 
 
 @media all and (max-width: 600px) {
-
-  $mobilePadding: 2em 2.5em;
-
-  @mixin mobilePadding {
-    padding: $mobilePadding;
-  }
 
   .navigation__hamburger {
     right: 13px;
@@ -248,35 +250,10 @@ $pMargin: 45px 0;
     width: 100%;
   }
 
-  .about {
-    @include mobilePadding;
+  .contact__form {
+    display: flex;
+    flex-direction: column;
   }
-
-  .we-doing {
-    @include mobilePadding;
-  }
-
-  .our-history {
-    @include mobilePadding;
-  }
-
-  .verified {
-    @include mobilePadding;
-  }
-
-  .page-design {
-    @include mobilePadding;
-    padding-bottom: 70px;
-  }
-
-  .contact {
-    @include mobilePadding;
-  }
-
-    .contact__form {
-      display: flex;
-      flex-direction: column;
-    }
 
   .menu-toggle__input {
     right: 10px;
@@ -284,6 +261,7 @@ $pMargin: 45px 0;
   }
 
    .nav {
+     position: sticky;
     top: 15px;
   }
 }
