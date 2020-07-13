@@ -109,52 +109,56 @@
 
   <footer class="footer">
     <div class="row">
-      <article class="page-design">
-        <h1 class="page-design__header">
-          This Webpage Is <strong class="strong">Designed By</strong>
+      <div class="col-12 p-5">
+        <article class="page-design">
+          <h1 class="page-design__header">
+            This Webpage Is <strong class="strong">Designed By</strong>
+          </h1>
+          <figure class="page-design__fig mt-5">
+            <img src="images/1.png" alt="Designer label">
+            <figcaption>
+              <h2 class="page-design__name my-4">
+                <strong class="strong">Ali Sayed</strong>
+              </h2>
+              <p class="page-design__description">
+                Graphic Designer
+              </p>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="col-12 p-4">
+      <article class="contact">
+        <h1 class="contact__header">
+          Say <strong class="strong">'Hello'</strong>
         </h1>
-        <figure class="page-design__fig">
-          <img src="images/1.png" alt="Designer label">
-          <figcaption>
-            <h2 class="page-design__name">
-              <strong class="strong">Ali Sayed</strong>
-            </h2>
-            <p class="page-design__description">
-              Graphic Designer
-            </p>
-          </figcaption>
-        </figure>
+        <form action="javascript:void(0)" class="contact__form d-flex flex-column">
+          <input type="text" placeholder="Your Name" class="contact__input rounded mt-5 mb-1 p-2">
+          <input type="text" placeholder="Your Email" class="contact__input rounded mb-1 p-2">
+          <textarea placeholder="Your Message Here ..." class="contact__input contact__message rounded p-2" rows="6"></textarea>
+        </form>
+        <address class="contact__address mt-5">
+          <p class="address_description">
+            Stay Connected With Us...
+          </p>
+          <div class="social__container d-flex p-1">
+            <a href="javascript:void(0)" class="address_button facebook_button d-block rounded">
+              <img src="images/Facebook.png" alt="FB" class="media-label">
+            </a>
+            <a href="javascript:void(0)" class="address_button dribbble_button rounded">
+              <img src="images/Dribbble.png" alt="Dribbble" class="media-label">
+            </a>
+            <a href="javascript:void(0)" class="address_button twitter_button rounded">
+              <img src="images/Twitter.png" alt="Twitter" class="media-label">
+            </a>
+          </div>
+        </address>
+        <p class="address_description mb-5">
+          Please Feel Free To Contact With me For Any Kind of Project.
+        </p>
       </article>
     </div>
-    <article class="contact">
-      <h1 class="contact__header">
-        Say <strong class="strong">'Hello'</strong>
-      </h1>
-      <form action="javascript:void(0)" class="contact__form">
-        <input type="text" placeholder="Your Name" class="contact__input">
-        <input type="text" placeholder="Your Email" class="contact__input">
-        <textarea placeholder="Your Message Here ..." class="contact__input contact__message"></textarea>
-      </form>
-      <address class="contact__address">
-        <p class="address_description">
-          Stay Connected With Us...
-        </p>
-        <div class="social__container">
-          <a href="javascript:void(0)" class="address_button facebook_button">
-            <img src="images/Facebook.png" alt="FB" class="media-label">
-          </a>
-          <a href="javascript:void(0)" class="address_button dribbble_button">
-            <img src="images/Dribbble.png" alt="Dribbble" class="media-label">
-          </a>
-          <a href="javascript:void(0)" class="address_button twitter_button">
-            <img src="images/Twitter.png" alt="Twitter" class="media-label">
-          </a>
-        </div>
-      </address>
-      <p class="address_description">
-        Please Feel Free To Contact With me For Any Kind of Project.
-      </p>
-    </article>
   </footer>
 </div>
 </body>
