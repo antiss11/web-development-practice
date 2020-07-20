@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../src/fonts/Roboto-Regular.ttf"),
+        url("../../src/fonts/Roboto-Bold.ttf"),
+        url("../../src/fonts/Roboto-Light.ttf");
+}
+
+$font-sizes: (
+  header-big: 2.812rem,
+  header-normal: 2.5rem,
+  big: 1rem,
+  normal: 1.0356rem,
+  small: .9731rem,
+);
+
+$social-colors: (
+  facebook: #035BB8,
+  dribbble: #FF4699,
+  twitter: #00B5FF,
+);
+
+@function font-size($type) {
+  @return map_get($font-sizes, $type)
+}
+
+@function social-color($type) {
+  @return map_get($social-colors, $type)
+}
+
+@mixin bg-cover {
+  background: {
+    size: cover;
+    position: center;
+  }
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  font-size: font-size(regular);
+  line-height: 2;
+}
+
+.about__text {
+  font-size: font-size(normal);
+}
+
+.we-doing__text {
+  font-size: font-size(small);
+  margin-bottom: 5rem;
+}
+
+.our-history__text {
+  font-size: font-size(small);
+}
+
+.our-history__view {
+  font-size: font-size(normal);
+  color: #000;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.verified__text {
+  font-size: font-size(small);
+}
+
+.verified__button {
+  font-size: font-size(normal);
+  border: 1px solid #fff;
+}
+
+.h1 {
+  font-weight: 300;
+  font-size: font-size(header-big);
+}
+
+.img-fluid {
+  object-fit: cover;
+}
+
+.h2 {
+  font-size: font-size(header-normal);
+  font-weight: 300
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../../src/img/menu.svg");
+}
+
+.btn {
+  color: #fff;
+  border-radius: 10px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+}
+
+.btn-facebook {
+  background-color: social-color(facebook);
+}
+
+.btn-dribbble {
+  background-color: social-color(dribbble);
+}
+
+.btn-twitter {
+  background-color: social-color(twitter);
+}
+
+.we-doing {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 1 copy 2.png");
+  color: #fff;
+}
+
+.our-history {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 2.png");
+}
+
+.verified {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 1 copy.png");
+  color: #fff;
+}
+
+.page-design {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 2 copy.png");
+  color: #fff;
+}
+
+.page-design__fig {
+  margin-top: 18.6rem;
+}
+
+.page-design__name {
+  font-size: 2.625rem;
+}
+
+.page-design__description {
+  font-size: font-size(normal);
+}
+
+.contact {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 3.png");
+  color: #fff;
+}
+
+.address_description {
+  font-size: font-size(normal);
+}
+
+.contact__input {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+
+}
