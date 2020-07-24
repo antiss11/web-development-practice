@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("/src/fonts/Roboto-Regular.ttf"),
+  src: url("src/fonts/Roboto-Regular.ttf"),
         url("src/fonts/Roboto-Bold.ttf"),
         url("src/fonts/Roboto-Light.ttf");
 }
@@ -82,6 +82,10 @@ $line-height: 2;
 
 .page-design__description {
   font-size: font-size(normal);
+}
+
+.page-design__name {
+  font-size: font-size(header-normal);
 }
 
 .address_description {
