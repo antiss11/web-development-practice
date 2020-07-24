@@ -4,17 +4,13 @@
   <meta charset="UTF-8">
   <title>Ali Sayed's</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
           crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-          crossorigin="anonymous"></script>
-  <script src="src/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="body">
 <div class="container-fluid p-0">
@@ -24,13 +20,13 @@
     </button>
   </nav>
   <div class="row">
-    <div class="col-12">
-      <figure class="main-image mb-0">
+    <div class="col-12 p-0">
+      <figure class="main-image mb-0 w-100">
         <img src="src/img/Rectangle%201.png" alt="main-image" class="img-fluid">
       </figure>
     </div>
-    <div class="col-12 p-5 about">
-      <article>
+    <div class="col-12 p-0 about">
+      <article class="p-5">
         <h1 class="about__header my-5 h2">
           Ali Sayed's <strong class="strong">Web Designing</strong> Project
         </h1>
@@ -51,7 +47,7 @@
   </div>
 
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 p-0">
       <article class="we-doing p-5">
         <h1 class="h1 my-5 we-doing__header">
           Drawing <strong class="strong">Scketch</strong>
@@ -79,7 +75,7 @@
         </p>
       </article>
     </div>
-    <div class="col-12">
+    <div class="col-12 p-0">
       <article class="our-history p-5">
         <h1 class="h1 our-history__header">
           Best <strong class="strong">Starting</strong>
@@ -107,7 +103,7 @@
 
   <footer class="footer">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 p-0">
         <article class="page-design p-5">
           <h1 class="page-design__header h1 mt-3">
             This Webpage Is <strong class="strong">Designed By</strong>
@@ -125,38 +121,46 @@
           </figure>
         </article>
       </div>
-    </div>
-    <div class="col-12 p-0">
-      <article class="contact p-4">
-        <h1 class="contact__header h1 mt-5">
-          Say <strong class="strong">'Hello'</strong>
-        </h1>
-        <form action="javascript:void(0)" class="contact__form d-flex flex-column">
-          <input type="text" placeholder="Your Name" class="contact__input mt-5 mb-1 p-2">
-          <input type="text" placeholder="Your Email" class="contact__input mb-1 p-2">
-          <textarea placeholder="Your Message Here ..." class="contact__input contact__message p-2"
-                    rows="6"></textarea>
-        </form>
-        <address class="contact__address mt-5">
-          <p class="address_description">
-            Stay Connected With Us...
+      <div class="col-12 p-0 w-100">
+        <article class="contact p-5">
+          <h1 class="contact__header h1 mt-5">
+            Say <strong class="strong">'Hello'</strong>
+          </h1>
+          <form action="javascript:void(0)" class="contact__form d-flex flex-column">
+            <input type="text" placeholder="Your Name" class="contact__input mt-5 mb-1 p-2">
+            <input type="text" placeholder="Your Email" class="contact__input mb-1 p-2">
+            <textarea placeholder="Your Message Here ..." class="contact__input contact__message p-2"
+                      rows="6"></textarea>
+          </form>
+          <address class="contact__address mt-5">
+            <p class="address_description">
+              Stay Connected With Us...
+            </p>
+            <div class="social__container d-flex p-1">
+              <a class="btn social-btn btn-facebook p-4 mr-2 d-flex justify-content-center align-items-center"><i
+                      class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+              <a class="btn social-btn btn-dribbble p-4 mr-2 d-flex justify-content-center align-items-center"><i
+                      class="fa fa-dribbble fa-2x"></i></a>
+              <a class="btn social-btn btn-twitter p-4 d-flex justify-content-center align-items-center"><i
+                      class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </address>
+          <p class="address_description my-5">
+            Please Feel Free To Contact With me For Any Kind of Project.
           </p>
-          <div class="social__container d-flex p-1">
-            <a class="btn social-btn btn-facebook p-2 mr-2 d-flex justify-content-center align-items-center"><i
-                    class="fab fa-facebook-f fa-2x"></i></a>
-            <a class="btn social-btn btn-dribbble p-2 mr-2 d-flex justify-content-center align-items-center"><i
-                    class="fab fa-dribbble fa-2x"></i></a>
-            <a class="btn social-btn btn-twitter p-2 d-flex justify-content-center align-items-center"><i
-                    class="fab fa-twitter fa-2x"></i></a>
-          </div>
-        </address>
-        <p class="address_description my-5">
-          Please Feel Free To Contact With me For Any Kind of Project.
-        </p>
-      </article>
+        </article>
+      </div>
     </div>
   </footer>
 </div>
-<script src="src/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 </body>
 </html>

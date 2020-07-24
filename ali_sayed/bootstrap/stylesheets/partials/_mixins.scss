@@ -1,0 +1,7 @@
+@mixin bg-cover {
+  background: {
+    size: cover;
+    position: center;
+  }
+}
+

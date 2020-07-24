@@ -1,0 +1,37 @@
+@import "mixins";
+
+.about {
+  background-color: #f3f3f3;
+}
+
+.we-doing {
+  background-image: url("../../src/img/Rectangle 1 copy.png");
+}
+
+.we-doing {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 1 copy 2.png");
+}
+
+.our-history {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 2.png");
+}
+
+.verified {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 1 copy.png");
+  color: #fff;
+}
+
+.page-design {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 2 copy.png");
+  color: #fff;
+}
+
+.contact {
+  @include bg-cover;
+  background-image: url("../../src/img/Rectangle 3.png");
+  color: #fff;
+}

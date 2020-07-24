@@ -1,0 +1,45 @@
+$social-colors: (
+  facebook: #035BB8,
+  dribbble: #FF4699,
+  twitter: #00B5FF,
+);
+
+@function social-color($type) {
+  @return map-get($map: $social-colors, $key: $type)
+}
+
+.our-history__view {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid black;
+}
+
+.verified__button {
+  border: 1px solid #fff;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.btn {
+  color: #fff;
+  border-radius: 10px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+}
+
+.btn-facebook {
+  background-color: social-color(facebook);
+}
+
+.btn-dribbble {
+  background-color: social-color(dribbble);
+}
+
+.btn-twitter {
+  background-color: social-color(twitter);
+}
