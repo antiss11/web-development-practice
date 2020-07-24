@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/src/fonts/Roboto-Regular.ttf"),
+        url("src/fonts/Roboto-Bold.ttf"),
+        url("src/fonts/Roboto-Light.ttf");
+}
+
+$font-sizes: (
+        header-big: 2.8125rem,
+        header-normal: 2.625rem,
+        header-small: 2.5rem,
+        big: 1.125rem,
+        normal: 1rem,
+        small: .973125rem,
+);
+
+$font-weights: (
+        light: 300,
+        regular: 400,
+        bold: 700,
+);
+
+
+@function font-size($type) {
+  @return map_get($font-sizes, $type)
+}
+
+@function font-weight($weight) {
+  @return map_get($font-weights, $weight)
+}
+
+$roboto: "Roboto", sans-serif;
+$line-height: 2;
+
+.body {
+  font-family: $roboto;
+  font-size: font-size(regular);
+  line-height: $line-height;
+}
+
+.about__text {
+  font-size: font-size(big);
+}
+
+.we-doing__text {
+  font-size: font-size(small);
+  margin-bottom: 5rem;
+}
+
+.our-history__text {
+  font-size: font-size(small);
+}
+
+.our-history__view {
+  font-size: font-size(normal);
+}
+
+.verified__text {
+  font-size: font-size(small);
+}
+
+.verified__button {
+  font-size: font-size(normal);
+}
+
+.h1 {
+  font-weight: font-weight(light);
+  font-size: font-size(header-big);
+}
+
+.h2 {
+  font-weight: font-weight(light);
+  font-size: font-size(header-small);
+}
+
+.strong {
+  font-weight: font-weight(bold);
+}
+
+.page-design__description {
+  font-size: font-size(normal);
+}
+
+.address_description {
+  font-size: font-size(normal);
+}
