@@ -17,17 +17,14 @@
 <body class="body">
   <div class="container-fluid p-0 overflow-hidden">
     <nav role="navigation" class="navbar fixed-top p-0">
-      <button class="navbar-toggler ml-auto">
+      <button class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
     <div class="row">
-      <div class="col-12 p-0">
-        <figure class="main-image mb-0 w-100">
-          <img src="src/img/Rectangle%201.png" alt="main-image" class="img-fluid">
-        </figure>
+      <div class="main-image col-12 col-md-8 p-0">
       </div>
-      <div class="col-12 p-0 about">
+      <div class="col-12 col-md-4 p-0 about">
         <article class="p-5">
           <h1 class="about__header my-5 h2">
             Ali Sayed's <strong class="strong">Web Designing</strong> Project
@@ -53,7 +50,7 @@
     </div>
 
     <div class="row">
-      <div class="col-12 p-0">
+      <div class="col-12 col-md-6 p-0">
         <article class="we-doing p-5">
           <h1 class="h1 my-5 we-doing__header">
             Drawing <strong class="strong">Scketch</strong>
@@ -86,8 +83,8 @@
           </p>
         </article>
       </div>
-      <div class="col-12 p-0">
-        <article class="our-history p-5">
+      <div class="col-12 col-md-6 p-0 d-flex flex-column">
+        <article class="our-history p-5 flex-fill d-flex justify-content-center flex-column">
           <h1 class="h1 our-history__header">
             Best <strong class="strong">Starting</strong>
           </h1>
@@ -97,9 +94,9 @@
             fuga
             harum laudantium nemo, optio sint vel? Ab illo ipsam ipsum obcaecati quaerat, quia vero.
           </p>
-          <a class="btn our-history__view" type="button">View Our History</a>
+          <a class="btn our-history__view align-self-start px-5 py-2" type="button">View Our History</a>
         </article>
-        <article class="verified p-5">
+        <article class="verified p-5 flex-fill d-flex justify-content-center flex-column">
           <h1 class="h1 my-5 verified__header">
             Verified <strong class="strong">Dummy</strong>
           </h1>
@@ -110,62 +107,63 @@
             dolor dolorum
             maiores.
           </p>
-          <a class="btn verified__button mb-5">Go To The Page</a>
+          <a class="btn verified__button mb-5 px-5 py-2 align-self-start">Go To The Page</a>
         </article>
       </div>
     </div>
+  </div>
 
-    <footer class="footer">
-      <div class="row">
-        <div class="col-12 p-0">
-          <article class="page-design p-5">
-            <h1 class="page-design__header h1 mt-3">
-              This Webpage Is <strong class="strong">Designed By</strong>
-            </h1>
-            <figure class="page-design__fig">
-              <img src="src/img/1.png" alt="Designer label">
-              <figcaption>
-                <h2 class="page-design__name my-4">
-                  <strong class="strong">Ali Sayed</strong>
-                </h2>
-                <p class="page-design__description">
-                  Graphic Designer
-                </p>
-              </figcaption>
-            </figure>
-          </article>
-        </div>
-        <div class="col-12 p-0 w-100">
-          <article class="contact p-5">
-            <h1 class="contact__header h1 mt-5">
-              Say <strong class="strong">'Hello'</strong>
-            </h1>
-            <form action="javascript:void(0)" class="contact__form d-flex flex-column">
-              <input type="text" placeholder="Your Name" class="contact__input mt-5 mb-1 p-2">
-              <input type="text" placeholder="Your Email" class="contact__input mb-1 p-2">
-              <textarea placeholder="Your Message Here ..." class="contact__input contact__message p-2"
-                rows="6"></textarea>
-            </form>
-            <address class="contact__address mt-5">
-              <p class="address_description">
-                Stay Connected With Us...
+  <footer class="footer overflow-hidden">
+    <div class="row d-flex">
+      <div class="col-12 col-md-5 p-0 flex-fill">
+        <article class="page-design p-5 h-100 d-flex justify-content-center flex-column">
+          <h1 class="page-design__header h1 mt-3">
+            This Webpage Is <strong class="strong">Designed By</strong>
+          </h1>
+          <figure class="page-design__fig">
+            <img src="src/img/1.png" alt="Designer label">
+            <figcaption>
+              <h2 class="page-design__name my-4">
+                <strong class="strong">Ali Sayed</strong>
+              </h2>
+              <p class="page-design__description">
+                Graphic Designer
               </p>
-              <div class="social__container d-flex p-1">
-                <a class="btn social-btn btn-facebook p-4 mr-2 d-flex justify-content-center align-items-center"><i
-                    class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-                <a class="btn social-btn btn-dribbble p-4 mr-2 d-flex justify-content-center align-items-center"><i
-                    class="fa fa-dribbble fa-2x"></i></a>
-                <a class="btn social-btn btn-twitter p-4 d-flex justify-content-center align-items-center"><i
-                    class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-              </div>
-            </address>
-            <p class="address_description my-5">
-              Please Feel Free To Contact With me For Any Kind of Project.
-            </p>
-          </article>
-        </div>
+            </figcaption>
+          </figure>
+        </article>
       </div>
-    </footer>
+      <div class="col-12 col-md-7 p-0 overflow-hidden">
+        <article class="contact p-5 h-100">
+          <h1 class="contact__header h1 mt-3">
+            Say <strong class="strong">'Hello'</strong>
+          </h1>
+          <form action="javascript:void(0)" class="contact__form d-flex mt-5">
+            <input type="text" placeholder="Your Name" class="contact__input mb-2 p-2">
+            <input type="text" placeholder="Your Email" class="contact__input mb-2 p-2">
+            <textarea placeholder="Your Message Here ..." class="contact__input contact__message p-2"
+              rows="6"></textarea>
+          </form>
+          <address class="contact__address mt-5">
+            <p class="address_description">
+              Stay Connected With Us...
+            </p>
+            <div class="social__container d-flex p-1">
+              <a class="btn social-btn btn-facebook p-4 mr-2 d-flex justify-content-center align-items-center"><i
+                  class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+              <a class="btn social-btn btn-dribbble p-4 mr-2 d-flex justify-content-center align-items-center"><i
+                  class="fa fa-dribbble fa-2x"></i></a>
+              <a class="btn social-btn btn-twitter p-4 d-flex justify-content-center align-items-center"><i
+                  class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </address>
+          <p class="address_description my-5">
+            Please Feel Free To Contact With me For Any Kind of Project.
+          </p>
+        </article>
+      </div>
+    </div>
+  </footer>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

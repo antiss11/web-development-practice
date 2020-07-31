@@ -1,0 +1,40 @@
+@media (min-width: 576px) {
+  .main-image {
+    height: 70vh;
+    background: no-repeat 10%/cover url("src/img/Rectangle 1.png");
+  }
+
+  .contact__input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-image {
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .navbar-toggler {
+    margin-right: 25%;
+  }
+
+  .main-image {
+    background-size: cover;
+  }
+
+  .contact__form {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .contact__input:not(.contact__message) {
+    width: 49%;
+  }
+
+  .contact__message {
+    flex-basis: 100%;
+  }
+}
