@@ -1,0 +1,237 @@
+.we-doing__text {
+  margin-bottom: 5rem;
+}
+
+.navbar {
+  top: 25px;
+  right: 25px;
+}
+
+.page-design__fig {
+  margin-top: 18.6rem;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.main-image {
+  background: no-repeat 10%/cover url("../src/img/Rectangle 1.png");
+}
+
+.about {
+  background-color: #f3f3f3;
+}
+
+.we-doing {
+  background-image: url("../src/img/Rectangle 1 copy.png");
+}
+
+.we-doing {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../src/img/Rectangle 1 copy 2.png");
+}
+
+.our-history {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../src/img/Rectangle 2.png");
+}
+
+.verified {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../src/img/Rectangle 1 copy.png");
+  color: #fff;
+}
+
+.page-design {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../src/img/Rectangle 2 copy.png");
+  color: #fff;
+}
+
+.contact {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../src/img/Rectangle 3.png");
+  color: #fff;
+}
+
+.contact__form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.img-fluid {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.contact__input {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.contact__input:focus {
+  outline: none;
+}
+
+.contact__input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.contact__input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact__input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact__input::placeholder {
+  color: #fff;
+}
+
+.our-history__view {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid black;
+}
+
+.verified__button {
+  border: 1px solid #fff;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../src/img/menu.svg");
+}
+
+.btn {
+  color: #fff;
+  border-radius: 10px;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+}
+
+.btn-facebook {
+  background-color: #035BB8;
+}
+
+.btn-dribbble {
+  background-color: #FF4699;
+}
+
+.btn-twitter {
+  background-color: #00B5FF;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("src/fonts/Roboto-Regular.ttf"), url("src/fonts/Roboto-Bold.ttf"), url("src/fonts/Roboto-Light.ttf");
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  line-height: 2;
+}
+
+.about__text {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.we-doing {
+  color: #fff;
+}
+
+.we-doing__text, .our-history__text, .verified__text {
+  font-size: 0.97313rem;
+  font-weight: 400;
+}
+
+.page-design__description, .address_description {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.our-history__view {
+  font-size: 1rem;
+}
+
+.verified__button {
+  font-size: 1rem;
+}
+
+.h1 {
+  font-weight: 300;
+  font-size: 2.8125rem;
+}
+
+.h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.page-design__name {
+  font-size: 2.625rem;
+}
+
+@media (min-width: 576px) {
+  .main-image {
+    height: 70vh;
+    /*     background: no-repeat 10/cover url("src/img/Rectangle 1.png");
+ */
+  }
+  .contact__input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-image {
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    margin-right: 25%;
+  }
+  .main-image {
+    background-size: cover;
+  }
+  .contact__form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact__input:not(.contact__message) {
+    width: 49%;
+  }
+  .contact__message {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
