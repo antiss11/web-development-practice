@@ -1,0 +1,87 @@
+.about-us {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 580px;
+
+  &::before {
+    @include button-pseudo-icon(80px, 5px, null, (top: -25px));
+    background: #000;
+  }
+}
+
+
+.contacts {
+  width: 560px;
+  position: relative;
+
+  &::before {
+    @include button-pseudo-icon(80px, 5px, null, (top: -25px));
+    background: #000;
+  }
+}
+
+.about-us__header,
+.contacts__header {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-family: $font-family-main;
+  font-size: $service-title-font-size;
+  line-height: 1;
+}
+
+.about-us__text,
+.contacts__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 2;
+  font-size: $main-font-size;
+  color: #464646;
+}
+
+.about-us__text {
+  width: 480px;
+}
+
+.about-us__logistics-list {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.about-us__logistics-item {
+  position: relative;
+  margin-bottom: 23px;
+  font-family: $font-family-main;
+  font-weight: 900;
+  font-size: $main-font-size;
+
+  &::before {
+    @include button-pseudo-icon(8px, 8px, "../../src/svg/slider-button-empty.svg", (top: 2px, left: -40px));
+    background-size: contain;
+    opacity: .3;
+  }
+}
+
+.before-footer {
+  display: flex;
+  position: relative;
+  top: -82px;
+}
+
+.before-footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__map-link {
+  display: block;
+  margin: 40px 0 65px;
+}
+
+.about-us__button:link,
+.abous-us__button:visited,
+.contacts__write-us-button:link,
+.contacts__write-us-button:visited {
+  margin-top: auto;
+  width: 260px;
+}

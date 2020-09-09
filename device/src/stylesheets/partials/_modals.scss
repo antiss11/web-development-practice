@@ -1,0 +1,100 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: none;
+  box-shadow: #000 0 20px 40px -30px;
+}
+
+.modal-write-us {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 90px 100px;
+  width: 960px;
+}
+
+.modal-write-us__field {
+  margin-top: 5px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: $modal-field-background-color;
+  padding-left: 20px;
+}
+
+.modal-write-us__subform {
+  display: flex;
+  flex-flow: column wrap;
+  box-sizing: border-box;
+  flex-basis: 360px;
+}
+
+
+.modal-write-us__form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.modal-write-us__message {
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  background: $modal-field-background-color;
+  padding-left: 20px;
+  padding-top: 20px;
+  resize: none;
+}
+
+.modal-write-us__label {
+  margin-top: 35px;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: $font-family-main;
+}
+
+.modal-write-us__send {
+  border: none;
+  background: none;
+  width: 200px;
+  margin-top: 50px;
+  outline: none;
+
+  &::before {
+    top: 4px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  border: none;
+  background: url("../../src/svg/modal-close.svg") no-repeat;
+  width: 55px;
+  height: 55px;
+  opacity: .5;
+  outline: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.is-open {
+  display: block;
+}
+
+.modal-write-us__close {
+  top: 30px;
+  right: 20px;
+}
+
+.modal-map__close {
+  right: 20px;
+  top: 20px;
+}

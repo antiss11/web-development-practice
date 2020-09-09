@@ -1,0 +1,108 @@
+.logo {
+  @include button-pseudo-icon();
+  font-family: $font-family-main;
+  font-size: 48px;
+  font-weight: 900;
+  display: block;
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: #000;
+  line-height: 30px;
+  position: relative;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.compare::before {
+  @include button-pseudo-icon(10px, 10px, "../../src/svg/compare.svg",
+    (top: 11px, left: -18px))
+}
+
+.user-login::before {
+  @include button-pseudo-icon(13px, 12px, "../../src/svg/user.svg",
+    (top: 5px, left: -25px))
+}
+
+.cart::before {
+  @include button-pseudo-icon(12px, 12px, "../../src/svg/cart.svg",
+    (top: 10px, left: -20px))
+}
+
+.details-button,
+.details-button:link,
+.details-button:visited {
+  position: relative;
+  display: block;
+  height: 40px;
+  font-family: var(--font-family-main);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .2em;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 40px;
+  text-align: center;
+
+  &:hover::before {
+    border: none;
+    height: inherit;
+  }
+
+  &:focus::before {
+    border: none;
+    height: inherit;
+  }
+
+  &:active {
+    color: rgb(#000, .5);
+  }
+}
+
+
+.details-button:before,
+.details-button:link::before,
+.details-button:visited::before {
+  @include button-pseudo-icon(initial, 8px, null, (top:0, left: 0, right: 0, bottom: 0));
+  $border-color: #f4d361;
+  $background-color: #f0c52e;
+  margin: auto;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  box-sizing: border-box;
+  background: $background-color;
+  position: absolute;
+  z-index: -1;
+  transition: height .3s ease-in;
+}
+
+.facebook {
+  background: url("../../src/svg/fb.svg");
+}
+
+.vk {
+  background: url("../../src/svg/vk.svg");
+}
+
+.twitter {
+  background: url("../../src/svg/twitter.svg");
+}

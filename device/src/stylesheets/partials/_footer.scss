@@ -1,0 +1,146 @@
+.footer {
+  padding: 50px 0;
+  background: #464646;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.footer-top__right {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  width: 300px;
+}
+
+.footer-compare {
+  margin: 0;
+}
+
+.footer-cart {
+  margin: 0;
+}
+
+.footer-user-login:link,
+.footer-user-login:visited,
+.footer-compare:link,
+.footer-compare:visited,
+.footer-cart:link,
+.footer-cart:visited {
+  color: #fff;
+}
+
+.footer-middle {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer-nav {
+  width: 420px;
+  margin-left: 130px;
+}
+
+.footer-nav__item {
+  margin-right: 30px;
+}
+
+.footer-nav__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footer__phone {
+  margin-left: auto;
+  color: #fff;
+}
+
+.footer-nav__item:link,
+.footer-nav__item:visited {
+  text-decoration: none;
+  color: #fff;
+  font-family: $font-family-main;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: $categories-font-size;
+  line-height: 1.333;
+  letter-spacing: .2em;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  padding: 0;
+  margin-left: 430px;
+  list-style: none;
+}
+
+.footer__social-item:link,
+.footer__social-item:visited {
+  display: block;
+  position: relative;
+  margin-right: 20px;
+  width: 32px;
+  height: 32px;
+  opacity: .3;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.footer-user-login::before {
+  background: url("../../src/svg/user-orange.svg");
+  top: 8px;
+}
+
+.footer-compare::before {
+  margin-right: 90px;
+  background: url("../../src/svg/compare-orange.svg");
+}
+
+.footer-cart::before {
+  background: url("../../src/svg/cart-orange.svg");
+}
+
+.footer-line {
+  height: 5px;
+  width: 80px;
+  background: #ffc600;
+}
+
+.footer-bottom__logo {
+  margin-left: auto;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.footer-logo:link,
+.footer-logo:visited {
+  color: $details-button-color;
+  position: relative;
+  top: 5px;
+}
+
+.footer-address {
+  color: #fff;
+}

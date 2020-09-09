@@ -1,0 +1,21 @@
+.logotypes {
+  position: relative;
+  top: -87px;
+}
+
+.logotypes__list {
+  display: flex;
+  padding: 95px 0;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.logotypes__img {
+  opacity: .2;
+  filter: grayscale(100%);
+}
+
+.logotypes__item:hover>.logotypes__img {
+  opacity: 1;
+  filter: none;
+}

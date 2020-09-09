@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Gilroy;
+  src: url("../../src/fonts/gilroylight.woff2") format("woff2"),
+    url("../../src/fonts/gilroylight.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url("../../src/fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../../src/fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../src/fonts/opensans.woff2") format("woff2"),
+    url("../../src/fonts/opensans.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../src/fonts/opensanslight.woff2") format("woff2"),
+    url("../../src/fonts/opensanslight.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
