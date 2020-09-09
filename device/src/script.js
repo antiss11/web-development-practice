@@ -1,5 +1,3 @@
-import "./stylesheets/main.scss";
-
 const CATALOG = document.querySelector(".header-nav__catalog-list");
 const WRITE_US = document.querySelector(".modal-write-us");
 const MAP_MODAL = document.querySelector(".modal-map");

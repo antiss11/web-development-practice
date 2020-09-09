@@ -1,39 +1,32 @@
 .visually-hidden {
+  clip: rect(0 0 0 0);
+  position: absolute;
   width: 1px;
   height: 1px;
-  position: absolute;
-  clip: rect(0 0 0 0);
   margin: -1px;
 }
 
 .body {
-  /* Visual */
-  background: #fff;
-
-  /* Typography */
+  background: #ffffff;
   font-family: $font-family-description;
   font-size: $main-font-size;
 }
 
 .wrapper {
-  /* Box model */
   width: 1160px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .inner-container {
-  /* Layout */
   position: relative;
-
-  /* Box model */
   padding: 0 60px;
 }
 
 .line {
   width: 100px;
   height: 7px;
-  background: #fff;
+  background: #ffffff;
 }
 
 .img-to-bottom {

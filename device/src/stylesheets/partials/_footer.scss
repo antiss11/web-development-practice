@@ -5,15 +5,17 @@
 
 .footer-top {
   display: flex;
-  align-items: center;
   margin-bottom: 17px;
+
+  align-items: center;
 }
 
 .footer-top__right {
   display: flex;
-  justify-content: space-between;
-  margin-left: auto;
   width: 300px;
+  margin-left: auto;
+
+  justify-content: space-between;
 }
 
 .footer-compare {
@@ -30,7 +32,7 @@
 .footer-compare:visited,
 .footer-cart:link,
 .footer-cart:visited {
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-middle {
@@ -49,62 +51,65 @@
 
 .footer-nav__list {
   display: flex;
-  justify-content: space-between;
   list-style: none;
+
+  justify-content: space-between;
 }
 
 .footer__phone {
   margin-left: auto;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-nav__item:link,
 .footer-nav__item:visited {
-  text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-family: $font-family-main;
-  font-weight: 900;
-  text-transform: uppercase;
   font-size: $categories-font-size;
+  font-weight: 900;
   line-height: 1.333;
-  letter-spacing: .2em;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .footer-bottom {
   display: flex;
+
   align-items: center;
 }
 
 .footer__social-list {
   display: flex;
-  justify-content: space-between;
   width: 160px;
-  padding: 0;
   margin-left: 430px;
+  padding: 0;
   list-style: none;
+
+  justify-content: space-between;
 }
 
 .footer__social-item:link,
 .footer__social-item:visited {
   display: block;
   position: relative;
-  margin-right: 20px;
   width: 32px;
   height: 32px;
-  opacity: .3;
+  margin-right: 20px;
+  opacity: 0.3;
 
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
 .footer-user-login::before {
-  background: url("../../src/svg/user-orange.svg");
   top: 8px;
+  background: url("../../src/svg/user-orange.svg");
 }
 
 .footer-compare::before {
@@ -117,8 +122,8 @@
 }
 
 .footer-line {
-  height: 5px;
   width: 80px;
+  height: 5px;
   background: #ffc600;
 }
 
@@ -126,21 +131,21 @@
   margin-left: auto;
 
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
 .footer-logo:link,
 .footer-logo:visited {
-  color: $details-button-color;
   position: relative;
   top: 5px;
+  color: $details-button-color;
 }
 
 .footer-address {
-  color: #fff;
+  color: #ffffff;
 }

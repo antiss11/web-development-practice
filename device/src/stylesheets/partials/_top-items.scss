@@ -1,19 +1,19 @@
 .top-items {
   position: relative;
   top: -65px;
-  padding-left: 18px;
-  padding-bottom: 10px;
   height: 500px;
+  padding-bottom: 10px;
+  padding-left: 18px;
 }
 
 .top-items__slide-num {
   position: absolute;
   top: -255px;
   right: 43px;
-  font-size: 179.2px;
+  color: #ffffff;
   font-family: $font-family-main;
+  font-size: 179.2px;
   font-weight: bold;
-  color: #fff;
 }
 
 .slide__middle {
@@ -28,10 +28,10 @@
 
 .slide__header {
   margin-bottom: 20px;
-  font-size: 47px;
-  line-height: 1.191;
-  font-weight: 900;
   font-family: $font-family-main;
+  font-size: 47px;
+  font-weight: 900;
+  line-height: 1.191;
 }
 
 .slide {
@@ -43,36 +43,33 @@
   display: flex;
 }
 
-/* .slide--active {
-  display: flex;
-} */
-
 .slide__right {
+  display: flex;
+  height: 465px;
   margin-left: 100px;
   padding-top: 45px;
-  /* padding-left: 50px; */
-  display: flex;
+
   flex-flow: column wrap;
-  height: 465px;
 }
 
 .slides__controls {
-  box-sizing: border-box;
+  display: flex;
   position: absolute;
+  z-index: 1000;
   right: 73px;
   bottom: 200px;
+  box-sizing: border-box;
   width: 85px;
-  display: flex;
+
   justify-content: space-between;
-  z-index: 1000;
 }
 
 .slides__control {
   position: relative;
-  opacity: 1;
   left: 23px;
   width: 13px;
   height: 13px;
+  opacity: 0;
 }
 
 .slides__control-label::before {
@@ -88,29 +85,26 @@
 }
 
 
-.slides__control--checked+.slides__control-label::before
-
-/* .slides__control:checked+.slides__control-label::before */
-  {
+.slides__control--checked+.slides__control-label::before {
   background: url("../../src/svg/slider-button.svg") no-repeat 0 0;
   background-size: contain;
 }
 
 .slide__details {
-  margin-top: auto;
   width: 220px;
+  margin-top: auto;
 }
 
 .slide__specs {
-  margin-bottom: 20px;
   margin-top: 35px;
+  margin-bottom: 20px;
 }
 
 .slide__specs-values {
   display: table-header-group;
   font-family: $font-family-main;
-  font-weight: lighter;
   font-size: 36px;
+  font-weight: lighter;
   line-height: 1.333;
 }
 
@@ -119,14 +113,14 @@
 }
 
 .specs-names__item {
-  text-align: start;
-  font-weight: 100;
   font-size: 13px;
+  font-weight: 100;
+  text-align: start;
 }
 
 .specs-values__item {
-  line-height: 1.54;
   font-weight: lighter;
+  line-height: 1.54;
 }
 
 .slide__specs-cell:nth-child(n+2) {

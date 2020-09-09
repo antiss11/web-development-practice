@@ -1,9 +1,7 @@
 .header {
-  /* Box model */
+  position: relative;
   margin-top: 40px;
   padding: 30px 0 148px;
-  position: relative;
-  /* Visual */
   background: $main-color;
 }
 
@@ -12,52 +10,44 @@
 }
 
 .header-top {
-  /* Layout */
   display: flex;
-  align-items: center;
-
-  /* Box model */
   margin-bottom: 25px;
+
+  align-items: center;
 }
 
 
 .header__logo:link,
 .header__logo:visited {
-  /* Layout */
   position: absolute;
   top: -58px;
-
-  /* Typography */
-  color: #000;
+  color: #000000;
 }
 
 .header__search {
-  position: relative;
   display: flex;
+  position: relative;
 
   &::before {
-    @include button-pseudo-icon(16px, 16px, "../../src/svg/search.svg", (top: 2px, left: 0px, ))
+    @include button-pseudo-icon(16px, 16px, "../../src/svg/search.svg", (top: 2px, left: 0, ));
   }
 }
 
 .search__field {
-  /* Box model */
+  width: 355px;
   padding-bottom: 5px;
   padding-left: 30px;
-  width: 355px;
-
-  /* Visual */
   border: none;
   background: $main-color;
 
   &::placeholder {
-    opacity: .3;
+    opacity: 0.3;
     font-weight: 100;
   }
 
   &:focus {
+    border-bottom: 1px solid #000000;
     outline: none;
-    border-bottom: 1px solid #000;
   }
 
   &:focus::placeholder {
@@ -66,12 +56,11 @@
   }
 
   &:hover::placeholder {
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
 .search__field:focus+.search__button {
-  /* Layout */
   display: block;
   opacity: 1;
 }
@@ -94,92 +83,92 @@
 
 .header-nav__item:link,
 .header-nav__item:visited {
+  color: #000000;
   font-family: $font-family-main;
-  font-weight: 900;
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
   font-size: $categories-font-size;
+  font-weight: 900;
   line-height: 1.333;
-  letter-spacing: .2em;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .header-nav__catalog-toggle {
   position: relative;
-  background: none;
-  border: none;
-  font-family: $font-family-main;
-  font-weight: 900;
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
-  font-size: $categories-font-size;
-  line-height: 1.333;
-  letter-spacing: .2em;
-  cursor: pointer;
-  outline: 0;
   padding: 0;
+  border: none;
+  outline: 0;
+  color: #000000;
+  background: none;
+  font-family: $font-family-main;
+  font-size: $categories-font-size;
+  font-weight: 900;
+  line-height: 1.333;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
 
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   &::after {
     @include button-pseudo-icon(16px, 16px, "../../src/svg/plus.svg", (top: 3px, right: -25px, ));
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
 .header-nav__list {
   display: flex;
   padding: 0;
-  list-style: none;
   font-family: $font-family-main;
   font-weight: 900;
+  list-style: none;
 }
 
 .header-nav__catalog-list {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
   width: 100%;
   height: inherit;
-  position: absolute;
-  bottom: 0;
-  z-index: 100;
   margin: 0;
   padding: 0;
   background: $main-color;
-  display: none;
 }
 
 .header-catalog__wrapper {
-  list-style: none;
   display: flex;
-  flex-flow: row wrap;
-  /* display: none; */
-  padding-bottom: 43px;
   width: 555px;
+  padding-bottom: 43px;
+  list-style: none;
+
+  flex-flow: row wrap;
 }
 
 .header-nav__catalog-link:link,
 .header-nav__catalog-link:visited {
-  text-decoration: none;
-  color: #000;
-  letter-spacing: initial;
-  text-transform: initial;
-  line-height: 36px;
+  color: #000000;
   font-family: $font-family-description;
   font-size: 15px;
   font-weight: 300;
+  line-height: 36px;
+  text-decoration: none;
+  letter-spacing: initial;
+  text-transform: initial;
 
   &:hover {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
@@ -204,21 +193,21 @@
 }
 
 .search__button {
-  width: 83px;
-  height: 48px;
-  background: none;
-  border: 1px solid black;
   position: absolute;
   right: -83px;
-  bottom: 0px;
+  bottom: 0;
+  width: 83px;
+  height: 48px;
+  border: 1px solid black;
   opacity: 0;
-  cursor: pointer;
+  background: none;
   font-family: $font-family-description;
   font-size: 15px;
+  cursor: pointer;
 
   &:hover {
-    color: #fff;
-    background: #000;
+    color: #ffffff;
+    background: #000000;
   }
 
   &:active {

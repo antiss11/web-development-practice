@@ -1,14 +1,14 @@
 @use "sass:map";
 
-@mixin button-pseudo-icon($width: auto, $height:auto, $url:none,
-  $pos:(top:initial, right:initial, bottom: initial, left: initial)) {
-  content: " ";
+@mixin button-pseudo-icon($width: auto, $height: auto, $url: none,
+  $pos: (top:initial, right:initial, bottom: initial, left: initial)) {
   position: absolute;
-  width: $width;
-  height: $height;
-  background: url($url);
   top: map.get($pos, "top");
   right: map.get($pos, "right");
   bottom: map.get($pos, "bottom");
   left: map.get($pos, "left");
+  width: $width;
+  height: $height;
+  background: url($url);
+  content: " ";
 }

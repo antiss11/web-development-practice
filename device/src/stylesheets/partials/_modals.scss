@@ -1,66 +1,68 @@
 .modal {
+  display: none;
   position: fixed;
+  z-index: 1000;
   top: 50%;
   left: 50%;
+  box-shadow: #000000 0 20px 40px -30px;
   transform: translate(-50%, -50%);
-  z-index: 1000;
-  display: none;
-  box-shadow: #000 0 20px 40px -30px;
 }
 
 .modal-write-us {
-  background: #fff;
   box-sizing: border-box;
-  padding: 90px 100px;
   width: 960px;
+  padding: 90px 100px;
+  background: #ffffff;
 }
 
 .modal-write-us__field {
-  margin-top: 5px;
   height: 50px;
-  outline: none;
-  border: none;
-  background: $modal-field-background-color;
+  margin-top: 5px;
   padding-left: 20px;
+  border: none;
+  outline: none;
+  background: $modal-field-background-color;
 }
 
 .modal-write-us__subform {
   display: flex;
-  flex-flow: column wrap;
   box-sizing: border-box;
+
   flex-basis: 360px;
+  flex-flow: column wrap;
 }
 
 
 .modal-write-us__form {
   display: flex;
+
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
 .modal-write-us__message {
   margin-top: 5px;
-  outline: none;
-  border: none;
-  background: $modal-field-background-color;
-  padding-left: 20px;
   padding-top: 20px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  background: $modal-field-background-color;
   resize: none;
 }
 
 .modal-write-us__label {
   margin-top: 35px;
+  font-family: $font-family-main;
   font-size: 18px;
   font-weight: 900;
-  font-family: $font-family-main;
 }
 
 .modal-write-us__send {
-  border: none;
-  background: none;
   width: 200px;
   margin-top: 50px;
+  border: none;
   outline: none;
+  background: none;
 
   &::before {
     top: 4px;
@@ -69,19 +71,19 @@
 
 .modal__close {
   position: absolute;
-  border: none;
-  background: url("../../src/svg/modal-close.svg") no-repeat;
   width: 55px;
   height: 55px;
-  opacity: .5;
+  border: none;
   outline: none;
+  opacity: 0.5;
+  background: url("../../src/svg/modal-close.svg") no-repeat;
 
   &:hover {
     opacity: 1;
   }
 
   &:active {
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
@@ -95,6 +97,6 @@
 }
 
 .modal-map__close {
-  right: 20px;
   top: 20px;
+  right: 20px;
 }
