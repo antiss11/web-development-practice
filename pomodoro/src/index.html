@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./jquery.ui.touch-punch.min.js"></script>
+  <title>Pomodoro</title>
+</head>
+
+<body class="body andromeda">
+
+  <div class="wrapper">
+    <div class="toggle-menu">
+      <button class="toggle-menu__open-button" type="button"><span class="visually-hidden">Open settings</span>
+        <span></span>
+        <span></span>
+      </button>
+      <section class="toggle-menu__menu-body toggle-menu__menu-body--hidden">
+        <div class="menu-body__setting menu-body__setting--active setting-timer">
+          <h3 class="menu-body__settings-name">Timer</h3>
+          <ul class="setting__subsettings-list">
+            <li class="menu-body__settings-item">
+              <h4 class="settings-list__setting-name">Focus</h4>
+              <p class="settings-list__setting-value setting-value__focus">25:00</p>
+              <div class="setting-value__slider" id="settings-item__focus-slider"><span></span></div>
+            </li>
+            <li class="menu-body__settings-item">
+              <h4 class="settings-list__setting-name">Short Break</h4>
+              <p class="settings-list__setting-value setting-value__shortBreak">5:00</p>
+              <div class="setting-value__slider" id="settings-item__shortBreak-slider"><span></span></div>
+            </li>
+            <li class="menu-body__settings-item">
+              <h4 class="settings-list__setting-name">Long Break</h4>
+              <p class="settings-list__setting-value setting-value__longBreak">15:00</p>
+              <div class="setting-value__slider" id="settings-item__longBreak-slider"><span></span></div>
+            </li>
+            <li class="menu-body__settings-item">
+              <h4 class="settings-list__setting-name">Rounds</h4>
+              <p class="settings-list__setting-value setting-value__rounds">4</p>
+              <div class="setting-value__slider" id="settings-item__rounds-slider"><span></span></div>
+            </li>
+          </ul>
+          <button class="setting__reset-button" type="button">Reset Defaults</button>
+        </div>
+        <div class="menu-body__setting setting-themes">
+          <ul class="setting__themes-list">
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button andromeda-button" type="button">Andromeda</button>
+            </li>
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button ayu-button" type="button">Ayu</button>
+            </li>
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button cityLights-button" type="button">City Lights</button>
+            </li>
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button dracula-button">Dracula</button>
+            </li>
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button dva-button">D.Va</button>
+            </li>
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button github-button">Github</button>
+            </li>
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button graphite-button">Graphite</button>
+            </li>
+            <li class="themes-list__theme-item">
+              <button class="theme-item__button gruvbox-button">Gruvbox</button>
+            </li>
+          </ul>
+        </div>
+        <ul class="menu-body__settings-list">
+          <li class="settings-list__settings-item settings-list__settings-item--active">
+            <h2 class="visually-hidden">Timer configuration</h2>
+            <button class="settings-item__open-setting-button open-timer-settings">
+              <svg class="open-setting-button__icon" width="25px" height="25px" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                <g>
+                  <path fill="currentColor"
+                    d="M500,10C229.8,10,10,229.8,10,500c0,270.2,219.8,490,490,490c270.2,0,490-219.8,490-490C990,229.8,770.2,10,500,10L500,10z M500,906.3C276,906.3,93.7,724,93.7,500C93.7,276,276,93.7,500,93.7C724,93.7,906.3,276,906.3,500C906.3,724,724,906.3,500,906.3L500,906.3z M325.3,500c-19.4,0-35.1,15.6-35.1,35s15.7,35,35.1,35h210c19.4,0,35-15.6,35-35V255.1c0-19.4-15.6-35.1-35-35.1c-19.4,0-35,15.7-35,35.1V500L325.3,500L325.3,500z" />
+                </g>
+              </svg>
+            </button>
+          </li>
+          <li class="settings-list__settings-item">
+            <h2 class="visually-hidden">Change colortheme</h2>
+            <button title="Timer configuration" class="settings-item__open-setting-button open-theme-settings">
+              <svg class="open-setting-button__icon" width="25px" height="25px" version="1.0"
+                xmlns="http://www.w3.org/2000/svg" width="1280.000000pt" height="1280.000000pt"
+                viewBox="0 0 1280.000000 1280.000000" preserveAspectRatio="xMidYMid meet">
+                <metadata>
+                  Created by potrace 1.15, written by Peter Selinger 2001-2017
+                </metadata>
+                <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor"
+                  stroke="none">
+                  <path d="M6135 11194 c-1192 -76 -2249 -543 -3088 -1364 -762 -745 -1247
+                      -1695 -1396 -2737 -38 -261 -46 -384 -45 -698 0 -443 38 -760 139 -1165 89
+                      -351 181 -602 350 -945 185 -376 364 -652 636 -980 118 -143 461 -481 616
+                      -608 711 -581 1539 -940 2440 -1057 312 -41 690 -50 798 -20 182 51 328 143
+                      434 275 130 161 191 350 177 555 -12 197 -68 325 -219 505 -67 80 -137 216
+                      -163 320 -25 96 -25 285 0 380 63 243 225 437 449 540 149 68 141 67 887 75
+                      371 4 686 10 700 13 14 4 70 13 125 22 536 84 1050 351 1447 752 324 327 539
+                      688 672 1133 108 360 133 810 70 1265 -186 1335 -1066 2512 -2379 3180 -582
+                      296 -1185 471 -1865 540 -147 15 -654 27 -785 19z m-840 -1094 c272 -86 474
+                      -296 547 -568 28 -109 28 -287 -1 -397 -74 -281 -295 -502 -576 -576 -114 -30
+                      -280 -30 -394 0 -277 73 -484 271 -571 546 -28 90 -38 267 -20 368 54 313 301
+                      570 614 642 94 22 312 14 401 -15z m2603 15 c315 -66 567 -325 622 -642 18
+                      -101 8 -278 -20 -368 -87 -275 -294 -473 -571 -546 -114 -30 -280 -30 -394 0
+                      -281 74 -502 295 -576 576 -30 112 -30 289 0 399 79 297 323 527 622 585 71
+                      14 242 12 317 -4z m-4308 -2126 c177 -28 313 -100 445 -233 133 -134 200 -272
+                      225 -464 32 -245 -61 -496 -247 -673 -98 -94 -201 -151 -340 -191 -102 -29
+                      -304 -31 -403 -4 -362 99 -600 408 -600 775 0 165 42 311 127 439 175 263 486
+                      401 793 351z m5958 -19 c348 -98 582 -408 582 -770 0 -165 -39 -297 -126 -433
+                      -250 -387 -770 -483 -1146 -210 -122 88 -238 250 -286 399 -88 271 -20 577
+                      175 785 123 130 271 213 438 245 96 19 269 11 363 -16z" />
+                </g>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="timer">
+      <div class="progress-container">
+      </div>
+    </div>
+    <button class="start-button" type="button">
+      <span class="visually-hidden">Start timer</span>
+      <svg class="start-button__svg-start" width="25px" height="25px" id="Слой_1" data-name="Слой 1"
+        xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10">
+        <polygon points="7 5 0 0 0 10 7 5" style="fill: currentColor" />
+      </svg>
+      <svg class="start-button__svg-pause" height="25px" width="25px" id="Layer_1"
+        style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
+        <g>
+          <path
+            d="M224,435.8V76.1c0-6.7-5.4-12.1-12.2-12.1h-71.6c-6.8,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6   C218.6,448,224,442.6,224,435.8z" />
+          <path
+            d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z" />
+        </g>
+      </svg>
+
+    </button>
+
+    <div class="bottom-container">
+      <div class="counter">
+        <p class="counter__value">1/4</p>
+        <button class="counter__reset-button">Reset</button>
+      </div>
+      <div class="bottom-container__right">
+        <button class="skip control-button" type="button" title="Skip the current round"><span
+            class="visually-hidden">Skip the current
+            round</span>
+          <svg width="25px" height="25px" class="skip__svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
+            enable-background="new 0 0 1000 1000" xml:space="preserve">
+            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+            <g>
+              <g>
+                <g>
+                  <path fill="currentColor"
+                    d="M684,463.9L89.8,90.7C45.9,61.9,10,83.1,10,137.8v724.4c0,54.7,35.9,75.9,79.8,47.1L684,536.1c0,0,21.4-15.1,21.4-36.1C705.4,479,684,463.9,684,463.9z M867.5,26C795,26,745,48.3,745,120.8v758.4c0,72.5,50,94.8,122.5,94.8S990,951.7,990,879.2V120.8C990,48.3,940,26,867.5,26z" />
+                </g>
+              </g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </g>
+          </svg>
+        </button>
+        <div class="volume-controls">
+          <div class="volume-slider" id="volume-slider"></div>
+          <button title="Mute" class="volume__toggle control-button">
+            <svg width="30px" height="30px" class="toggle__svg" xmlns="http://www.w3.org/2000/svg" version="1.0"
+              width="500" height="500" viewBox="0 0 75 75">
+              <path d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
+                style="stroke:currentColor;stroke-width:5;stroke-linejoin:round;fill:currentColor;" />
+              <path d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
+                style="fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round" />
+            </svg>
+
+            <svg width="32px" height="32px" class="toggle__svg--muted" xmlns="http://www.w3.org/2000/svg" version="1.0"
+              width="500" height="500" viewBox="0 0 75 75" stroke="currentColor" stroke-width="5">
+              <path d="m39,14-17,15H6V48H22l17,15z" fill="currentColor" stroke-linejoin="round" />
+              <path d="m49,26 20,24m0-24-20,24" fill="currentColor" stroke-linecap="round" />
+
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="progress-container"></div>
+  <script src="main.js"></script>
+</body>
+
+</html>

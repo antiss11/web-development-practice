@@ -1,0 +1,26 @@
+@import "themes";
+@import "mixins";
+
+
+@mixin setThemesButtons {
+  @each $themeName in map-keys($map: $themes) {
+    .#{$themeName}-button {
+      border-left: 4px solid getThemeProp($themeName, activeColor);
+      background-color: getThemeProp($themeName, mainBgColor);
+      color: getThemeProp($themeName, mainColor);
+    }
+  }
+}
+
+body {
+  @include setThemesButtons();
+}
+
+.theme-item__button {
+  @include buttonReset;
+  font-size: 3rem;
+  width: 70vw;
+  cursor: pointer;
+}
+
+

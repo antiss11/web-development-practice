@@ -1,0 +1,547 @@
+@import "themes";
+@import "mixins";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import "buttonsThemes";
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.body {  
+  margin: 0 auto; 
+  font-size: 2rem;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.wrapper {
+  @include setThemes(&, background-color, mainBgColor);
+  height: 100vh;
+  padding: 0 50px;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.timer {
+  @include setThemes(&, color, mainColor);
+  margin: 100px auto 0;
+  position: relative;
+
+  &__body {
+    margin: auto;    
+    position: relative;
+  }
+
+  &__time {
+    font-size: calc(1.5rem + 3vw);
+  }
+
+  &__description {
+    position: absolute;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    font-size: calc(1.5rem + .5vw);
+  }
+}
+
+.start-button {
+  @include setThemes(&, border-color, subColor);  
+  @include setThemes(&, background-color, mainBgColor); 
+  border: 2px solid;
+  border-radius: 50%;
+  width: 15vw;
+  max-width: 175px;
+  max-height: 175px;
+  height: 15vw;
+  position: relative;
+  top: 2em;
+  cursor: pointer;
+  transition: opacity .3s ease-in-out,
+              background-color .3s ease-in-out;              
+
+  &__svg-start {
+    @include setThemes(&, color, mainColor); 
+    margin: auto;
+    transition: color .3s ease-in-out;
+  }
+
+  &__svg-pause {
+    @include setThemes(&, color, mainColor); 
+    display: none;
+    margin: auto;
+  }
+
+  &:hover > .start-button__svg-start {
+    @include setThemes(&, color, activeColor); 
+  }
+} 
+
+.counter {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;  
+
+  &__value {
+    @include setThemes(&, color, mainColor);  
+
+    & > small {
+      @include setThemes(&, color, subColor);
+      position: relative;
+      left: 5px;
+      font-size: .5em;  
+    }
+  }
+
+  &__reset-button {
+    @include buttonReset; 
+    @include setThemes(&, color, subColor);  
+    font-size: .6em;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      @include setThemes(&, color, activeColor); 
+      cursor: pointer;
+    }
+  }
+}
+
+.skip {
+    @include buttonReset;
+    margin-left: auto;
+    background: none;
+    margin-right: 20px;
+  }  
+
+.volume__toggle {
+  @include buttonReset;
+  background: none;
+}
+
+.skip__svg {
+  @include setThemes(&, color, subColor); 
+  width: inherit;
+  height: inherit;
+  transition: .2s ease-in-out color;
+
+  &:hover {
+    @include setThemes(&, color, activeColor); 
+  }
+}
+
+.toggle__svg {
+  @include setThemes(&, color, subColor); 
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  &--muted {
+    @include setThemes(&, color, mainColor);
+    display: none;   
+  }
+
+  &--muted:hover {
+    @include setThemes(&, color, activeColor);
+  }  
+
+  &:hover {
+    @include setThemes(&, color, activeColor);
+  }
+}
+
+.bottom-container {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 20px;
+  margin: 0 30px;
+  padding: 0 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.bottom-container__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.volume-controls {
+  display: flex;
+  align-items: center;
+}
+
+.control-button {
+  width: 35px;
+  height: 35px;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#volume-slider.ui-slider-vertical {
+  @include setThemes(&, background-color, mainColor);
+  width: 2px;
+  position: absolute;
+  bottom: 100px;
+  right: 67px;
+}
+
+.volume-slider {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+#volume-slider > .ui-slider-handle {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  transition: .2s ease-in-out background-color;
+  @include setThemes(&, background-color, mainColor);
+
+  &:hover {
+    @include setThemes(&, background, activeColor);
+  }
+}
+
+#volume-slider > .ui-state-active {
+  @include setThemes(&, background, activeColor);
+}
+
+.audio {
+  display: none;
+}
+
+.progress-container {
+  position: absolute;
+  margin-top: 0;
+  display: flex;
+  transform: rotate(-360deg);
+  width: 50vw;
+  height: 50vh;
+}
+
+.center-circle {
+  @include setThemes(&, stroke, subColor);
+}
+
+.progress-circle--focus {
+  @include setThemes(&, stroke, focusColor);
+}
+
+.progress-circle--short-break {
+  @include setThemes(&, stroke, shortBreakColor);
+}
+
+.progress-circle--long-break {
+  @include setThemes(&, stroke, longBreakColor);
+}
+
+.progressbar-text{
+  @include setThemes(&, stroke, mainColor);
+}
+
+.toggle-menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.toggle-menu__open-button {
+  background: none;
+  position: absolute;
+  border: none;
+  width: 50px;
+  padding: 5px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1100;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  flex-flow: column wrap;
+  
+  &:hover > span {        
+    @include setThemes(&, border-color, activeColor);
+  }
+
+  & > span {
+    display: block;
+    @include setThemes(&, border-color, subColor);
+    @include setThemes(&, background-color, subColor);
+    border: 2px solid;   
+    transition: border-color .2s ease-in-out,
+                background-color .2s ease-in-out,
+                transform .2s linear;
+  }
+
+  & > span:nth-child(2) {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  & > span:nth-child(3) {
+    width: 40%;
+    margin-top: 10px;
+  }  
+
+  &--active > span:nth-child(2) {
+    width: 50%;
+    transform: rotate(-45deg);
+  }
+
+  &--active > span:nth-child(3) {
+    width: 50%;
+    transform: rotate(45deg);
+  }
+}
+
+.open-button__svg {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.toggle-menu__menu-body {
+  @include setThemes(&, background, settingsBgColor);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  z-index: 1000;
+  top: 85px;
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 85px);
+  transition: width linear .05s;
+  &--hidden {
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+.menu-body__setting {
+  display: none;
+
+  &--active {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
+
+.setting__subsettings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-body__settings-item {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  position: relative;
+  font-size: calc(1rem + 0.5vw);
+}
+
+.menu-body__settings-name {
+  @include setThemes(&, color, mainColor);
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.menu-body__settings-list {
+  @include setThemes(&, background-color, mainBgColor);
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: auto;
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-around;
+}
+
+.settings-list__setting-name {
+  @include setThemes(&, color, activeColor);
+  text-align: center;
+  margin-bottom: 1.5vh;
+  margin-top: 1.5vh;
+}
+
+.settings-list__setting-value {
+  @include setThemes(&, color, mainColor);
+  @include setThemes(&, background, mainBgColor);
+  padding: 4px 10px;
+  border-radius: 20%;
+  text-align: center;
+  margin: 0;
+  display: inline-block;
+}
+
+.setting-value__slider {
+  margin: 20px 0;
+}
+
+.setting-value__slider > span {
+  @include setThemes(&, border-color, mainBgColor);
+  width: 90vw;
+  height: 5px;
+  position: relative;
+  display: block;
+
+  & > .ui-slider-handle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -17px;
+  }
+
+  @media (min-width: 800px) {
+    width: 70vw;
+  }
+
+  @media (min-width: 1000px) {
+    width: 60vw;
+  } 
+
+  @media (min-width: 1100px) {
+    width: 50vw;
+  }
+}
+
+
+#settings-item__focus-slider > span > .ui-widget-header {
+  @include setThemes(&, background, focusColor);
+
+  & + .ui-slider-handle {
+    @include setThemes(&, background, focusColor);
+    @include setThemes(&, border-color, focusColor);
+  }
+}
+
+#settings-item__shortBreak-slider > span > .ui-widget-header {
+  @include setThemes(&, background, shortBreakColor);
+
+  & + .ui-slider-handle {
+    @include setThemes(&, background, shortBreakColor);
+    @include setThemes(&, border-color, shortBreakColor);
+  }
+}
+
+#settings-item__longBreak-slider > span > .ui-widget-header {
+  @include setThemes(&, background, longBreakColor);
+
+  & + .ui-slider-handle {
+    @include setThemes(&, background, longBreakColor);
+    @include setThemes(&, border-color, longBreakColor);
+  }
+}
+
+#settings-item__rounds-slider > span > .ui-widget-header {
+  @include setThemes(&, background, subColor);
+
+  & + .ui-slider-handle {
+    @include setThemes(&, background, subColor);
+    @include setThemes(&, border-color, subColor);
+  }
+}
+
+.setting__reset-button {
+  @include setThemes(&, color, subColor);
+  @include buttonReset;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: .2s ease-in-out color;
+
+  &:hover {
+    @include setThemes(&, color, activeColor);
+  }
+}
+
+.settings-list__settings-item {
+  transition: background-color .2s ease-in-out;
+  padding: 5px 20px;
+  justify-content: center;
+  display: flex;
+  flex-grow: 2;
+  box-sizing: border-box;
+  border-bottom: 4px solid;
+  border-color: transparent;
+  cursor: pointer;
+
+  &--active {
+    @include setThemes(&, border-bottom-color, activeColor);    
+  }
+
+  &:hover {
+    @include setThemes(&, background-color, settingsBgColor);
+  }
+}
+
+.settings-item__open-setting-button {
+  @include buttonReset;
+  @include setThemes(&, color, subColor);
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  margin: 0;
+  
+  &--active {
+    @include setThemes(&, border-bottom-color, activeColor);
+    border-bottom: 4px solid;
+  }
+}
+
+.open-setting-button__icon {
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+}
+
+
+.setting__themes-list {
+  list-style: none;
+  height: 75vh;
+}
+
+.themes-list__theme-item:not(:first-child) {
+  margin-top: 30px;
+}
+
+.theme-item__button {
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.settings-list__settings-item {
+  padding: 5px 0;
+}

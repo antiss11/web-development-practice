@@ -1,0 +1,97 @@
+$mainColor: #F7F7F1;
+
+$themes: andromeda, ayu, cityLights, dracula, dva, github, graphite,
+          gruvbox, monokai, nord, oneDarkPro, pomotroid, poppingLocking,
+          solarizedLight, spandex, synthwave, tokyoNightStorm;
+
+$themes: (
+  andromeda: (
+    mainColor: #D4CDD8,
+    subColor: #736F76,
+    mainBgColor: #23262E,
+    focusColor: #ED5D43,
+    settingsBgColor: #2E323D,
+    shortBreakColor: #02DBBC,
+    longBreakColor: #C64DEC,
+    activeColor: #FEE56D,
+  ),
+
+  ayu: (
+    mainColor: #CACBC5,
+    subColor: #736F76,
+    mainBgColor: #1F2430,
+    focusColor: #F18678,
+    settingsBgColor: #2A3546,
+    shortBreakColor: #B1DB7A,
+    longBreakColor: #5CCEE5,
+    activeColor: #FECB66,
+  ),
+
+  cityLights: (
+    mainColor:#B2C0CD,
+    subColor: #708A9F,
+    mainBgColor: #1D252C,
+    focusColor: #E17D8C,
+    settingsBgColor: #28313A,
+    shortBreakColor:#33CDD7,
+    longBreakColor: #6795E6,
+    activeColor: #EABE82,
+  ),
+
+  dracula: (
+    mainColor:#E1E1DD,
+    subColor: #6271A3,
+    mainBgColor: #282A36,
+    focusColor: #FE5555,
+    settingsBgColor: #363846,
+    shortBreakColor:#50F97A,
+    longBreakColor:#8AE8FC,
+    activeColor: #BC92F8,
+  ),
+
+  dva: (
+    mainColor:#F1F7F6,
+    subColor: #AAA2B2,
+    mainBgColor: #2E2733,
+    focusColor: #EB57FC,
+    settingsBgColor:#35303A,
+    shortBreakColor:#0DE1C8,
+    longBreakColor:#26ACFE,
+    activeColor:#0DE1C8,
+  ),
+  
+  github: (
+    mainColor: #252A2F,
+    subColor: #252A2F,
+    mainBgColor:#FFFFFF,
+    focusColor: #CD3232,
+    settingsBgColor: #F6F8FA,
+    shortBreakColor:#015DC5,
+    longBreakColor:#7043C1,
+    activeColor: #156ACA,
+  ),
+
+  graphite: (
+    mainColor: #282A2E,
+    subColor: #ADAFB1,
+    mainBgColor:#EBEBEA,
+    focusColor: #515255,
+    settingsBgColor: #FCFCFC,
+    shortBreakColor: #515255,
+    longBreakColor:#515255,
+    activeColor: #515255,
+  ),
+
+  gruvbox: (
+    mainColor: #EADAB1,
+    subColor: #BCAD92,
+    mainBgColor: #282828,
+    focusColor: #FA4934,
+    settingsBgColor: #3C3836,
+    shortBreakColor: #B7BA26,
+    longBreakColor: #82A497,
+    activeColor: #ACAF26,
+  ),
+);
+
+

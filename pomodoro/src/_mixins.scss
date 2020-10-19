@@ -1,0 +1,24 @@
+@function getThemeProp($themeName, $propName) {
+  $themeMap: map-get($map: $themes, $key: $themeName);
+  @return map-get($map: $themeMap, $key: $propName);
+}
+
+@mixin setThemes($selector, $propName, $themePropName) {
+  @each $themeName in map-keys($map: $themes) {
+    @at-root .#{$themeName} #{$selector} {
+      #{$propName}: getThemeProp($themeName, $themePropName);
+    }    
+  }
+}
+
+@mixin buttonReset {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+@mixin setThemeButton($propName, $themePropName, $themeName) {
+  & {
+    #{$propName}: getThemeProp($themeName, $themePropName);
+  }
+}
